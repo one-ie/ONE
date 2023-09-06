@@ -4,6 +4,7 @@ import preact from "@astrojs/preact";
 import tailwind from '@astrojs/tailwind';
 import vercel from "@astrojs/vercel/serverless";
 import react from "@astrojs/react";
+import netlify from '@astrojs/netlify'
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
