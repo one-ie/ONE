@@ -7,7 +7,7 @@ import react from "@astrojs/react";
 
 import cloudflare from "@astrojs/cloudflare";
 
-// https://astro.build/config
+// Change your adaptor
 export default defineConfig({
   output: "server",
   adapter: cloudflare(),
