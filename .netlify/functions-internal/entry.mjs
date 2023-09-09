@@ -1,6 +1,6 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest_019c9688.mjs';
+import { manifest } from './manifest_bd77fc43.mjs';
 import 'preact';
 import 'react';
 import 'react-dom/server';

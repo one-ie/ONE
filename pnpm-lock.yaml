@@ -50,6 +50,9 @@ dependencies:
   astro:
     specifier: ^3.0.8
     version: 3.0.8(stylus@0.60.0)
+  astro-sst:
+    specifier: ^2.24.24
+    version: 2.24.24
   autoprefixer:
     specifier: ^10.4.15
     version: 10.4.15(postcss@8.4.29)
@@ -311,6 +314,12 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: false
+
+  /@astrojs/webapi@2.2.0:
+    resolution: {integrity: sha512-mHAOApWyjqSe5AQMOUD9rsZJqbMQqe3Wosb1a40JV6Okvyxj1G6GTlthwYadWCymq/lbgwh0PLiY8Fr4eFxtuQ==}
+    dependencies:
+      undici: 5.23.0
     dev: false
 
   /@babel/code-frame@7.22.13:
@@ -1730,6 +1739,13 @@ packages:
     resolution: {integrity: sha512-xvsWESUJn0JN421Xb9MQw6AsMHRCUknCe0Wjlxvjud80mU4E6hQf1A6NzQKcYNmYw62MfzEtXc+badstZP3JpQ==}
     dependencies:
       printable-characters: 1.0.42
+    dev: false
+
+  /astro-sst@2.24.24:
+    resolution: {integrity: sha512-5PzAKh6Wcs9WyOCmGdOzDQa2sC9voBIxX6VwtcgxJeZNiqCRebLziXj5rsPU7YMBFr+wYEEvJdBnn3Vk+LV0xA==}
+    dependencies:
+      '@astrojs/webapi': 2.2.0
+      set-cookie-parser: 2.6.0
     dev: false
 
   /astro@3.0.8(stylus@0.60.0):
