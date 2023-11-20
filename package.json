@@ -12,12 +12,11 @@
     "dependencies": {
         "@alwaysmeticulous/recorder-loader": "^2.87.0",
         "@astrojs/cloudflare": "^7.6.4",
-        "@astrojs/netlify": "^3.0.4",
+        "@astrojs/mdx": "^1.1.5",
         "@astrojs/preact": "^3.0.1",
         "@astrojs/react": "^3.0.4",
         "@astrojs/svelte": "^4.0.3",
         "@astrojs/tailwind": "^5.0.2",
-        "@astrojs/vercel": "^4.0.5",
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
         "@nanostores/persistent": "^0.9.1",
