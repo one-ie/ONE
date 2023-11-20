@@ -9,7 +9,7 @@ dependencies:
     specifier: ^2.89.0
     version: 2.89.0
   '@astrojs/cloudflare':
-    specifier: ^7.6.4
+    specifier: ^7.7.1
     version: 7.7.1(astro@3.5.5)(stylus@0.60.0)
   '@astrojs/preact':
     specifier: ^3.0.1
