@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/images/posts/lighthouse-desktop (copy).png",
+    "/images/how-it-work/market-professionals.png",
+    "/images/posts/lighthouse-desktop (copy).webp"
+  ]
+}

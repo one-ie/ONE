@@ -1,5 +1,0 @@
-{
-	"runtime": "nodejs18.x",
-	"handler": "dist/pages/api/entry.checkout.astro.mjs",
-	"launcherType": "Nodejs"
-}
