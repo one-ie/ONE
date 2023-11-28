@@ -9,7 +9,7 @@ dependencies:
     specifier: ^2.89.0
     version: 2.89.0
   '@astrojs/cloudflare':
-    specifier: ^7.7.1
+    specifier: ^7.6.4
     version: 7.7.1(astro@3.6.1)(stylus@0.60.0)
   '@astrojs/mdx':
     specifier: ^1.1.5
@@ -51,7 +51,7 @@ dependencies:
     specifier: ^18.2.17
     version: 18.2.17
   astro:
-    specifier: ^3.6.1
+    specifier: ^3.6.0
     version: 3.6.1(stylus@0.60.0)(typescript@5.3.2)
   astro-sst:
     specifier: ^2.36.7
@@ -63,8 +63,8 @@ dependencies:
     specifier: ^1.9.2
     version: 1.9.2
   daisyui:
-    specifier: ^3.9.4
-    version: 3.9.4
+    specifier: ^4.4.11
+    version: 4.4.11(postcss@8.4.31)
   nanostores:
     specifier: ^0.9.5
     version: 0.9.5
@@ -2298,10 +2298,6 @@ packages:
       color-string: 1.9.1
     dev: false
 
-  /colord@2.9.3:
-    resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-    dev: false
-
   /comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
     dev: false
@@ -2376,17 +2372,21 @@ packages:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
     dev: false
 
-  /daisyui@3.9.4:
-    resolution: {integrity: sha512-fvi2RGH4YV617/6DntOVGcOugOPym9jTGWW2XySb5ZpvdWO4L7bEG77VHirrnbRUEWvIEVXkBpxUz2KFj0rVnA==}
+  /culori@3.3.0:
+    resolution: {integrity: sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
+  /daisyui@4.4.11(postcss@8.4.31):
+    resolution: {integrity: sha512-AXP9oltpez0y6z3Lrzdu7JfEBi/4jpGqmuoJjq42hsY4aXODkhv07k4MgVJZIeh4x6vD03wrdjntofOk6APGxg==}
     engines: {node: '>=16.9.0'}
     dependencies:
-      colord: 2.9.3
       css-selector-tokenizer: 0.8.0
-      postcss: 8.4.31
+      culori: 3.3.0
+      picocolors: 1.0.0
       postcss-js: 4.0.1(postcss@8.4.31)
-      tailwindcss: 3.3.5
     transitivePeerDependencies:
-      - ts-node
+      - postcss
     dev: false
 
   /data-uri-to-buffer@2.0.2:
