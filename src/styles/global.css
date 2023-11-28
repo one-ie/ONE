@@ -31,3 +31,281 @@
     @apply disabled:cursor-not-allowed disabled:opacity-60;
   }
 }
+/* Global styles */
+html {
+  font-size: 1rem;
+}
+
+body {
+  background: url('/images/background.png') repeat;
+  font-family: font-primary, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--text-text);
+}
+
+.primary {
+  background-color: #1a5fb4;
+}
+
+.background-primary,
+.background-secondary {
+  background: url('/images/background.png') repeat;
+  font-family: font-primary, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--text-text);
+}
+
+.background-secondary {
+  background: url('/images/backgrounds/brilliant.png') repeat;
+}
+
+.background-black {
+  background-color: #222222 !important;
+  color: #222222;
+}
+
+.red {
+  background-color: red !important;
+  color: pink;
+}
+
+.blue {
+  background-color: blue !important;
+  color: blue;
+}
+
+.text-gray {
+  color: gray;
+}
+
+.black {
+  color: #222222 !important;
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#1a5fb4, #1a5fb4);
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+/* Heading styles */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: font-secondary, sans-serif;
+  font-weight: bold;
+  line-height: tight;
+  color: white;
+}
+
+h1,
+.h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.125rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+/* Grid styles */
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Logo styles */
+.logo-cloud {
+  display: grid;
+  overflow: hidden;
+  border-radius: var(--theme-rounded-container);
+}
+
+.logo-item {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.logo-item span {
+  padding-left: 1px;
+  padding-right: 1px;
+  color: white;
+}
+
+/* Navigation styles */
+.nav-link.active::after {
+  display: none;
+}
+
+.center {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.playbook {
+  padding: 40px;
+}
+
+/* Loading styles */
+.loading {
+  background-color: #242624;
+  margin-top: -200px;
+}
+
+.loading img {
+  margin: 0 auto;
+}
+
+.logo-item span img {
+  padding-right: 8px;
+}
+
+.logo-item {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: rgb(0 0 0 / 1);
+  background-color: rgba(var(--color-surface-500), 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 1px;
+}
+
+/* Footer styles */
+.primary {
+  background-color: #1a5fb4;
+}
+
+#ecommerce-platforms,
+#channels {
+  padding: 60px 10px;
+}
+
+.ecommerce-platforms p {
+  padding: 0 20px 20px 20px;
+}
+
+.ecommerce-platforms img {
+  margin: 0 auto;
+}
+
+.logo-item span img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer {
+  padding: 20px;
+}
+
+.logo-footer {
+  margin-left: -10px;
+}
+
+.hero p {
+  font-size: 24px;
+}
+
+.integration-card-head img {
+  width: 80px;
+  height: 80px;
+}
+
+.logo {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+}
+
+.footer-heading {
+  font-size: 24px !important;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.testimonial-author {
+  font-size: 24px !important;
+  color: white;
+  padding-bottom: 20px;
+}
+
+#flowbuilder-main {
+  background-color: rgba(17, 17, 17, 1);
+  background-image: url("https://one.ie/images/backgrounds/brilliant.png");
+  background-repeat: repeat;
+}
+
+.social-icons li a {
+  display: inline-flex;
+  height: 20px !important;
+  width: 20px !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: transparent !important;
+  text-align: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Transition swipe styles */
+.transition-swipe {
+  transition: 500ms;
+  transform: translateY(0);
+}
+
+.html.is-animating .transition-swipe {
+  transform: translateY(100px);
+}
+
+

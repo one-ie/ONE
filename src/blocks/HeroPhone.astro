@@ -1,59 +1,47 @@
 ---
-import Phone from "@blocks/Phone.astro";
-import ChatEmbed from "@components/chatembed.jsx";
-
+import Phone from '@blocks/Phone.astro'
+import ChatEmbed from '@blocks/chatembed.jsx'
 ---
 
-<section class="section banner relative">
-  <div class="container">
-    <div class="row items-center">
-      <div class="md:col-7 hero">
-       <h1 class="text-4xl font-bold leading-none sm:text-5xl">Explode <span class="text-gray">Ecommerce </span>Sales
-			with AI-Powered <span class="text-primary">Chat Funnels</span>
-		</h1>
-          <p>
-            Connect your ecommerce store to your customer's favourite messaging channels. Then help them buy using AI-powered chat. 
-          </p>
-          <br /><br />
-          </a>
-          <a data-no-swup href="/demo" class="btn btn-white variant-filled col-span-2">View Demo</a>
-          <a data-no-swup href="/get-started" class="btn btn-primary variant-filled col-span-2"> Get Started</a>
-          <br />
-          <br />
-          <p>It's suprisingly simple and fast...</p>
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <Phone />
+    <ChatEmbed client:only="react" />
 
-          <br />
-          <div class="logo-cloud grid-cols-2 gap-2.5">
-            <a class="logo-item background-secondary" href="/">
-              <span
-                ><img
-                  src="/images/logos/logo-openai.svg"
-                  width="50px"
-                  height="50px"
-                  alt="OpenAI"
-                /></span
-              >
-              <span>OpenAI</span>
-            </a>
-            <a class="logo-item background-secondary" href="/">
-              <span
-                ><img
-                  src="/images/logos/logo-google-dialogflow.svg"
-                  width="50px"
-                  height="50px"
-                  alt="Google Dialogflow"
-                /></span
-              >
-              <span>Google Dialogflow</span>
-            </a><br><br><br>
-          </div>
-      </div>
-       <div class="md:flex md:col-1">
-      </div>
-            <div class="md:flex md:col-4">
-        <Phone />     <ChatEmbed client:visible />
+    <div>
+      <h1 class="text-4xl font-bold leading-none sm:text-5xl">
+        Explode <span class="text-gray">Ecommerce</span>Sales with AI-Powered <span
+          class="text-primary">Chat Funnels</span
+        >
+      </h1>
+      <p>
+        Connect your ecommerce store to your customer's favourite messaging channels. Then help them
+        buy using AI-powered chat.
+      </p>
+      <br /><br />
+      <a data-no-swup href="/demo" class="btn-white variant-filled btn col-span-2">View Demo</a>
+      <a data-no-swup href="/get-started" class="variant-filled btn btn-primary col-span-2">
+        Get Started</a
+      >
+      <br />
+      <br />
+      <p>It's suprisingly simple and fast...</p>
 
+      <br />
+      <div class="logo-cloud grid-cols-2 gap-2.5">
+        <a class="logo-item background-secondary" href="/">
+          <span
+            ><img
+              src="/images/logos/logo-openai.svg"
+              width="50px"
+              height="50px"
+              alt="OpenAI"
+            /></span
+          >
+          <span>OpenAI</span>
+        </a>
+        <br /><br /><br />
       </div>
     </div>
   </div>
-</section>
+</div>

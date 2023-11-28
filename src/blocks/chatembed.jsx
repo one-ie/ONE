@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-
 const ONEChatbot = () => {
   useEffect(() => {
     const script = document.createElement('script');
