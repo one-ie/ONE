@@ -15,9 +15,9 @@ import EcommercePlatforms from "@blocks/EcommercePlatforms.astro";
 <Layout title={title}/> 
   <Header />
   <Hero />
-  <Channels client:visible/>
-  <Stats client:visible/>
-  <EcommercePlatforms client:visible/>
-  <Cal client:visible/>
-  <Footer client:visible/>
+  <Channels client:load/>
+  <Stats client:load/>
+  <EcommercePlatforms client:load/>
+  <Cal client:load/>
+  <Footer client:load/>
 </Layout>
