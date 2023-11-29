@@ -1,9 +1,37 @@
-//Themes
+primary = white
+secondary = #1D3963
+tertirary = #394E32
+primary-font = white
+secondary-font = #1D3963
+tertirary-font = #4b5563
+primary-background = url("/dark-primary-background.png")
+secondary-background = url("/brilliant.png")
+ 
+.primary 
+    color : primary
+.secondary 
+    color : secondary  
+.tertiary  
+    color : tertiary  
+.primary-background
+    url("/dark-primary-background.png")
+.secondary-background 
+    background-image url("/brilliant.png")
+    padding: 100px
+.primary-button 
+   background: tertirary
+   color: black
+
+.warning {
+  @extend .primary;
+  color: #E2E21E;
+}
+
 [data-theme='ONE']
-  --color-default #111
+  --color-default #000
   --background-primary url("/dark-primary-background.png")
   --background-secondary url("/brilliant.png")
-  --font-primary #ca3939
+  --font-primary #111
   --font-secondary url("/images/logos/ONE.svg")
   --font-tertiary url("/images/logos/ONE.svg")
   --logo url("/src/assets/images/logos/ONE.svg")
@@ -25,10 +53,16 @@
   --background-primary url("/transparent-background.png")
   --background-secondary url("/transparent-background.png")
   --logo url("src/assets/images/hilltribe/logos/ONE.svg")
-//Header
-header
-  padding: 10px
-.logo
+
+body
+  background-color var(--color-default)
+  background-image var(--background-primary)
+
+.bg-base-100
+    background-color var(--color-default)
+    background-image var(--background-secondary)
+
+.logo {
   display: block;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -36,5 +70,4 @@ header
   width: 50px; /* Width of new image */
   height: 50px; /* Height of new image */
   padding-left: 125px; /* Equal to width of new image */
-  padding-top: 20px
-
+}
