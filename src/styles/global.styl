@@ -1,3 +1,12 @@
+primary = white
+secondary = #1D3963
+tertirary = #394E32
+primary-font = white
+secondary-font = #1D3963
+tertirary-font = #4b5563
+primary-background = url("/dark-primary-background.png")
+secondary-background = url("/brilliant.png")
+
 //Themes
 [data-theme='ONE']
   --color-default #111
@@ -21,10 +30,6 @@
   --background-secondary url("/transparent-background.png")
   --logo url("/src/assets/images/hilltribe/logo-icon.png")
 
-[data-theme='synthwave']
-  --background-primary url("/transparent-background.png")
-  --background-secondary url("/transparent-background.png")
-  --logo url("src/assets/images/hilltribe/logos/ONE.svg")
 //Header
 header
   padding: 10px
@@ -37,4 +42,75 @@ header
   height: 50px; /* Height of new image */
   padding-left: 125px; /* Equal to width of new image */
   padding-top: 20px
+
+//Links
+
+.link-underline
+  border-bottom-width 0
+  background-image linear-gradient(transparent, transparent), linear-gradient(#fff, #fff)
+  background-size 0 3px
+  background-position 0 100%
+  background-repeat no-repeat
+  transition background-size 0.5s ease-in-out
+
+.link-underline-black
+  background-image linear-gradient(transparent, transparent), linear-gradient(#1a5fb4, #1a5fb4)
+
+.link-underline:hover
+  background-size 100% 3px
+  background-position 0 100%
+
+//Headings
+// Heading styles
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+  font-family font-secondary, sans-serif
+  font-weight bold
+  line-height tight
+  color white
+
+h1, .h1
+  font-size 40px
+  font-weight 600
+
+h2, .h2
+  font-size 2rem
+
+h3, .h3
+  font-size 1.5rem
+
+h4, .h4
+  font-size 1.25rem
+
+h5, .h5
+  font-size 1.125rem
+
+h6, .h6
+  font-size 1rem
+
+// Logo styles
+.logo-cloud
+  display grid
+  overflow hidden
+  border-radius var(--theme-rounded-container)
+
+.logo-item
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  background: secondary-background
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 1px;
+
+  span
+    padding-left 1px
+    padding-right 1px
+    color white
+    img
+      padding-right 8px
+.integration-card-head img
+  width 80px
+  height 80px
 
