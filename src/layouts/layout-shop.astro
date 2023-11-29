@@ -1,6 +1,7 @@
 ---
 import ThemeSwitcher from '@scripts/theme-switcher.astro'
 import ThemeSwitchButtons from '@blocks/theme-switch-buttons.astro'
+import CartDrawer from "../components/CartDrawer.svelte";
 import '@styles/global.styl'
 
 interface Props {
@@ -14,11 +15,11 @@ const { title = 'ONE' } = Astro.props.frontmatter || Astro.props
     <ThemeSwitcher />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="one" />
     <link rel="icon" type="image/svg+xml" href="/fav.png" />
     <title>{title}</title>
   </head>
   <body>
+    <CartDrawer client:idle />
     <section>
       <container>
         <slot />

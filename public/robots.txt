@@ -1,7 +1,7 @@
 User-agent: *
-Disallow: /
+Disallow: /*
 
-Allow: /$
+Allow: /
 Allow: /terms
 Allow: /privacy
 Allow: /get-started
