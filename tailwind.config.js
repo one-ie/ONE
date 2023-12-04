@@ -22,8 +22,8 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
-  
- // daisyUI config
+
+  // daisyUI config
   daisyui: {
     themes: [
       {
@@ -33,6 +33,8 @@ module.exports = {
           accent: '#365314',
           neutral: 'red',
           'base-100': '#111',
+          'base-200': '#222',
+          'base-300': '#333',
           info: '#77a2f8',
           success: '#21dec5',
           warning: '#c17915',
