@@ -29,7 +29,7 @@
         "astro-sst": "^2.36.1",
         "autoprefixer": "^10.4.16",
         "canvas-confetti": "^1.9.0",
-        "daisyui": "^3.9.4",
+        "daisyui": "^4.4.18",
         "nanostores": "^0.9.5",
         "postcss": "^8.4.31",
         "preact": "^10.19.1",

@@ -63,8 +63,8 @@ dependencies:
     specifier: ^1.9.0
     version: 1.9.0
   daisyui:
-    specifier: ^3.9.4
-    version: 3.9.4
+    specifier: ^4.4.18
+    version: 4.4.18
   nanostores:
     specifier: ^0.9.5
     version: 0.9.5
