@@ -1,6 +1,7 @@
 <section class="cal">
+  <h1 class="flex justify-center">Book a demo</h1>
 <!-- Cal inline embed code begins -->
-<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline" class="flex justify-center cal"></div>
 <script type="text/javascript">
   ;(function (C, A, L) {
     let p = function (a, ar) {
@@ -37,11 +38,13 @@
     calLink: 'tony/30min',
   })
 
-  Cal('ui', { styles: { branding: { brandColor: '#000000' } }, hideEventTypeDetails: false })
+  Cal('ui', { styles: { branding: { brandColor: '#111111' } }, hideEventTypeDetails: false })
 </script>
 <!-- Cal inline embed code ends -->
 </section>
 <style lang="stylus">
   .cal
+    background-color: #111
+  #my-cal-inline
     background-color: red
 </style>
