@@ -6,6 +6,8 @@ import preact from "@astrojs/preact";
 import react from "@astrojs/react";
 import cloudflare from "@astrojs/cloudflare";
 
+// Change your adaptor
+
 // https://astro.build/config
 export default defineConfig({
   output: "server",
@@ -13,6 +15,8 @@ export default defineConfig({
     mode: 'server',
     routes: {
       strategy: 'exclude',
+      include: ['/*'], // handled by custom function: functions/users/[id].js
+      exclude: ['/studio/*'], // handled by static page: pages/users/faq.astro
     },
   }),
   integrations: [tailwind(), svelte(), preact(), react(), mdx()]
