@@ -14,7 +14,7 @@ export default defineConfig({
     adapter: cloudflare({
     mode: 'server',
     routes: {
-      strategy: 'include',
+      strategy: 'exclude',
       include: ['/*'], // handled by custom function: functions/users/[id].js
       exclude: ['/'], // handled by static page: pages/users/faq.astro
     },
