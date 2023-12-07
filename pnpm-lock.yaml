@@ -65,6 +65,9 @@ dependencies:
   astro-critters:
     specifier: ^2.0.11
     version: 2.0.11
+  astro-google-fonts-optimizer:
+    specifier: ^0.2.2
+    version: 0.2.2
   astro-sst:
     specifier: ^2.38.1
     version: 2.38.1
@@ -2945,6 +2948,10 @@ packages:
     dependencies:
       critters: 0.0.20
       files-pipe: 2.0.16
+    dev: false
+
+  /astro-google-fonts-optimizer@0.2.2:
+    resolution: {integrity: sha512-YQxp/ExF3NzUomAGuu1VKecO7/ETRnhnE50gqwAqfpbGPZFj4MYa4XxK1ukBg3R63QmKuE5uurOiKmXiLzttuw==}
     dev: false
 
   /astro-sst@2.38.1:
