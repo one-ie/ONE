@@ -11,9 +11,11 @@ import cloudflare from "@astrojs/cloudflare";
 import critters from "astro-critters";
 import serviceWorker from "astrojs-service-worker";
 
+import prefetch from "@astrojs/prefetch";
+
 // https://astro.build/config
 export default defineConfig({
   output: "server",
   adapter: cloudflare({}),
-  integrations: [tailwind(), svelte(), preact(), react(), mdx(), serviceWorker(), critters()]
+  integrations: [tailwind(), svelte(), preact(), react(), mdx(), prefetch(), serviceWorker(), critters()]
 });
