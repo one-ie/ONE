@@ -15,7 +15,7 @@ export default defineConfig({
     mode: 'directory',
     routes: {
       strategy: 'include',
-      include: ['/users/*'], // handled by custom function: functions/users/[id].js
+      include: ['/*'], // handled by custom function: functions/users/[id].js
       exclude: ['/users/faq'], // handled by static page: pages/users/faq.astro
     },
   }),
