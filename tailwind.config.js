@@ -21,11 +21,11 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['ui-sans-serif', 'system-ui'],
+      sans: ['Inter','ui-sans-serif', 'system-ui'],
       serif: ['ui-serif', 'Georgia'],
       mono: ['ui-monospace', 'SFMono-Regular'],
-      display: ['Oswald'],
-      body: ['"Open Sans"'],
+      display: ['Inter'],
+      body: ['"Inter"'],
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
@@ -81,7 +81,17 @@ module.exports = {
           success: '#21dec5',
           warning: '#c17915',
           error: '#f22618',
-          "fontFamily": "monospace, comic sans ms",
+           "fontFamily": "Verdana",
+          ".btn": {
+            "fontFamily": "Chalkboard, comic sans ms",
+          },
+          ".tab": {
+            "fontFamily": "monospace",
+          },
+          ".alert": {
+            "border": "2px dashed",
+            "fontFamily": "ui-sans-serif, system-ui",
+          }
         },
       },
       'ONE',
