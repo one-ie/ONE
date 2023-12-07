@@ -7,13 +7,13 @@ import Layout from "@layouts/layout.astro";
 import Header from "@sections/header.astro";
 import Footer from "@sections/footer.astro";
 import Hero from "@blocks/HeroCenter.astro";
-import Cal from "@blocks/Cal.astro";
+import Calendar from "@blocks/Cal.jsx";
 import Channels from "@blocks/Channels.astro";
 import Stats from "@blocks/Stats.astro";
 import EcommercePlatforms from "@blocks/EcommercePlatforms.astro";
 ---
 <Layout title={title}/> 
   <Header />
-  <Cal />
+  <Calendar client:idle="react" />
   <Footer/>
 </Layout>
