@@ -14,9 +14,7 @@ export default defineConfig({
     adapter: cloudflare({
     mode: 'server',
     routes: {
-      strategy: 'include',
-      include: ['/*'], // handled by custom function: functions/users/[id].js
-      exclude: ['/studio/*'], // handled by static page: pages/users/faq.astro
+      strategy: 'auto',
     },
   }),
   integrations: [tailwind(), svelte(), preact(), react(), mdx()]
