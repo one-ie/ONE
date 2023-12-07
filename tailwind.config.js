@@ -20,6 +20,13 @@ module.exports = {
         // Add more sizes as needed
       },
     },
+    fontFamily: {
+      sans: ['ui-sans-serif', 'system-ui'],
+      serif: ['ui-serif', 'Georgia'],
+      mono: ['ui-monospace', 'SFMono-Regular'],
+      display: ['Oswald'],
+      body: ['"Open Sans"'],
+    },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
 
@@ -51,6 +58,8 @@ module.exports = {
           success: '#21dec5',
           warning: '#c17915',
           error: '#f22618',
+          //Font
+          "fontFamily": "Inter",
           // Styles
           '--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
           '--rounded-btn': '3.5rem', // border radius rounded-btn utility class, used in buttons and similar element
@@ -72,6 +81,7 @@ module.exports = {
           success: '#21dec5',
           warning: '#c17915',
           error: '#f22618',
+          "fontFamily": "monospace, comic sans ms",
         },
       },
       'ONE',
