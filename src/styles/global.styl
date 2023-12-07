@@ -19,16 +19,18 @@ darkenColor(color, amount)
 
 [data-theme='ONE']
   --logo url("/src/assets/images/logos/ONE.svg")
-  primaryColor = green
+  .logo
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: var(--logo) no-repeat;
+    width: 50px; /* Width of new image */
+    height: 50px; /* Height of new image */
+    padding-left: 125px; /* Equal to width of new image */
+    padding-top: 20px  
   .base-100, body
     background-image: url(/pattern-primary.png);
     background-repeat: repeat;
-  #section
-    background-color: blue  
-  .primary
-    primaryColor
-  .bg-primary 
-    background-color: primaryColor 
   .pattern-primary
     background-image: url(/pattern-primary.png);
     background-repeat: repeat; 
@@ -46,6 +48,15 @@ darkenColor(color, amount)
   --background-primary url("/light-primary-background.png")
   --background-secondary url("/transparent-background.png")
   --logo url("/images/logos/ONE-black.svg")
+  .logo
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: var(--logo) no-repeat;
+    width: 50px; /* Width of new image */
+    height: 50px; /* Height of new image */
+    padding-left: 125px; /* Equal to width of new image */
+    padding-top: 20px    
 
 [data-theme='hilltribe']
   --color-default #27372E
@@ -54,23 +65,11 @@ darkenColor(color, amount)
   --background-secondary url("/transparent-background.png")
   --logo url("/src/assets/images/hilltribe/logo-icon.png")
 
-.base-100
-  background-color: purple
-
 .red
   background-color: red
 //Header
 header
   padding: 10px
-.logo
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: var(--logo) no-repeat;
-  width: 50px; /* Width of new image */
-  height: 50px; /* Height of new image */
-  padding-left: 125px; /* Equal to width of new image */
-  padding-top: 20px
 
 //Links
 
