@@ -17,36 +17,29 @@ darkenColor(color, amount)
 .focus-primary
   background-color darkenColor(primaryColor, 70%)
 
-.focus-secondary
-  background-color darkenColor(secondaryColor, 10%)
-
-.focus-accent
-  background-color darkenColor(accentColor, 10%)
-
-.focus-neutral
-  background-color darkenColor(neutralColor, 10%)
-
-// Borders
-.border-primary
-  border-color darkenColor(primaryColor, 30%)
-
-.border-secondary
-  border-color darkenColor(secondaryColor, 30%)
-
-.border-accent
-  border-color darkenColor(accentColor, 30%)
-
-.border-neutral
-  border-color darkenColor(neutralColor, 30%)
-
-primary-background = url("/dark-primary-background.png")
-secondary-background = url("/brilliant.png")
-
 [data-theme='ONE']
-  --background-primary url("/dark-primary-background.png")
-  --background-secondary url("/brilliant.png")
-  --pattern-secondary white
   --logo url("/src/assets/images/logos/ONE.svg")
+  primaryColor = green
+  .base-100, body
+    background-image: url(/pattern-primary.png);
+    background-repeat: repeat;
+  #section
+    background-color: blue  
+  .primary
+    primaryColor
+  .bg-primary 
+    background-color: primaryColor 
+  .pattern-primary
+    background-image: url(/pattern-primary.png);
+    background-repeat: repeat; 
+  .pattern-secondary
+    background-image: url(/pattern-secondary.png);
+    background-repeat: repeat; 
+  .pattern-accent   
+    background-image: url(/pattern-accent.png);
+    background-repeat: repeat; 
+  .border-primary
+    border-color darkenColor(primaryColor, 30%)
 
 [data-theme='TWO']
   --color-default white

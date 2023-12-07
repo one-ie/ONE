@@ -28,14 +28,35 @@ module.exports = {
     themes: [
       {
         ONE: {
-          primary: 'black', // Primary Color
-          secondary: 'yellow', // Secondary Color
-          accent: 'blue', // Accent Color
-          neutral: 'green', // Neutral Color
-          // Base Colors for Background
-          'base-100': '#333', // Main Color
-          'base-200': 'purple', // Slightly Darker or Lighter
+          primary: 'red', // Primary Color
+          'pattern-primary': 'url(/pattern-secondary.png)', // Primary Pattern
+          'primary-focus': '#primary-focus-color', // Primary Focus
+          'primary-border': '#primary-border-color', // Primary Border
+          'primary-content': '#primary-content-color', // Primary Content
+
+          secondary: '#312e81', // Secondary Color
+          'secondary-pattern': 'url(/secondary-pattern.png)', // Secondary Pattern
+          'secondary-focus': '#secondary-focus-color', // Secondary Focus
+          'secondary-border': '#secondary-border-color', // Secondary Border
+          'secondary-content': '#secondary-content-color', // Secondary Content
+
+          accent: 'white', // Accent Color
+          'pattern-accent': 'url(/pattern-accent.png)', // Accent Pattern
+          'accent-focus': '#accent-focus-color', // Accent Focus
+          'accent-border': '#accent-border-color', // Accent Border
+          'accent-content': '#accent-content-color', // Accent Content
+
+          neutral: '#111111', // Neutral Color
+          'neutral-pattern': 'url(/neutral-pattern.png)', // Neutral Pattern
+          'neutral-focus': '#neutral-focus-color', // Neutral Focus
+          'neutral-border': '#neutral-border-color', // Neutral Border
+          'neutral-content': '#neutral-content-color', // Neutral Content
+
+          // Base Colors for Font
+          'base-100': 'yellow', // Main Color
+          'base-200': 'red', // Slightly Darker or Lighter
           'base-300': '#333', // Even more dark or light
+
           // Info Colors
           info: '#77a2f8',
           success: '#21dec5',
