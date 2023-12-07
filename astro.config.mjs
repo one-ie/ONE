@@ -12,11 +12,11 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   output: "server",
     adapter: cloudflare({
-    mode: 'directory',
+    mode: 'server',
     routes: {
       strategy: 'include',
       include: ['/*'], // handled by custom function: functions/users/[id].js
-      exclude: ['/users/faq'], // handled by static page: pages/users/faq.astro
+      exclude: ['/studio/*'], // handled by static page: pages/users/faq.astro
     },
   }),
   integrations: [tailwind(), svelte(), preact(), react(), mdx()]
