@@ -16,7 +16,7 @@ export default defineConfig({
     routes: {
       strategy: 'include',
       include: ['/*'], // handled by custom function: functions/users/[id].js
-      exclude: ['/studio/*'], // handled by static page: pages/users/faq.astro
+      exclude: ['/'], // handled by static page: pages/users/faq.astro
     },
   }),
   integrations: [tailwind(), svelte(), preact(), react(), mdx()]
