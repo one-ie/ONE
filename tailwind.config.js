@@ -59,7 +59,21 @@ module.exports = {
           warning: '#c17915',
           error: '#f22618',
           //Font
-          fontFamily: 'ui-sans-serif',
+          fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              'Segoe UI',
+              'Roboto',
+              'Oxygen',
+              'Ubuntu',
+              'Cantarell',
+              'Fira Sans',
+              'Droid Sans',
+              'Helvetica Neue',
+              'sans-serif',
+            ],
+          },
           // Styles
           '--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
           '--rounded-btn': '3.5rem', // border radius rounded-btn utility class, used in buttons and similar element
