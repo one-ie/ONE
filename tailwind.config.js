@@ -21,11 +21,11 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Inter','ui-sans-serif', 'system-ui'],
+      sans: ['ui-sans-serif', 'system-ui'],
       serif: ['ui-serif', 'Georgia'],
       mono: ['ui-monospace', 'SFMono-Regular'],
-      display: ['Inter'],
-      body: ['"Inter"'],
+      display: ['ui-sans-serif', 'system-ui'],
+      body: ['ui-sans-serif', 'system-ui'],
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
@@ -59,7 +59,7 @@ module.exports = {
           warning: '#c17915',
           error: '#f22618',
           //Font
-          "fontFamily": "Inter",
+          fontFamily: 'ui-sans-serif',
           // Styles
           '--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
           '--rounded-btn': '3.5rem', // border radius rounded-btn utility class, used in buttons and similar element
@@ -81,17 +81,17 @@ module.exports = {
           success: '#21dec5',
           warning: '#c17915',
           error: '#f22618',
-           "fontFamily": "Verdana",
-          ".btn": {
-            "fontFamily": "Chalkboard, comic sans ms",
+          fontFamily: 'Verdana',
+          '.btn': {
+            fontFamily: 'Chalkboard, comic sans ms',
           },
-          ".tab": {
-            "fontFamily": "monospace",
+          '.tab': {
+            fontFamily: 'monospace',
           },
-          ".alert": {
-            "border": "2px dashed",
-            "fontFamily": "ui-sans-serif, system-ui",
-          }
+          '.alert': {
+            border: '2px dashed',
+            fontFamily: 'ui-sans-serif, system-ui',
+          },
         },
       },
       'ONE',
