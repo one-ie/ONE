@@ -53,6 +53,8 @@ darkenColor(color, amount)
     background-repeat: repeat; 
   .border-primary
     border-color darkenColor(primaryColor, 30%)
+  .border-neutral
+    border-color white  
 
 [data-theme='TWO']
   --color-default white
@@ -65,7 +67,23 @@ darkenColor(color, amount)
     width: 50px; /* Width of new image */
     height: 50px; /* Height of new image */
     padding-left: 125px; /* Equal to width of new image */
-    padding-top: 20px    
+    padding-top: 20px
+  .base-100, body
+    background-image: url(/light-pattern-primary.png);
+    background-repeat: repeat;
+  .pattern-primary
+    background-image: url(/light-pattern-primary.png);
+    background-repeat: repeat; 
+  .pattern-secondary
+    background-image: url(/light-pattern-secondary.png);
+    background-repeat: repeat; 
+  .pattern-accent   
+    background-image: url(/light-pattern-accent.png);
+    background-repeat: repeat; 
+  .border-primary
+    border-color darkenColor(primaryColor, 30%)
+  .border-neutral
+    border-color white          
 
 [data-theme='hilltribe']
   --color-default #27372E
@@ -73,6 +91,9 @@ darkenColor(color, amount)
 
 .red
   background-color: red
+.red-text
+  color: red
+
 .center
   display: block
   margin-left: auto;
@@ -103,8 +124,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
   font-family font-secondary, sans-serif
   font-weight bold
   line-height tight
-  color white
-
 h1, .h1
   font-size 40px
   font-weight 600

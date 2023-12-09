@@ -35,17 +35,17 @@ module.exports = {
     themes: [
       {
         ONE: {
-          neutral: '#111111',
           primary: '#1d3963',
-          secondary: '#394e32',
+          'focus-primary': '#102646',
           'border-primary': '#ffffff',
+          'content-primary': '#d9d9d9',
+          secondary: '#394e32',
           'focus-secondary': '#23321e',
           'border-secondary': '#23321e',
-          'focus-primary': '#102646',
-          'content-primary': '#d9d9d9',
           'content-secondary': '#ffffff',
           accent: '#ffffff',
           'border-accent': '#4b5563',
+          neutral: '#111111',
           'focus-neutral': '#111111',
           'border-neutral': '#ffffff',
           'content-neutral': '#ffffff',
@@ -86,26 +86,55 @@ module.exports = {
           '--tab-radius': '0.5rem', // border radius of tabs
         },
         TWO: {
-          primary: '#1D3963',
-          secondary: '#394E32',
-          accent: '#365314',
-          neutral: 'red',
-          'base-100': 'white',
+           primary: '#1d3963',
+          'focus-primary': '#102646',
+          'border-primary': '#ffffff',
+          'content-primary': '#d9d9d9',
+          secondary: '#394e32',
+          'focus-secondary': '#23321e',
+          'border-secondary': '#23321e',
+          'content-secondary': '#ffffff',
+          accent: '#111111',
+          'border-accent': '#4b5563',
+          neutral: '#ffffff',
+          'focus-neutral': '#111111',
+          'border-neutral': '#ffffff',
+          'content-neutral': '#ffffff',
+          // Base Colors for Background
+          'base-100': '#fff', // Main Color
+          'base-200': '#eee', // Slightly Darker or Lighter
+          'base-300': '#d8d8d8', // Even more dark or light
+          // Info Colors
           info: '#77a2f8',
           success: '#21dec5',
           warning: '#c17915',
           error: '#f22618',
-          fontFamily: 'Verdana',
-          '.btn': {
-            fontFamily: 'Chalkboard, comic sans ms',
+          //Font
+          fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              'Segoe UI',
+              'Roboto',
+              'Oxygen',
+              'Ubuntu',
+              'Cantarell',
+              'Fira Sans',
+              'Droid Sans',
+              'Helvetica Neue',
+              'sans-serif',
+            ],
           },
-          '.tab': {
-            fontFamily: 'monospace',
-          },
-          '.alert': {
-            border: '2px dashed',
-            fontFamily: 'ui-sans-serif, system-ui',
-          },
+          // Styles
+          '--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
+          '--rounded-btn': '3.5rem', // border radius rounded-btn utility class, used in buttons and similar element
+          '--rounded-badge': '1.9rem', // border radius rounded-badge utility class, used in badges and similar
+          '--animation-btn': '0.25s', // duration of animation when you click on button
+          '--animation-input': '0.2s', // duration of animation for inputs like checkbox, toggle, radio, etc
+          '--btn-focus-scale': '0.95', // scale transform of button when you focus on it
+          '--border-btn': '1px', // border width of buttons
+          '--tab-border': '1px', // border width of tabs
+          '--tab-radius': '0.5rem', // border radius of tabs
         },
       },
       'ONE',
@@ -143,5 +172,6 @@ module.exports = {
     base: true, // applies background color and foreground color for root element by default
     styled: true, // include daisyUI colors and design decisions for all components
     utils: true, // adds responsive and modifier utility classes
+    darkTheme: 'ONE',
   },
 }
