@@ -1,0 +1,11 @@
+---
+import BaseLayout from "@layouts/layout-text.astro";
+const allPosts = await getCollection("posts");
+const pageTitle = "My Astro Learning Blog";
+const { title, url } = Astro.props;
+---
+
+<BaseLayout>
+  <p>This is where I will post about my journey learning Astro.</p>
+  {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}  </ul>
+</BaseLayout>

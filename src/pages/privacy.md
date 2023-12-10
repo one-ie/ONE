@@ -2,7 +2,10 @@
 title: "Privacy Policy"
 excerpt: Privacy Policy for ONE
 draft: false
+layout: '@layouts/layout-text.astro'
 ---
+# Privacy Policy
+
 ## What Information We Have & Where We Get It
 
 When you create an account, buy a product or service we will collect your information which depending on service we are providing, may include your contact and billing information. When you use our websites or apps, we collect information such as the browser and device you’re using, your IP address, your location, the site you came from, what you did and didn’t use our site/app for, or the site you visit when you leave us. For more information on how we collect this information, see our Cookies Policy. When you use a social media feature within our website or apps, and you post to social media platforms, the social media site will provide us with some information about you.

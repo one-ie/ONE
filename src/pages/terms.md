@@ -2,7 +2,10 @@
 title: "Terms & Conditions"
 excerpt: Terms and conditions for ONE
 draft: false
+layout: '@layouts/layout-text.astro'
 ---
+# Terms & Conditions
+
 These terms and conditions outline the rules and regulations for the use of Network ONE’s Website.
 
 Network ONE is located at:
