@@ -11,6 +11,7 @@
     currencyDisplay: showCurrency ? "symbol" : "narrowSymbol",
   }).format(parseInt(price.amount));
 </script>
+
 <span>
   {formatPrice}
 </span>

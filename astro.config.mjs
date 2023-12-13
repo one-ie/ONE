@@ -17,7 +17,10 @@ import partytown from "@astrojs/partytown";
 export default defineConfig({
   output: "server",
   adapter: cloudflare({}),
-  integrations: [tailwind(), svelte(), preact(), react(), mdx(), prefetch({
+  integrations: [tailwind(), svelte(),
+    preact({
+      include: ['./components/Button.jsx*'],
+    }),, react(), mdx(), prefetch({
     // Allow up to three links to be prefetched concurrently
     throttle: 3
   }), serviceWorker(),  partytown({
