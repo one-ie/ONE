@@ -16,12 +16,17 @@ import { Tweet, Vimeo, YouTube } from 'astro-embed';
 <Layout title={title}/> 
   <Header />
   <Hero />
-  <div class="flex justify-center items-center h-screen">
+  <section>
+    <container>
+  <div class="flex justify-center items-center pattern-secondary">
     <div class="w-full max-w-[800px] shadow-lg p-4">
       <h2 class="text-center">Demo</h2>
+      <br>
   <YouTube id="https://www.youtube.com/watch?v=kj1OB42Dhqw" />
     </div>
 </div>
+</container>
+</section>
 
   <Channels/>
   <Stats/>
