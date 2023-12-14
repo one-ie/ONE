@@ -11,10 +11,18 @@ import Cal from "@blocks/Cal.astro";
 import Channels from "@blocks/Channels.astro";
 import Stats from "@blocks/Stats.astro";
 import EcommercePlatforms from "@blocks/EcommercePlatforms.astro";
+import { Tweet, Vimeo, YouTube } from 'astro-embed';
 ---
 <Layout title={title}/> 
   <Header />
   <Hero />
+  <div class="flex justify-center items-center h-screen">
+    <div class="w-full max-w-[800px] shadow-lg p-4">
+      <h2 class="text-center">Demo</h2>
+  <YouTube id="https://www.youtube.com/watch?v=kj1OB42Dhqw" />
+    </div>
+</div>
+
   <Channels/>
   <Stats/>
   <EcommercePlatforms/>

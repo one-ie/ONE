@@ -30,6 +30,7 @@
         "@types/react-dom": "^18.2.17",
         "astro": "^4.0.3",
         "astro-critters": "^2.0.11",
+        "astro-embed": "^0.6.1",
         "astro-google-fonts-optimizer": "^0.2.2",
         "astro-sst": "^2.38.1",
         "astrojs-service-worker": "^2.0.0",
