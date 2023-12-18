@@ -1,0 +1,33 @@
+{
+  "company": {
+    "name": "ONE",
+    "website": "https://one.ie",
+    "owner": {
+      "name": "Anthony O'Connell",
+      "email": "tony@one.ie",
+      "phone": "+66660106632"
+    },
+    "description": "ONE empowers companies to create, deploy, and engage in stories and conversations using natural language. Offering courses, consulting, development, and a SAAS platform, ONE specializes in increasing conversion rates, sales, and profits through personalized customer interactions across multiple channels.",
+    "services": [
+      "Courses",
+      "Consulting",
+      "Development",
+      "SAAS Platform"
+    ],
+    "goals": [
+      "Attract followers, customers, clients, students, partners",
+      "Convert interactions into appointments and sales",
+      "Grow business through AI-driven personalized interactions"
+    ],
+    "core_services": [
+      "Lead capturing",
+      "Sales closing",
+      "Automating customer inquiries"
+    ],
+    "integration": [
+      "Ecommerce platforms",
+      "Funnel builders",
+      "Messaging channels"
+    ]
+  }
+}
