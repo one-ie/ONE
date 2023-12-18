@@ -1,0 +1,86 @@
+version: 4
+data:
+  attachedData:
+    trivet:
+      testSuites: []
+      version: 1
+  graphs:
+    5GKBWOAfNLAnRJv6iefDm:
+      metadata:
+        description: ""
+        id: 5GKBWOAfNLAnRJv6iefDm
+        name: Untitled Graph
+      nodes:
+        '[2huQBPJOSg4awl1AROUer]:text "Text"':
+          data:
+            text: Create a hero component for an AI chatbot
+          outgoingConnections:
+            - output->"Chat" jyI5UTq7xvv_TcvdDrP5g/prompt
+          visualData: 545/508/330/2//
+        '[R_GNfzWTJHrNZBcmcznFN]:text "Text"':
+          data:
+            text: src/content/blog
+          outgoingConnections:
+            - output->"Write File" VriI__g-kuQnsZJH8GZsC/path
+          visualData: 1133/107/330/6//
+        '[VriI__g-kuQnsZJH8GZsC]:writeFile "Write File"':
+          data:
+            baseDirectory: ./
+            content: ""
+            path: src/content/posts/
+            useBaseDirectoryInput: true
+            useContentInput: true
+            usePathInput: true
+          visualData: 1585/274/230/9//
+        '[YYP0jCp2mFiCosCA72Gxw]:text "Text"':
+          data:
+            text: ./
+          description: Base Directory
+          outgoingConnections:
+            - output->"Write File" VriI__g-kuQnsZJH8GZsC/baseDirectory
+          visualData: 1132/-69/330/8//
+        '[ZXogWZvkwFxHUCkymb-So]:text "Text"':
+          data:
+            text: You are an AI code generator that builds Astro websites with Daisy UI.
+              Reply with code only.
+          outgoingConnections:
+            - output->"Chat" jyI5UTq7xvv_TcvdDrP5g/systemPrompt
+          visualData: 532/310/330/null//
+        '[jyI5UTq7xvv_TcvdDrP5g]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Write File" VriI__g-kuQnsZJH8GZsC/content
+          visualData: 1052/293/230/1//
+  metadata:
+    description: ""
+    id: btcNvm7vL4OCBiCmJjojC
+    title: ONE
+  plugins:
+    - id: openai
+      name: OpenAI
+      type: built-in
+    - id: rivet-plugin-fs@latest
+      package: rivet-plugin-fs
+      tag: latest
+      type: package
