@@ -37,6 +37,7 @@
         "autoprefixer": "^10.4.16",
         "canvas-confetti": "^1.9.2",
         "daisyui": "4.4.19",
+        "grida": "^0.0.22",
         "nanostores": "^0.9.5",
         "postcss": "^8.4.32",
         "preact": "^10.19.2",
