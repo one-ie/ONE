@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "db83e59c2494a483",
+    "type": "split",
+    "children": [
+      {
+        "id": "5824c8b6d01274fa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b72c183474f0a43b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/blog3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9c517cf0fc48039a",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7d2f3cc20e7ad3d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6cf43f57ec249696",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a5a753ceb85dc710",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1e7be3dad0d98502",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f4a6ed48445e6892",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c64c8df7f1db671",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf5dc88413a9e58c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "posts/blog3.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fe602db0ee7bfda5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "posts/blog3.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d0383ceabb5a8ed5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0e4710141c9be70d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "posts/blog3.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b72c183474f0a43b",
+  "lastOpenFiles": [
+    "posts/blog1 1.md",
+    "posts/blog1.md",
+    "prompts/write-blog.md",
+    "0001-12-22.md",
+    "2024-01-06.md",
+    "posts/blog3.md",
+    "docs/glossary.md",
+    "posts/b.md",
+    "blog/markdown-style-guide.md",
+    "learn/daisyui/theme.md",
+    "Untitled.md"
+  ]
+}

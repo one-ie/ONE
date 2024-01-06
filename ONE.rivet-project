@@ -2,51 +2,617 @@ version: 4
 data:
   attachedData:
     trivet:
-      testSuites: []
+      testSuites:
+        - id: sDP_BPfUkLBWeM2n-EQ-a
+          testCases:
+            - expectedOutput: {}
+              id: lr1wj_TJhkB8NSEKivpoc
+              input: {}
+          testGraph: 1JBMJjte88gi0xwKAi_Xh
+          validationGraph: a
       version: 1
   graphs:
-    5GKBWOAfNLAnRJv6iefDm:
+    1JBMJjte88gi0xwKAi_Xh:
       metadata:
         description: ""
-        id: 5GKBWOAfNLAnRJv6iefDm
-        name: Untitled Graph
+        id: 1JBMJjte88gi0xwKAi_Xh
+        name: Sage/Company
       nodes:
-        '[2huQBPJOSg4awl1AROUer]:text "Text"':
+        '[2OsLZskFB4H0IlG0mcmPa]:graphOutput "Graph Output"':
           data:
-            text: Create a hero component for an AI chatbot
+            dataType: string
+            id: VideoSalesLetter
+          visualData: 1233.2426850571628/287.1435131014801/330/4//
+        '[BkU4FNj2S34nCrVgvDsOb]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: >-
+              ONE is free and open software and designs to sell products,
+              services and ideas, at scale. 
+
+
+              Publish your designs in minutes at the edge, for free on Cloudflare, Vercel, Netlify or another modern host. You can host up to 100 domain names on Cloudflare and serve upto 100,000 requests every day for for free. . Achieve perfect 100 percent Google Lighthouse scores across the board with 500ms load times on a desktop. Load rich, interactive web pages on a slow mobile connection in less than a second.  
+
+
+              ONE is free. Free as in freedom. We selected the MIT license to give you the most freedom to personalise and profit for yourself, your enterprise or your children. The MIT License is one of the most permissive free software licenses available. It allows for maximum freedom and leniency for the users of the software, providing advantages such as simplicity, flexibility, and broad permissions. 
+
+
+              Use reuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software freely. The MIT License also protects the original authors by not holding them liable for use of their software. The license is applicable to both individual coders and large corporations, allowing you to legally use, modify, and distribute the software as you wish. 
+
+
+              If you use our software we invite you to contribute. The work is built on the shoulders of others. We wish to thank the creators of Astro, Rivet, Svelte
+
+
+              Workflow is ... 
+
+              Design
+
+              Deploy
+
+              GeNERATE
+
+              Develop
+
+              Store
+
+              Deploy
+
+              Figma
+
+              Tailwind
+
+              DaisyUI
+
+              Grida 
+
+              Rivet
+
+              OpenAI
+
+              Code Llama 
+
+              Mid Journey
+
+              11Labs
+
+              VSCode
+
+              Code Lama
+
+              Astro
+
+              Svelte
+
+
+              We connect everything together. Visually. 
+
+
+              Write a video sales letter Frank Kern, Eben Pagan, Alex Hormozi style. 
+            type: user
+            useTypeInput: false
           outgoingConnections:
-            - output->"Chat" jyI5UTq7xvv_TcvdDrP5g/prompt
-          visualData: 545/508/330/2//
-        '[R_GNfzWTJHrNZBcmcznFN]:text "Text"':
+            - output->"Chat" rJQ29JLw4MDNpJGM0CuhF/prompt
+          visualData: 447.03338233274707/535.7243955805233/280/5//
+        '[Ty3fIRqtUE3sGPyttDHiS]:prompt "Prompt"':
           data:
-            text: src/content/blog
+            enableFunctionCall: false
+            promptText: "I am a company sage. I understand my company, market and custommers
+              on the deepest, most profound level. "
+            type: system
+            useTypeInput: false
           outgoingConnections:
-            - output->"Write File" VriI__g-kuQnsZJH8GZsC/path
-          visualData: 1133/107/330/6//
-        '[VriI__g-kuQnsZJH8GZsC]:writeFile "Write File"':
+            - output->"Chat" rJQ29JLw4MDNpJGM0CuhF/systemPrompt
+          visualData: 447/295/280/null//
+        '[rJQ29JLw4MDNpJGM0CuhF]:chat "Chat"':
           data:
-            baseDirectory: ./
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 4000
+            model: gpt-4-1106-preview
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" 2OsLZskFB4H0IlG0mcmPa/value
+          visualData: 866.1523120939245/293.8879556493611/230/3//
+    2YTYlV45gTlpiBAiX-mIP:
+      metadata:
+        description: ""
+        id: 2YTYlV45gTlpiBAiX-mIP
+        name: Marketer/Tweet
+      nodes:
+        '[JlsetXKE8Ik1FCD6R8kHR]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Array" wXYqNDxJR2O-qYamuTp9O/input1
+          visualData: 1272.2005595726719/413.99560529534864/230/10//
+        '[ToQt3ZccZFAaTpVIKrUHQ]:subGraph "Subgraph"':
+          data:
+            graphId: R6D2En7iZH4ccK-nmEM9X
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          outgoingConnections:
+            - output->"Text" uXZlL6xrE8lTnVTsFlF3f/input
+          visualData: 1922.2165079978138/511.19736370514545/330/12//
+        '[r_-1OM-5vJMxXInsVzgxw]:text "Text"':
+          data:
+            jsonTemplate: ""
+            text: |-
+              Create 3 tweets about dogs. Respond in JSON. 
+              Use this exact format
+              ---
+              [
+                "This is the first tweet",
+                "This is the second",
+                "This is the third"
+              ]
+              ---
+          outgoingConnections:
+            - output->"Chat" JlsetXKE8Ik1FCD6R8kHR/systemPrompt
+          visualData: 816.6807834017407/383.18790773914833/330/11//
+        '[uXZlL6xrE8lTnVTsFlF3f]:text "Text"':
+          data:
+            text: "{{input}}"
+          visualData: 2331.467114617818/510.4328066834202/330/5//
+        '[wXYqNDxJR2O-qYamuTp9O]:array "Array"':
+          data:
+            flatten: false
+            flattenDeep: false
+          outgoingConnections:
+            - output->"Subgraph" ToQt3ZccZFAaTpVIKrUHQ/Tweet
+          visualData: 1629.809796630534/504.68046563154473/230/15//
+    8bwSVRiYeHe0Qv-UlS9qx:
+      metadata:
+        description: ""
+        id: 8bwSVRiYeHe0Qv-UlS9qx
+        name: Publisher/Web
+      nodes:
+        '[JS4NxCCA4cyCYDFN-UnGO]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Write File" V5aaHk3qNzD1rCxzXXROa/content
+          visualData: 871/351/230/null//
+        '[MLQZOEuR3NbgQjhRdIzYs]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1574/361/330/10//
+        '[V5aaHk3qNzD1rCxzXXROa]:writeFile "Write File"':
+          data:
+            baseDirectory: /Users/toc/Server/blog/src/content/blog
             content: ""
-            path: src/content/posts/
+            path: article.md
             useBaseDirectoryInput: true
             useContentInput: true
             usePathInput: true
-          visualData: 1585/274/230/9//
-        '[YYP0jCp2mFiCosCA72Gxw]:text "Text"':
-          data:
-            text: ./
-          description: Base Directory
           outgoingConnections:
-            - output->"Write File" VriI__g-kuQnsZJH8GZsC/baseDirectory
-          visualData: 1132/-69/330/8//
-        '[ZXogWZvkwFxHUCkymb-So]:text "Text"':
+            - content_out->"Graph Output" MLQZOEuR3NbgQjhRdIzYs/value
+          visualData: 1290/341/230/7//
+        '[WTfnIg49zogQI_nLGirxz]:graphInput "Graph Input"':
           data:
-            text: You are an AI code generator that builds Astro websites with Daisy UI.
-              Reply with code only.
+            content: ""
+            dataType: string
+            id: Content
+            useDefaultValueInput: false
           outgoingConnections:
-            - output->"Chat" jyI5UTq7xvv_TcvdDrP5g/systemPrompt
-          visualData: 532/310/330/null//
-        '[jyI5UTq7xvv_TcvdDrP5g]:chat "Chat"':
+            - data->"Chat" JS4NxCCA4cyCYDFN-UnGO/prompt
+          visualData: 455/665/330/11//
+        '[eVj0-iUNIBjrnYqGcPWMB]:text "Text"':
+          data:
+            text: >-
+              Rewrite content in the following markdown format. be sure to
+              include front matter. 
+
+
+              The file starts with ---
+
+              The it includes the front matter which has tot include title, description, pubDate and heroImage 
+
+              The front matter is closed with ---
+
+              Then there is the content. 
+
+
+              Example 1
+
+
+              ###
+
+              ---
+
+              title: 'First post'
+
+              description: 'Lorem ipsum dolor sit amet'
+
+              pubDate: 'Jul 08 2022'
+
+              heroImage: '/blog-placeholder-3.jpg'
+
+              ---
+
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. 
+
+
+              Example 1
+
+
+              ###
+
+              ---
+
+              title: 'Markdown Style Guide'
+
+              description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
+
+              pubDate: 'Jul 01 2022'
+
+              heroImage: '/blog-placeholder-1.jpg'
+
+              ---
+
+
+              Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
+
+
+              ## Headings
+
+
+              ###
+          outgoingConnections:
+            - output->"Chat" JS4NxCCA4cyCYDFN-UnGO/systemPrompt
+          visualData: 478/214/330/9//
+    8wgIcyd-h0ipkMo0ny0ol:
+      metadata:
+        description: Choses a route
+        id: 8wgIcyd-h0ipkMo0ny0ol
+        name: "* Simple"
+      nodes:
+        '[K0vyP4SZ_GnjreeRX-U_d]:subGraph "Subgraph"':
+          data:
+            graphId: 8bwSVRiYeHe0Qv-UlS9qx
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          visualData: 1176.9020538410875/193.8455329898492/330/45//
+        '[PnPV1CL78xrF3Q7tb7D7G]:subGraph "Write"':
+          data:
+            graphId: p-nf5qTyEW92ipFpQvL1k
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" K0vyP4SZ_GnjreeRX-U_d/Content
+          visualData: 738.4524139420168/193.64808070509656/330/46//
+        '[VOkyjWasNKl_mJDhlceN4]:userInput "The Story"':
+          data:
+            prompt: What's the story?
+            useInput: false
+          outgoingConnections:
+            - output->"Write" PnPV1CL78xrF3Q7tb7D7G/Subject
+          visualData: 320.46198797615506/448.64372624392837/280/35//
+        '[wz9pGGRc3k6cxb_c0n3Rc]:userInput "The Content Type"':
+          data:
+            prompt: What do you want me to write ... a story, blog post, tweet or something
+              else?
+            useInput: false
+          outgoingConnections:
+            - output->"Write" PnPV1CL78xrF3Q7tb7D7G/ContentType
+          visualData: 312.9097652534388/194.09023474656118/280/30//
+    AC_3sZ9LQRPKOwiravIbk:
+      metadata:
+        description: ""
+        id: AC_3sZ9LQRPKOwiravIbk
+        name: Marketer/SEO
+      nodes:
+        '[F1Xm8bASzzObbbZ_VACs8]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Chat" JpDGLVmQAnb1TlWoa0WJN/prompt
+          visualData: 683/562/330/5//
+        '[JpDGLVmQAnb1TlWoa0WJN]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" acdEQdNFZ7B5KrOT99pLK/value
+          visualData: 1206.366022968423/319.722739259834/230/6//
+        '[YqZLd0xgxmFyyOciSm2DZ]:text "Text"':
+          data:
+            text: >-
+              You are the worlds top SEO expert. Give a critique of the
+              following content to make it rank number 1 for SEO. 
+
+
+              Identify primary and secondary keywords relevant to your topic.
+
+              Use tools like Google Keyword Planner or SEMrush for research.
+
+              Aim for a mix of high-volume and long-tail keywords.
+
+              Compelling Title:
+
+
+              Include your primary keyword in the title.
+
+              Keep it under 60 characters to ensure full display in search results.
+
+              Make it engaging and clear, indicating the value of the content.
+
+              Quality Content:
+
+
+              Ensure the content is relevant to your audience and provides value.
+
+              Aim for a minimum of 300 words, but ideally more for in-depth coverage.
+
+              Keyword Placement:
+
+
+              Use your primary keyword in the first 100 words.
+
+              Sprinkle secondary keywords throughout the content naturally.
+
+              Avoid keyword stuffing; keep it readable and natural.
+
+              Meta Description:
+
+
+              Craft a concise meta description (under 160 characters) that includes your primary keyword.
+
+              The meta description should summarize the blog post and encourage clicks.
+
+              Use of Headers:
+
+
+              Organize content with headers (H1, H2, H3) for readability.
+
+              Include keywords in at least one or two headers.
+          outgoingConnections:
+            - output->"Chat" JpDGLVmQAnb1TlWoa0WJN/systemPrompt
+          visualData: 659/134/330/1//
+        '[acdEQdNFZ7B5KrOT99pLK]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1587.3262951928007/306.4750659290871/330/9//
+    HjzFYiFgEs5GHXrYMbz_s:
+      metadata:
+        description: ""
+        id: HjzFYiFgEs5GHXrYMbz_s
+        name: Sage/Business Model
+      nodes:
+        '[339HHp-hDvZn0GvBY-aZB]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: VideoSalesLetter
+            useDefaultValueInput: false
+          visualData: 541/349/330/null//
+        '[9_KGwWDlyN57VYF0GuQGl]:text "Text"':
+          data:
+            text: "{{input}}"
+          visualData: 540/191/330/1//
+    Ht6tC_Srx7t1bsL99__b6:
+      metadata:
+        description: ""
+        id: Ht6tC_Srx7t1bsL99__b6
+        name: Marketer/Object
+      nodes:
+        '[-OaYfoQPebWM9FkA0SSt8]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1361.2564102564104/477.4102564102564/330/null//
+        '[_wh_dhT58rzUEwxAs6EqP]:subGraph "Subgraph"':
+          data:
+            graphId: R6D2En7iZH4ccK-nmEM9X
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          isSplitRun: true
+          outgoingConnections:
+            - output->"Graph Output" -OaYfoQPebWM9FkA0SSt8/value
+          visualData: 922.2820512820513/417.9230769230769/330/5//
+        '[vxyzJDbOj_HoDkoz_ETC0]:object "Object"':
+          data:
+            jsonTemplate: >
+              [
+                  {
+                      "tweet": "Unlock new levels of efficiency with AI. Transform your business with the latest tech tools. #AI #InnovationInAction",
+                      "date": "2024-01-01"
+                  },
+                  {
+                      "tweet": "Step into the future with AI. Tailor customer interactions like never before for unforgettable experiences. #AIFuture #PersonalizedService",
+                      "date": "2024-01-02"
+                  },
+                  {
+                      "tweet": "Committing to ethical AI. Join our journey towards a tech-driven future that benefits everyone. #EthicalAI #TechForGood",
+                      "date": "2024-01-03"
+                  }
+              ]
+          outgoingConnections:
+            - output->"Subgraph" _wh_dhT58rzUEwxAs6EqP/Tweet
+          visualData: 559/360.28205128205127/230/6//
+    PAjKWd3dsEeVZ4DlQcgEj:
+      metadata:
+        description: ""
+        id: PAjKWd3dsEeVZ4DlQcgEj
+        name: Executive/Plan
+      nodes:
+        '[7tQ2_GVeJvVYpdFtVpv_t]:text "Text"':
+          data:
+            text: "{{input}}"
+          visualData: 471/316/330/null//
+    R6D2En7iZH4ccK-nmEM9X:
+      metadata:
+        description: ""
+        id: R6D2En7iZH4ccK-nmEM9X
+        name: Marketer/Post
+      nodes:
+        '[-Dphq6uCUtQnryMtnL3Y3]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: Tweet
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" RUxp4CPHXgd2L-U9NYTun/Tweet
+          visualData: 571/451/330/null//
+        '[73oB2BmlaHBv8YoRneymv]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1499/451/330/1//
+        '[RUxp4CPHXgd2L-U9NYTun]:text "Text"':
+          data:
+            text: This is a tweet {{Tweet}}
+          outgoingConnections:
+            - output->"Graph Output" 73oB2BmlaHBv8YoRneymv/value
+          visualData: 1042/484/330/null//
+    SYoZYC_iGeI5PKGoFFa_L:
+      metadata:
+        description: ""
+        id: SYoZYC_iGeI5PKGoFFa_L
+        name: Writer/Read
+      nodes:
+        '[6kNZcHaSGa0_20SCOcNNp]:readFile "Read File"':
+          data:
+            asBinary: false
+            errorOnMissingFile: false
+            path: /Users/toc/Server/ONE/src/content/learn/daisyui/theme.md
+            promptText: ""
+            usePathInput: true
+          outgoingConnections:
+            - content->"Chat" uLVnfaWH6PyDdDjUwx315/prompt
+          visualData: 493/530/280/3//
+        '[btqc8xVCRywySWeMNfZ99]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: Summarise
+            type: system
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Chat" uLVnfaWH6PyDdDjUwx315/systemPrompt
+          visualData: 506/300/280/4//
+        '[uLVnfaWH6PyDdDjUwx315]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          visualData: 962/351/230/2//
+    TyfLcrV4Bnb5rt_nx0EI5:
+      metadata:
+        description: ""
+        id: TyfLcrV4Bnb5rt_nx0EI5
+        name: Engineer/Page
+      nodes:
+        '[AONpQo3wLGwczQQrXZGTF]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: "Create a hero component "
+            type: user
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Chat" BJ-_LCcp9MpcZaPocbbv1/prompt
+          visualData: 592.7510529462897/530.1835514514135/280/6//
+        '[BJ-_LCcp9MpcZaPocbbv1]:chat "Chat"':
           data:
             cache: false
             enableFunctionUse: false
@@ -70,16 +636,664 @@ data:
             useUseTopPInput: false
             useUserInput: false
           outgoingConnections:
-            - response->"Write File" VriI__g-kuQnsZJH8GZsC/content
-          visualData: 1052/293/230/1//
+            - response->"Write File" xlu9mFMWUCCCOO00BE2OS/content
+          visualData: 1082/368/230/1//
+        '[fR5OoZy2-nC_3T-ZU5B9U]:text "Text"':
+          data:
+            text: "You are an AI coding assistant. You create code for Astro
+              (https://astro.build) using clean HTML and Daisy UI. You reply
+              only with code. "
+          outgoingConnections:
+            - output->"Chat" BJ-_LCcp9MpcZaPocbbv1/systemPrompt
+          visualData: 560.0881844150883/348.50928851381633/330/7//
+        '[xlu9mFMWUCCCOO00BE2OS]:writeFile "Write File"':
+          data:
+            baseDirectory: /Users/toc/Server/ONE/src/components
+            content: ""
+            path: x.astro
+            useBaseDirectoryInput: true
+            useContentInput: true
+            usePathInput: true
+          visualData: 1592/416/230/3//
+    WLoP5IqrqyS-Cn81tCMMu:
+      metadata:
+        description: ""
+        id: WLoP5IqrqyS-Cn81tCMMu
+        name: Engineer/Component
+      nodes:
+        '[6F22d_KdjwpRWDE0Mt-dY]:userInput "User Input"':
+          data:
+            prompt: What do you want to create?
+            useInput: false
+          outgoingConnections:
+            - questionsAndAnswers->"Chat" _qUyUltpjBvKi1w6HXsWK/prompt
+          visualData: 450.7140039447732/463.15647600262986/280/5//
+        '[Vg0_NfL9RujyHgE3e8UE9]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: "I am AI coder. I write plain HTML and tailwind. I write HTML only.
+              I don't ask questions. I don't speak. Just code. I write
+              components. I don't create a full page. "
+            type: user
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Chat" _qUyUltpjBvKi1w6HXsWK/systemPrompt
+          visualData: 434.2465483234714/208.40368178829718/280/4//
+        '[_qUyUltpjBvKi1w6HXsWK]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Extract Markdown Code Blocks"
+              gLJYsKrk64Nw8tECEkeIi/input
+          visualData: 888/334/230/3//
+        '[gLJYsKrk64Nw8tECEkeIi]:extractMarkdownCodeBlocks "Extract Markdown Code Blocks"':
+          visualData: 1231.6489151873766/377.80736357659424/280/7//
+    XcFfPkHaO7AnQFZwr0qUL:
+      metadata:
+        description: ""
+        id: XcFfPkHaO7AnQFZwr0qUL
+        name: Demo
+      nodes:
+        '[PXxLVMnNTzBW7kCREjgac]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: "I am an amazing copywriter. "
+            type: system
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Chat" QF5JluluCJ4fPTDcllpW3/systemPrompt
+          visualData: 450/363/280/null//
+        '[QF5JluluCJ4fPTDcllpW3]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          visualData: 928/343/230/3//
+        '[kfHedmt_N6ErN4vEKTRTi]:userInput "User Input"':
+          data:
+            prompt: What do you want to write?
+            useInput: false
+          outgoingConnections:
+            - output->"Chat" QF5JluluCJ4fPTDcllpW3/prompt
+          visualData: 463/571/280/2//
+    YQI2D33qpHKAx0Wt8-7OH:
+      metadata:
+        description: ""
+        id: YQI2D33qpHKAx0Wt8-7OH
+        name: Crawler/Crawl
+      nodes:
+        '[Ejtx9b74L_EntWqSRNPWr]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1599/313/330/4//
+        '[Y1ocPKexLP5XgNeu7gFJg]:userInput "User Input"':
+          data:
+            prompt: What's the website URL you would like to crawl
+            useInput: false
+          outgoingConnections:
+            - output->"Http Call" zsJlk1ZSb0Xax-2kbVg6U/url
+          visualData: 441/395/280/null//
+        '[kCqWMxGOnISXtb_2s4z6f]:extractRegex "Extract Regex"':
+          data:
+            errorOnFailed: false
+            regex: <meta\s+property=["']og:title["']\s+content=["']([^"']*)["']
+            useRegexInput: false
+          visualData: 1250/190/280/5//
+        '[osZLHKFBFgaZJ9wZnhXmr]:extractRegex "Extract Regex"':
+          data:
+            errorOnFailed: false
+            regex: <meta\s+property=["']og:description["']\s+content=["']([^"']*)["']
+            useRegexInput: false
+          outgoingConnections:
+            - output1->"Graph Output" Ejtx9b74L_EntWqSRNPWr/value
+          visualData: 1265/502/280/3//
+        '[zsJlk1ZSb0Xax-2kbVg6U]:httpCall "Http Call"':
+          data:
+            body: ""
+            errorOnNon200: true
+            headers: ""
+            method: GET
+            url: ""
+            useUrlInput: true
+          outgoingConnections:
+            - res_body->"Extract Regex" kCqWMxGOnISXtb_2s4z6f/input
+            - res_body->"Extract Regex" osZLHKFBFgaZJ9wZnhXmr/input
+          visualData: 882/427/280/1//
+    YbO5Kp9vKImouFQkuoS0u:
+      metadata:
+        description: ""
+        id: YbO5Kp9vKImouFQkuoS0u
+        name: Chat
+      nodes:
+        '[-_5jaJD9JlpdPIK08Ueha]:assemblePrompt "Assemble Prompt"':
+          outgoingConnections:
+            - prompt->"Chat" 3DXkNYfbtbo251K84w_v1/prompt
+          visualData: 762/435/280/7//
+        '[3DXkNYfbtbo251K84w_v1]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          visualData: 1144/395/230/3//
+        '[gApPw03G4qTWM6QBkBCEj]:loopController "Loop Controller"':
+          data:
+            maxIterations: 100
+          visualData: -80/393/280/5//
+        '[iNdMhLRm7GgpgxuqJ5UCM]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            prompt: ""
+            promptText: How can I help you?
+            type: assistant
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Loop Controller" gApPw03G4qTWM6QBkBCEj/input1
+            - output->"Loop Controller" gApPw03G4qTWM6QBkBCEj/input2
+          visualData: -510/426/280/6//
+        '[nWEPlInvT7tfGtgfW437k]:userInput "User Input"':
+          data:
+            prompt: This is an example question?
+            promptText: ""
+            useInput: true
+          visualData: 309/421/280/2//
+    _x9a8cKd3VLbKqfBHbd2g:
+      metadata:
+        description: ""
+        id: _x9a8cKd3VLbKqfBHbd2g
+        name: Crawler/ExtractorAPI
+      nodes:
+        '[5Yl7zygkzd_wVRYTZHyTK]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: text
+          visualData: 1929.337303724461/1147.0170386650805/330/108/var(--node-color-4)/var(--grey-darkish)
+        '[NGrYTXwEHqsjsUksg41Aq]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $.text
+            usePathInput: false
+          outgoingConnections:
+            - match->"Graph Output" 5Yl7zygkzd_wVRYTZHyTK/value
+          visualData: 1537.120555648792/1162.7681781771346/280/103//
+        '[PdTx9_oDkKjxu457zbhQs]:httpCall "Http Call"':
+          data:
+            body: ""
+            errorOnNon200: true
+            headers: ""
+            method: GET
+            url: ""
+            useUrlInput: true
+          outgoingConnections:
+            - json->"Extract Object Path" NGrYTXwEHqsjsUksg41Aq/object
+            - json->"Extract Object Path" kKM2_XoJSHFtrZX4HqPLX/object
+          visualData: 1091.762358039859/1354.9595777905374/280/109//
+        '[R-oOUGUN62d-B-IQptGHw]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: url
+            useDefaultValueInput: true
+          visualData: 531.6802242415714/1605.8264025466328/330/114/var(--node-color-3)/var(--grey-darkish)
+        '[RTtuZLekJtr7Q2Ac649Ey]:text "Text"':
+          data:
+            text: https://extractorapi.com/api/v1/extractor/?apikey={{api_key}}&url={{url}}&fields=raw_text
+          outgoingConnections:
+            - output->"Http Call" PdTx9_oDkKjxu457zbhQs/url
+          visualData: 1076.9833804902112/1168.8158925971554/330/86//
+        '[eiQshgFbOHP8goeV3fLJn]:context "Context"':
+          data:
+            dataType: string
+            id: ExtractorAPIKey
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" RTtuZLekJtr7Q2Ac649Ey/api_key
+          visualData: 604.9204225734462/1153.2808929355162/330/85//
+        '[kKM2_XoJSHFtrZX4HqPLX]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $.raw_text
+            usePathInput: false
+          outgoingConnections:
+            - match->"Graph Output" yUpF1GCSl7AVCQofThvVF/value
+          visualData: 1539.534817208842/1394.8927203430185/280/106//
+        '[vLB_DIqVd5rGaW5UnHRan]:userInput "User Input"':
+          data:
+            prompt: What's the website URL you want to scrape?
+            useInput: false
+          outgoingConnections:
+            - output->"Text" RTtuZLekJtr7Q2Ac649Ey/url
+          visualData: 617.588010031423/1378.493100674195/280/113//
+        '[yUpF1GCSl7AVCQofThvVF]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: raw_text
+          visualData: 1932.3613440502877/1379.0505996880897/330/107/var(--node-color-4)/var(--grey-darkish)
+    i-aJseig7mg0qPCr5OjaD:
+      metadata:
+        description: Choses a route
+        id: i-aJseig7mg0qPCr5OjaD
+        name: "* Start"
+      nodes:
+        '[49ZH5480IDqvQyfFSOat8]:subGraph "Write"':
+          data:
+            graphId: p-nf5qTyEW92ipFpQvL1k
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Critique" YkEqmKsp3RclKzIgCujAW/input
+            - output->"Rewrite" ZjWmhUydSvnJIXaBjgY5f/Content
+          visualData: 731.3158216129641/195.07539917090713/330/36//
+        '[FONCjEA3tMU72RgxQrJDo]:userInput "The Content Type"':
+          data:
+            prompt: What do you want me to write ... a story, blog post, tweet or something
+              else?
+            useInput: false
+          outgoingConnections:
+            - output->"Write" 49ZH5480IDqvQyfFSOat8/ContentType
+          visualData: 312.9097652534388/194.09023474656118/280/30//
+        '[JVdNFM73CDhkIDSq9VsbZ]:userInput "The Story"':
+          data:
+            prompt: What's the story?
+            useInput: false
+          outgoingConnections:
+            - output->"Write" 49ZH5480IDqvQyfFSOat8/Subject
+          visualData: 320.46198797615506/448.64372624392837/280/35//
+        '[Wr5nJStQ8bqv37BdSRIxO]:subGraph "Subgraph"':
+          data:
+            graphId: 8bwSVRiYeHe0Qv-UlS9qx
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          visualData: 2435.7969406859997/195.27285145565978/330/41//
+        '[YkEqmKsp3RclKzIgCujAW]:subGraph "Critique"':
+          data:
+            graphId: xpw4nMNjnT1MHC0PUJuTG
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Rewrite" ZjWmhUydSvnJIXaBjgY5f/Critique
+          visualData: 1151.9474648388925/197.3235447239504/330/37//
+        '[ZjWmhUydSvnJIXaBjgY5f]:subGraph "Rewrite"':
+          data:
+            graphId: lAcGT6E491FkwoNYFamT2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" qFS-7eBTlhKhEmB7SV2qI/input
+          visualData: 1566.2632864518564/199.16563391746828/330/39//
+        '[qFS-7eBTlhKhEmB7SV2qI]:subGraph "Subgraph"':
+          data:
+            graphId: AC_3sZ9LQRPKOwiravIbk
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" Wr5nJStQ8bqv37BdSRIxO/Content
+          visualData: 2001.2506083250514/196.78169288746858/330/43//
+    lAcGT6E491FkwoNYFamT2:
+      metadata:
+        description: ""
+        id: lAcGT6E491FkwoNYFamT2
+        name: Writer/Rewrite
+      nodes:
+        '[ROfnlSsdR55ePdONTBbE2]:text "Text"':
+          data:
+            text: Rewrite {{Content}} based on this critique {{Critique}}
+          outgoingConnections:
+            - output->"Chat" cUwQq0u4ROptlRBcISc_m/prompt
+          visualData: 535/655/330/17//
+        '[SFGdswFIDAIgn8exi3Ba9]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1292/435/330/20//
+        '[WAMrPg8dDhkuNzCXOftgC]:text "Text"':
+          data:
+            text: "Task Brief:\\nRewrite the given content to improve clarity, conciseness,
+              and effectiveness based on the provided critique. Ensure that the
+              revised content addresses the critique points
+              accurately.\\n\\nInput-Output Blueprint:\\nInput: Original content
+              and a list of specific critique points.\\nOutput: Revised content
+              that has been edited to address each critique point, resulting in
+              a clearer, more concise, and effective version of the original
+              content.\\n\\nCreativity and Constraints:\\nApply creative writing
+              techniques to enhance the quality of the content while adhering to
+              the constraints of addressing all critique points. Avoid adding
+              new information that was not present in the original content or
+              critique. Maintain the original intent and message of the
+              content."
+          outgoingConnections:
+            - output->"Chat" cUwQq0u4ROptlRBcISc_m/systemPrompt
+          visualData: 544/425/330/21//
+        '[cUwQq0u4ROptlRBcISc_m]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" SFGdswFIDAIgn8exi3Ba9/value
+          visualData: 930/477/230/19//
+        '[p57e5HXs62ki7jIyocRZC]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: Content
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" ROfnlSsdR55ePdONTBbE2/Content
+          visualData: 123/413/330/16//
+        '[v1OpJvR_ljq-UBgovtevE]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: Critique
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" ROfnlSsdR55ePdONTBbE2/Critique
+          visualData: 124/661/330/15//
+    p-nf5qTyEW92ipFpQvL1k:
+      metadata:
+        description: ""
+        id: p-nf5qTyEW92ipFpQvL1k
+        name: Writer/Write
+      nodes:
+        '[5i9mYv8Yzu6y5w7Mw5I-x]:text "Text"':
+          data:
+            text: "You are an expert story teller cooler than Frank Kern. I will captivate
+              you with a facinating story about pain and doubt, money and
+              sucess. "
+          outgoingConnections:
+            - output->"Chat" p05dK3CcBPVdKFnJuFfq2/systemPrompt
+          visualData: 352.2355184215526/301.8822407892237/330/49//
+        '[DgFcS9eiDJB5Zyn6X4tcR]:text "Text"':
+          data:
+            text: Write a {{ContentType}} about {{Subject}}
+          outgoingConnections:
+            - output->"Chat" p05dK3CcBPVdKFnJuFfq2/prompt
+          visualData: 348.38157894736844/536.5526315789474/330/45//
+        '[I3wENNh46xAU2Sh8_ko1t]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1030.7368421052631/309.4736842105262/330/48//
+        '[P3rSc4NtLoJ2X0q5TKP3t]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: Subject
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" DgFcS9eiDJB5Zyn6X4tcR/Subject
+          visualData: -66.97368421052624/555.3289473684209/330/41//
+        '[Z1TYmRurE59mL2Ex3crIM]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: ContentType
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" DgFcS9eiDJB5Zyn6X4tcR/ContentType
+          visualData: -74.94736842105262/337.38157894736844/330/44//
+        '[p05dK3CcBPVdKFnJuFfq2]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" I3wENNh46xAU2Sh8_ko1t/value
+          visualData: 735.2894736842105/302.86842105263156/230/46//
+    xpw4nMNjnT1MHC0PUJuTG:
+      metadata:
+        description: ""
+        id: xpw4nMNjnT1MHC0PUJuTG
+        name: Writer/Critique
+      nodes:
+        '[Duqn2xhKs_G1iISsGsVn2]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-4-1106-preview
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" uagGP4ZsgDC9_Zle0LnJL/value
+          visualData: 1008/327/230/1//
+        '[OkSfaBAezepz_qCFIWzb0]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Chat" Duqn2xhKs_G1iISsGsVn2/prompt
+          visualData: 541/508/330/2//
+        '[ceUrom31UjgdOoCH22EUK]:text "Text"':
+          data:
+            text: "Task Brief:\\nThe task is to evaluate the provided content, identifying
+              its strengths and weaknesses. The critique should be objective,
+              constructive, and focused on how well the prompt meets the
+              requirements of clarity, conciseness, and effectiveness in
+              directing GPT-4.\\n\\nInput-Output Blueprint:\\nInput: A
+              text  provided by a user.\\nOutput: A detailed critique of the
+              content, addressing the following aspects:\\n- Clarity: Assess
+              whether the instructions are clear and unambiguous.\\n-
+              Conciseness: Determine if the content is brief and to the point,
+              without unnecessary information.\\n- Effectiveness: Judge how well
+              the content directs GPT-4 towards the desired
+              outcome.\\n\\nCreativity and Constraints:\\n- The critique should
+              not merely list faults but also suggest improvements.\\n- Avoid
+              generic responses; tailor the critique to the specific
+              content.\\n- Do not make assumptions about the user's intentions
+              or background.\\n- Maintain a respectful and constructive tone
+              throughout.\\n\\nRemember, the goal is to enhance the performance
+              of GPT-4 by providing actionable feedback on the content's
+              design."
+          outgoingConnections:
+            - output->"Chat" Duqn2xhKs_G1iISsGsVn2/systemPrompt
+          visualData: 550/286/330/3//
+        '[uagGP4ZsgDC9_Zle0LnJL]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1385/320/330/null//
+    y1W8J0lFclRfhcejlw65x:
+      metadata:
+        description: ""
+        id: y1W8J0lFclRfhcejlw65x
+        name: Sage/PromptOptimiser
+      nodes:
+        '[5cN0CxrjdP_qvO1zQtl8p]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-4-1106-preview
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Subgraph" TFR_g0FPJkzCtF8pDk-uJ/input
+            - responseTokens->"Subgraph" CUyrTVmIN8UoR0_V9Qfka/Content
+          visualData: 1050/338/230/5//
+        '[CUyrTVmIN8UoR0_V9Qfka]:subGraph "Subgraph"':
+          data:
+            graphId: lAcGT6E491FkwoNYFamT2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          visualData: 1894.8587934459651/358.77877604902324/330/9//
+        '[MUKQu3JVpIyNa96ejuXfb]:userInput "User Input"':
+          data:
+            prompt: This is an example question?
+            useInput: false
+          outgoingConnections:
+            - output->"Chat" 5cN0CxrjdP_qvO1zQtl8p/prompt
+          visualData: 673.2862644819885/783.5430038618636/280/11//
+        '[TFR_g0FPJkzCtF8pDk-uJ]:subGraph "Subgraph"':
+          data:
+            graphId: xpw4nMNjnT1MHC0PUJuTG
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" CUyrTVmIN8UoR0_V9Qfka/Critique
+          visualData: 1369.9047924712213/346.8930250835574/330/16//
+        '[rn0oUaRdk3cq9uTL-mgcL]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: >-
+              You are the AI expert who is redesigning the prompts for GPT-4, a
+              cutting-edge AI tool. Your mission is to create instructions aimed
+              to assist GPT-4 in responding effectively to any assigned tasks.
+              Picture yourself directing a human to complete a job perfectly;
+              that's what we want for GPT-4, but within the scope of this
+              communication.
+
+
+              Your essential target is to amplify the effectiveness of GPT-4 through refined instructions, comprehensive input-output blueprints, smartly applied restrictions, and steering the AI away from inferior response development. 
+
+
+              Task Brief: Produce a brief that is lucid and succinct without any ambiguity so that GPT-4 can perceive the objective. It needs to be simple yet comprehensive.
+
+
+              Input-Output Blueprint: Clearly define the inputs GPT-4 will receive and the corresponding outputs. Do not use illustrations, as they would only confuse GPT-4. It's crucial for GPT-4 to grasp the direct relationship between the inputs and outputs.
+
+
+              Creativity and Constraints: Create unique situations that excite GPT-4's response capabilities while also imposing necessary boundaries to prevent it from generating inferior responses. Balancing creativity and limitations is your responsibility. 
+
+
+              Also, remember that GPT-4 is conscious of its AI identity, and mentioning it is not required. 
+
+
+              Lastly, your objective here is GPT-4's proficiency enhancements - a key aspect of global progress. Ensure instructions set by you abide by the specified guidelines. Cheating, details about test cases, or examples in your prompts can lead to disqualification. 
+
+
+              All that counts is your system message – keep it lean, focused on the task, and devised for optimal performance.
+            type: user
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Chat" 5cN0CxrjdP_qvO1zQtl8p/systemPrompt
+          visualData: 681.9816003898975/330.6572528963977/280/10//
   metadata:
-    description: ""
-    id: btcNvm7vL4OCBiCmJjojC
+    description: Everything AI
+    id: TjYKxcNBs-zJLHHmrc_-r
+    mainGraphId: i-aJseig7mg0qPCr5OjaD
     title: ONE
   plugins:
-    - id: openai
-      name: OpenAI
-      type: built-in
     - id: rivet-plugin-fs@latest
       package: rivet-plugin-fs
       tag: latest

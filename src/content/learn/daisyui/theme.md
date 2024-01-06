@@ -4,7 +4,7 @@ Learn how to use daisyUI colors in your project.
 
 ## Introduction
 
-DaisyUI is fully themeable and colorable. Instead of using constant color utility classes like `bg-green-500`, `bg-orange-600`, and `bg-blue-700`, it's suggested to use semantic color utility classes like `bg-primary`, `bg-secondary`, and `bg-accent`. Each color name contains CSS variables, and daisyUI themes apply color values to the utility classes.
+DaisyUI is fully theme-able and colorable. Instead of using constant color utility classes like `bg-green-500`, `bg-orange-600`, and `bg-blue-700`, it's suggested to use semantic color utility classes like `bg-primary`, `bg-secondary`, and `bg-accent`. Each color name contains CSS variables, and daisyUI themes apply color values to the utility classes.
 
 ## Benefits
 
