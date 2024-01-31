@@ -10,7 +10,7 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://one.ie",
+  site: "https://new.one.ie",
   integrations: [mdx({
     syntaxHighlight: 'shiki',
     shikiConfig: {
