@@ -1,0 +1,54 @@
+---
+title: Github Quickstart
+description: How to upload your website to git hub
+image: 
+category: Version Control
+activity: Setup
+task: Get Started with Git and GitHub
+sequence: 101
+tags: git, github, get started, beginner, setup, installation, quick start, beginner, tutorial, guide, walkthrough, how to, 101, git hub, git hub setup, git hub quick start, git hub beginner, git hub installation, git hub quick setup, git hub beginner setup, git hub tutorial, git hub guide, git hub walkthrough, git hub how to, git hub 101, git hub quick start, git hub beginner, git hub installation, git hub quick setup, git hub beginner setup, git hub tutorial, git hub guide, git hub walkthrough, git hub how to, git hub 101, git hub quick start, git hub beginner, git hub installation, git hub quick setup, git hub beginner setup, git hub tutorial, git hub guide, git hub walkthrough, git hub how to, git hub 101, git hub quick start, git hub beginner, git hub installation, git hub quick setup, git hub beginner setup, git hub tutorial, git hub guide, git hub walkthrough, git hub how to, git hub 101, git hub quick start, git hub beginner, git hub installation, git hub quick setup
+---
+
+# **Fast-Track Your Project with Git and GitHub**
+Accelerate your project's journey from local development to global accessibility with ONE's rapid guide to Git and GitHub integration.
+
+## **Step 1: Install Git**
+**Speedy Setup**
+- Download Git from [git-scm.com](https://git-scm.com/).
+- Follow the installation instructions for your operating system.
+- Verify installation: Open a terminal and type `git --version`. You should see a version number.
+
+## **Step 2: Create a Local Repository**
+**Instant Initialization**
+1. Open a terminal.
+2. Navigate to your project directory: `cd path/to/your/project`.
+3. Initialize the repository: `git init`.
+4. Your local Git repository is ready!
+
+## **Step 3: Add Project Files**
+**Rapid File Tracking**
+1. Add files to the staging area: `git add .` (adds all files).
+2. Commit the changes: `git commit -m "Initial commit"`.
+3. Your changes are now committed locally.
+
+## **Step 4: Create a GitHub Repository**
+**Effortless Online Setup**
+1. Log in to [GitHub](https://github.com/).
+2. Click the "+" icon in the top right corner, then "New repository".
+3. Name your repository, add a description (optional), and choose public or private.
+4. Click "Create repository".
+
+## **Step 5: Link Local Repository to GitHub**
+**Seamless Synchronization**
+1. Copy the GitHub repository URL.
+2. Link your local repository to GitHub:
+   - `git remote add origin <repository_URL>`.
+3. Ensure the link is established: `git remote -v`.
+
+## **Step 6: Push to GitHub**
+**Launch Your Code Globally**
+1. Push your local commits to GitHub: `git push -u origin main` (for the first push).
+2. Future updates: `git push`.
+
+🚀 **Congratulations!** Your project is now on GitHub, ready for collaboration and growth. With ONE, you've achieved this with unparalleled speed and efficiency, setting your project on a trajectory for accelerated success. 🌟
+
