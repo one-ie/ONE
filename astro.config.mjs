@@ -6,8 +6,6 @@ import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
 import robots from "astro-robots";
 
-import compress from "astro-compress";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://new.one.ie",
@@ -25,7 +23,6 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     robots(),
-    compress(),
   ],
   adapter: cloudflare(),
   output: "hybrid",
