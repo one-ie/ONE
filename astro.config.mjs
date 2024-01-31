@@ -25,7 +25,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     robots(),
-    compress({ JavaScript: false }),
+    compress(),
   ],
   adapter: cloudflare(),
   output: "hybrid",
