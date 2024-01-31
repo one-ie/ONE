@@ -10,15 +10,29 @@ import purgecss from "astro-purgecss";
 // https://astro.build/config
 export default defineConfig({
   site: "https://new.one.ie",
-  integrations: [mdx({
-    syntaxHighlight: "shiki",
-    shikiConfig: {
-      theme: "github-dark-dimmed"
-    },
-    gfm: true
-  }), sitemap(), react(), tailwind({
-    applyBaseStyles: false
-  }), purgecss()],
+  integrations: [
+    mdx({
+      syntaxHighlight: "shiki",
+      shikiConfig: {
+        theme: "github-dark-dimmed",
+      },
+      gfm: true,
+    }),
+    sitemap(),
+    react(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    purgecss({
+      fontFace: true,
+      keyframes: true,
+      safelist: ["random", "yep", "button", /^nav-/],
+      blocklist: ["usedClass", /^nav-/],
+      content: [
+        process.cwd() + "/src/**/*.{astro,react}", // Watching astro and react sources 
+      ],
+    }),
+  ],
   adapter: cloudflare(),
-  output: "hybrid"
+  output: "hybrid",
 });
