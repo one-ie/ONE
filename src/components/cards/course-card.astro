@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = CollectionEntry<"docs">;
+
+const docs = Astro.props;
+---
+
+<article
+  class="group relative rounded-lg border p-6 shadow-md transition-shadow hover:shadow-lg"
+>
+<a
+    href={`/docs/${docs.slug}/`}
+    class="flex h-52 group-hover:-translate-y-2 group-hover:shadow-xl transition duration-300"
+  >
+  <div class="flex flex-col justify-between space-y-4">
+    <div class="space-y-2">
+      <h2 class="font-heading text-2xl" >{docs.data.title}</h2>
+  </div>
+</a>
+</article>
