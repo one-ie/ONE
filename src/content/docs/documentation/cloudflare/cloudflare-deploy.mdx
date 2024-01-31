@@ -1,0 +1,98 @@
+---
+title: Deploy on Cloudflare
+description: How to deploy your site on Cloudflare
+image: 
+category: Hosting
+activity: Setup
+task: Deploy your site on Cloudflare
+author: "Anthony O'Connell"
+sequence: 101
+tags: cloudflare, astro, ssr, hosting, 
+---
+# Deploying Astro with SSR on Cloudflare: A Step-by-Step Tutorial
+
+Astro is a modern web framework for building fast, content-focused websites. Server-Side Rendering (SSR) enhances its performance by pre-rendering pages on the server. Deploying Astro with SSR on Cloudflare leverages Cloudflare's edge network for even faster delivery. Here's how to do it:
+
+## Step 1: Create a New Astro Project
+Astro supports SSR out of the box. Ensure your `astro.config.mjs` is set up for SSR:
+
+```javascript
+export default {
+  // ...
+  output: 'server',
+  // ...
+};
+```
+
+## Step 3: Build Your Astro Project
+
+Build your project to ensure everything is working correctly:
+
+```bash
+npm run build
+```
+
+This command generates a `dist` directory with your server-side rendered site.
+
+## Step 4: Set Up Cloudflare Workers
+
+1. **Sign Up/Login to Cloudflare:** Go to [Cloudflare](https://www.cloudflare.com/) and sign up or log in.
+2. **Create a Workers Project:** Navigate to the Workers section and create a new project.
+3. **Install Wrangler CLI:** Cloudflare’s command-line tool for managing Workers projects.
+
+   ```bash
+   pnpm install -g @cloudflare/wrangler
+   ```
+
+4. **Authenticate Wrangler:** 
+
+   ```bash
+   wrangler login
+   ```
+
+## Step 5: Configure Your Worker
+
+1. **Generate a New Worker:**
+
+   ```bash
+   wrangler generate my-astro-project
+   ```
+
+2. **Configure `wrangler.toml`:** Replace the contents of `wrangler.toml` in your new Worker directory with:
+
+   ```toml
+   name = "my-astro-project"
+   account_id = "yourCloudflareAccountId"
+   workers_dev = true
+   route = ""
+   zone_id = ""
+
+   [site]
+   bucket = "./dist"
+   entry-point = "workers-site"
+   ```
+
+   Replace `yourCloudflareAccountId` with your actual Cloudflare account ID.
+
+3. **Copy Built Files:** Copy the `dist` folder from your Astro project into the Worker directory.
+
+## Step 6: Deploy to Cloudflare
+
+1. **Publish Your Worker:**
+
+   ```bash
+   wrangler publish
+   ```
+
+2. **Visit Your Deployed Site:** After the deployment, Wrangler will provide a URL to view your deployed site.
+
+## Step 7: Verify and Monitor
+
+- **Verify Deployment:** Visit the provided URL to ensure your Astro site is live.
+- **Monitor Performance:** Utilize Cloudflare's analytics to monitor your site's performance.
+
+## Conclusion
+
+Deploying Astro with SSR on Cloudflare is a straightforward process that brings the speed and reliability of Cloudflare's edge network to your Astro projects. This setup ensures your site is delivered with unparalleled speed, aligning perfectly with ONE's commitment to rapid, efficient, and innovative AI solutions.
+
+For further assistance or to explore how ONE can accelerate your business with similar technologies, feel free to contact us at [tony@one.ie](mailto:tony@one.ie) or call us at +66660106632. Visit [ONE](https://one.ie/) for more information on how we can transform your business operations with the speed of light in the AI world.
