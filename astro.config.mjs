@@ -4,8 +4,9 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
-
 import critters from "astro-critters";
+
+import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +19,7 @@ export default defineConfig({
     gfm: true
   }), sitemap(), react(), tailwind({
     applyBaseStyles: false
-  }), critters()],
+  }), critters(), compressor()],
   adapter: cloudflare(),
   output: "hybrid"
 });

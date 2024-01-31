@@ -50,6 +50,9 @@ dependencies:
   astro:
     specifier: ^4.2.6
     version: 4.2.6
+  astro-compressor:
+    specifier: ^0.4.1
+    version: 0.4.1
   astro-critters:
     specifier: ^2.0.11
     version: 2.0.11
@@ -1894,6 +1897,10 @@ packages:
   /astring@1.8.6:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
+    dev: false
+
+  /astro-compressor@0.4.1:
+    resolution: {integrity: sha512-IAgYAlxYRMolaptsFB9quH7RxX4eUeC4UfULCPhT+ILcg7m1kbaxuyUKqGg9Hh+KZ+FNPPDAz7DqUfl+HDWhQg==}
     dev: false
 
   /astro-critters@2.0.11:
