@@ -20,5 +20,5 @@ export default defineConfig({
     applyBaseStyles: false
   })],
   adapter: cloudflare(),
-  output: "server"
+  output: "hybrid"
 });

@@ -1,0 +1,49 @@
+---
+title: Deploy on Cloudflare
+description: How to deploy your site on Cloudflare
+image: 
+category: Hosting
+activity: Setup
+task: Deploy your site on Cloudflare
+author: "Anthony O'Connell"
+sequence: 101
+tags: cloudflare, astro, ssr, hosting, 
+---
+# Deploying Your Site on Cloudflare: A Step-by-Step Tutorial
+
+Astro is a modern web framework for building fast, content-focused websites. Server-Side Rendering (SSR) enhances its performance by pre-rendering pages on the server. Deploying Astro with SSR on Cloudflare leverages Cloudflare's edge network for even faster delivery. Here's how to do it:
+
+## Step 1: Build Your Astro Project
+
+Build your project to ensure everything is working correctly:
+
+```bash
+pnpm run build
+```
+
+This command generates a `dist` directory with your server-side rendered site.
+
+## Step 2: Create a New Cloudflare Account
+
+## Step 3: Create a Cloudflare Worker
+
+## Step 4: Connect Your Worker to Your Project on Github
+Select a repository to connect as your project’s source code. New commits will trigger Cloudflare to automatically build and deploy your changes.
+![Connect to Github](./cloudflare-connect-to-github.png)
+
+
+
+
+
+2. **Visit Your Deployed Site:** After the deployment, Wrangler will provide a URL to view your deployed site.
+
+## Step 7: Verify and Monitor
+
+- **Verify Deployment:** Visit the provided URL to ensure your Astro site is live.
+- **Monitor Performance:** Utilize Cloudflare's analytics to monitor your site's performance.
+
+## Conclusion
+
+Deploying Astro with SSR on Cloudflare is a straightforward process that brings the speed and reliability of Cloudflare's edge network to your Astro projects. This setup ensures your site is delivered with unparalleled speed, aligning perfectly with ONE's commitment to rapid, efficient, and innovative AI solutions.
+
+For further assistance or to explore how ONE can accelerate your business with similar technologies, feel free to contact us at [tony@one.ie](mailto:tony@one.ie) or call us at +66660106632. Visit [ONE](https://one.ie/) for more information on how we can transform your business operations with the speed of light in the AI world.
