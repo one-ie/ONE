@@ -5,8 +5,6 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
 
-import purgecss from "astro-purgecss";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://new.one.ie",
@@ -22,15 +20,6 @@ export default defineConfig({
     react(),
     tailwind({
       applyBaseStyles: false,
-    }),
-    purgecss({
-      fontFace: true,
-      keyframes: true,
-      safelist: ["random", "yep", "button", /^nav-/],
-      blocklist: ["usedClass", /^nav-/],
-      content: [
-        process.cwd() + "/src/**/*.{astro,react}", // Watching astro and react sources 
-      ],
     }),
   ],
   adapter: cloudflare(),
