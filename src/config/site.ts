@@ -8,6 +8,6 @@ export const siteConfig: SiteConfig = {
   ogImage: "https://one.ie/og.jpg",
   links: {
     twitter: "https://twitter.com/tonyoconnell",
-    github: "https://github.com/one-ie/oneai",
+    github: "https://github.com/one-ie/ONE",
   },
 };
