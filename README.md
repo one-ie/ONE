@@ -2,7 +2,7 @@
 
 ## Accelerate with AI
 
-Sell products, services and ideas at scale. 
+Sell products, services and ideas at the edge. 
 
 1. Clone this repo
 
