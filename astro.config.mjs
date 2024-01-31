@@ -11,15 +11,22 @@ import compress from "astro-compress";
 // https://astro.build/config
 export default defineConfig({
   site: "https://new.one.ie",
-  integrations: [mdx({
-    syntaxHighlight: 'shiki',
-    shikiConfig: {
-      theme: 'github-dark-dimmed'
-    },
-    gfm: true
-  }), sitemap(), react(), tailwind({
-    applyBaseStyles: false
-  }), robots(), compress()],
+  integrations: [
+    mdx({
+      syntaxHighlight: "shiki",
+      shikiConfig: {
+        theme: "github-dark-dimmed",
+      },
+      gfm: true,
+    }),
+    sitemap(),
+    react(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    robots(),
+    compress({ JavaScript: false }),
+  ],
   adapter: cloudflare(),
-  output: "hybrid"
+  output: "hybrid",
 });

@@ -31,9 +31,18 @@ This command generates a `dist` directory with your server-side rendered site.
 Select a repository to connect as your project’s source code. New commits will trigger Cloudflare to automatically build and deploy your changes.
 ![Connect to Github](./cloudflare-connect-to-github.png)
 
+## Configure automatic builds and deployments 
+Select Astro as the preset
+Click Save and Deploy
 
-
-
+## Configure Nodejs Compatability
+Go to your project
+Click Settings > Functions
+Scroll down to Compatability Flags
+Compatibility flags
+Specify which Workers runtime compatibility flags you want the Functions in your project to use.
+Click configure compatabilty Flags
+Add nodejs_compat to the list of Flags
 
 2. **Visit Your Deployed Site:** After the deployment, Wrangler will provide a URL to view your deployed site.
 
