@@ -2,8 +2,6 @@
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-import Icon from "astro-icon";
-
 type Props = {
   className?: string;
 };
@@ -36,7 +34,7 @@ const { className } = Astro.props;
       class="absolute top-1/2 left-1/2 -translate-x-4 -translate-y-4 md:hidden"
     >
       <a href="/" aria-label="ONE homepage">
-        <Icon name="stars-outline" class="size-8" />
+           <img src="/one.svg" alt="ONE logo" class="size-10" />
       </a>
     </div>
 
