@@ -1,0 +1,19 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+.float-highlights {
+    transition: all 150ms ease;
+    margin: 1em 0 1em 0 !important;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 22px 53px 4px;
+    border: 1px solid white;
+    padding: 1em !important;
+    border-radius: 0.5em;
+    list-style-type: none;
+}

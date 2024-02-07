@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "002797005967c2a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "b72aa1ed0e7645a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f620b792931eff55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "guides/using-next-auth-next-13.mdx",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "83e411b97984c166",
+    "type": "split",
+    "children": [
+      {
+        "id": "4674dbc6791c319c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7f28d3d15880a21",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9b87b75f3456cf8e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "99e7c974246b1476",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a8fdd074363fd39d",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d4a558f87846348",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df867adfb9edba0f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "guides/using-next-auth-next-13.mdx",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "02413ba6c02b1c1e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "guides/using-next-auth-next-13.mdx",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6355e4d926d7c309",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "86de34d4f30f8fa4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "guides/using-next-auth-next-13.mdx"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "edit-mdx:New .mdx file": false
+    }
+  },
+  "active": "f620b792931eff55",
+  "lastOpenFiles": [
+    "guides/build-blog-using-astro-mdx.mdx",
+    "docs/documentation/astro/code-blocks.mdx",
+    "docs/documentation/cloudflare/Untitled.md",
+    "clients/client.md",
+    "blog/preview-markdown.md",
+    "blog/first-post.md"
+  ]
+}

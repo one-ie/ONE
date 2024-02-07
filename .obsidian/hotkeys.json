@@ -1,0 +1,10 @@
+{
+  "ai-tools:ai-search": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "S"
+    }
+  ]
+}
