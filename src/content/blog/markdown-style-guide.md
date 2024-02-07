@@ -6,6 +6,8 @@ coverImage: '/blog-placeholder-1.jpg'
 category: 'code'
 ---
 
+## Hello Astro
+
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
 ## Headings
@@ -40,7 +42,7 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 #### Output
 
-![blog placeholder](/blog-placeholder-about.jpg)
+![blog placeholder](blog-placeholder-about.jpg.md)
 
 ## Blockquotes
 

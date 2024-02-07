@@ -940,7 +940,7 @@ data:
       metadata:
         description: Choses a route
         id: 8wgIcyd-h0ipkMo0ny0ol
-        name: Engineering/Crawler/* Start
+        name: Knowledge/Crawler/* Start
       nodes:
         '[9_fUdleCOclMyaSpznATF]:readFile "Read File"':
           data:
@@ -1372,13 +1372,22 @@ data:
       metadata:
         description: ""
         id: CMgY-yl963mOU4tvddPhb
-        name: Publishing/Write Blog
+        name: Publishing/Save Post
       nodes:
         '[EsyjbT_zLwqVAubvk-ue2]:graphOutput "Graph Output"':
           data:
             dataType: string
             id: output
-          visualData: 3638.1144931896506/354.6572056095102/330/21//
+          visualData: 3622.5959818380247/346.89794993369713/330/24//
+        '[NkP01hoO4aPZdZjBag_Qz]:readFile "Read File"':
+          data:
+            asBinary: false
+            errorOnMissingFile: false
+            path: /Users/toc/Server/ONE/src/content/blog/pale-blue-dot.md
+            usePathInput: true
+          outgoingConnections:
+            - content->"Graph Input" adckpXBRNjRbreQZRDD8D/default
+          visualData: 2394.909306020493/385.69422831276233/280/26//
         '[OrwHYdfH-wwaAdBNI678F]:writeFile "Write File"':
           data:
             baseDirectory: ""
@@ -1397,14 +1406,95 @@ data:
             useDefaultValueInput: false
           outgoingConnections:
             - data->"Write File" OrwHYdfH-wwaAdBNI678F/baseDirectory
-          visualData: 3001.806422176773/112.6476214487619/330/19//
+          visualData: 2844.034890101908/130.75255135899232/330/22//
         '[adckpXBRNjRbreQZRDD8D]:graphInput "Graph Input"':
           data:
             dataType: string
             id: content
+            useDefaultValueInput: true
           outgoingConnections:
             - data->"Write File" OrwHYdfH-wwaAdBNI678F/content
-          visualData: 2720.7898601386078/360.0816635552445/300/20//
+          visualData: 2848.3865090297554/369.56519827012715/300/25//
+    GH7zuGI1-WmPnxIAzFNpL:
+      metadata:
+        description: ""
+        id: GH7zuGI1-WmPnxIAzFNpL
+        name: Knowledge/Crawler/Crawl & Analyse
+      nodes:
+        '[4HWqlutY8xEopQyURMpvm]:httpCall "Http Call"':
+          data:
+            body: ""
+            errorOnNon200: true
+            headers: ""
+            method: GET
+            url: ""
+            useUrlInput: true
+          outgoingConnections:
+            - res_body->"Chat" HWJ5UyMhIkBg-WQ316Os6/prompt
+          visualData: 887.8526315789474/411.3929824561404/280/29//
+        '[9GwoQrzDnShoEyhLoWMut]:text "Text"':
+          data:
+            text: "Analyse this page and build a detail company profile. "
+          outgoingConnections:
+            - output->"Chat" HWJ5UyMhIkBg-WQ316Os6/systemPrompt
+          visualData: 988.3122807017545/205.04035087719302/330/32//
+        '[BcHCu8FaXESOY9XbUn7iO]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1952.1894736842105/448.7684210526316/330/33//
+        '[HWJ5UyMhIkBg-WQ316Os6]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-4-1106-preview
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" BcHCu8FaXESOY9XbUn7iO/value
+            - response->"Write File" M9dTmRbCLckZ_Td8zyH9T/content
+          visualData: 1403.8491228070175/417.6859649122807/230/31//
+        '[M9dTmRbCLckZ_Td8zyH9T]:writeFile "Write File"':
+          data:
+            baseDirectory: /Users/toc/Server/ONE/src/content/clients
+            content: ""
+            path: client.md
+            useBaseDirectoryInput: true
+            useContentInput: true
+            usePathInput: true
+          visualData: 1682.7522567409017/247.6466297786057/230/35//
+        '[_hbeTfgJkijYOwSxfaecD]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: true
+          outgoingConnections:
+            - data->"User Input" s_xhNrv2G_b6WEa1FSHvu/questions
+          visualData: -51/467/330/27//
+        '[s_xhNrv2G_b6WEa1FSHvu]:userInput "User Input"':
+          data:
+            prompt: What's the website URL you would like to crawl
+            useInput: true
+          outgoingConnections:
+            - output->"Http Call" 4HWqlutY8xEopQyURMpvm/url
+          visualData: 480/430/280/26//
     HjzFYiFgEs5GHXrYMbz_s:
       metadata:
         description: ""
@@ -1564,14 +1654,23 @@ data:
             id: input
             useDefaultValueInput: true
           outgoingConnections:
-            - data->"Delegate" zViYBzOuA854DxwMqPkt_/input
-          visualData: 464/444/330/4//
+            - data->"Sub Graph" zViYBzOuA854DxwMqPkt_/input
+          visualData: 401.0341900220656/440.59644270389543/330/12//
         '[nB8PGBd5rQ5cYUmRKvFQ_]:graphOutput "Graph Output"':
           data:
             dataType: string
             id: output
-          visualData: 1309/457/330/7//
-        '[zViYBzOuA854DxwMqPkt_]:subGraph "Delegate"':
+          visualData: 1309/445.08754946363405/330/9//
+        '[vTvpdHh3SHsqJkORNOdn3]:userInput "User Input"':
+          data:
+            prompt: |-
+              What do you want to do?
+              Type start, write, or publish
+            useInput: false
+          outgoingConnections:
+            - output->"Graph Input" mEse2rpCnb6dfXVW8Rzhs/default
+          visualData: -16.280434871424973/433.75375515064076/280/10//
+        '[zViYBzOuA854DxwMqPkt_]:subGraph "Sub Graph"':
           data:
             graphId: Rk77OMcmQ8Yr2P7Ahk1Id
             useAsGraphPartialOutput: false
@@ -1665,7 +1764,7 @@ data:
           data:
             asBinary: false
             errorOnMissingFile: false
-            path: /Users/toc/ONE/Company/Knowledge/Prompts/Format.md
+            path: /Users/toc/ONE/Company/Intelligence/Prompts/Format.md
             usePathInput: true
           outgoingConnections:
             - content->"Chat" a7Fsh5-BhyFaL-zzkS_A1/systemPrompt
@@ -1784,12 +1883,22 @@ data:
         id: Rk77OMcmQ8Yr2P7Ahk1Id
         name: Engineering/Delegation/Route
       nodes:
+        '[4AtDgSPB_r8ndGvqmo5cw]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1866.4108521144929/399.36505837905383/330/129//
+        '[4t4bGH-S4bQdHhH2PRJgE]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1923.0765573146034/611.1647433893022/330/134//
         '[5C5vguhETZzIkFbunfBCh]:text "Text"':
           data:
             text: I want to {{input}}
           outgoingConnections:
             - output->"Graph Output" dcMlEzk2VgogR5krORfDG/value
-          visualData: 1390.8924987570272/661.8575677059056/330/75//
+          visualData: 1392.7503907308014/871.7993607423798/330/138//
         '[6ROk9Q_s1JdhEJC8bngoY]:text "Text"':
           data:
             text: "{{input}}"
@@ -1806,11 +1915,7 @@ data:
             useDefaultValueInput: false
           outgoingConnections:
             - data->"Assemble Prompt" SDf4J0DwQmLBVG0gX0rOC/message1
-          visualData: 135.78447854391146/522.9148746350319/330/117//
-        '[YhZRs0Vh5QPssqeLIYadD]:text "Text"':
-          data:
-            text: I want to {{input}}
-          visualData: 1368.5071772636659/410.0322229615138/330/76//
+          visualData: 134.85553255702442/512.6964687792743/330/120//
         '[cbvnFTi7O4e5myIRldf9I]:text "Text"':
           data:
             text: "{{input}}"
@@ -1819,19 +1924,20 @@ data:
           data:
             dataType: string
             id: output
-          visualData: 1785.592551255319/409.5834642348113/330/119//
+          visualData: 1790.2372811897544/767.227669186327/330/132//
         '[f6kh6ce5LHZbEyR2jZQDt]:match "Match"':
           data:
             cases:
-              - plan
-              - market
-              - sell
+              - start
+              - write
+              - publish
           outgoingConnections:
-            - case1->"Text" YhZRs0Vh5QPssqeLIYadD/input
+            - case1->"Subgraph" xrn0ZODkDxKduBCzvNt-E/input
+            - case2->"Subgraph" vwYC6Auf343yoQz2Lej6T/input
             - case3->"Text" 5C5vguhETZzIkFbunfBCh/input
             - unmatched->"Chat" y0qKdo445PO9znc5M37JR/prompt
             - unmatched->"If" t1ZlfNOP0Mjmc1U5RxcQJ/value
-          visualData: 885.9184583540496/453.85789197377414/280/83//
+          visualData: 886.8474043409366/462.2184058557576/280/121//
         '[gh9au4YSgibM8JKvINNQ-]:boolean "Bool"':
           data:
             useValueInput: true
@@ -1845,9 +1951,9 @@ data:
             promptText: |-
               Analyse the text and print one of these words only 
               ---
-              plan
-              market
-              sell
+              start
+              write
+              publish
               ---
             type: user
             useTypeInput: false
@@ -1861,6 +1967,20 @@ data:
             - falseOutput->"Text" 6ROk9Q_s1JdhEJC8bngoY/input
             - output->"Text" cbvnFTi7O4e5myIRldf9I/input
           visualData: 1571.0060282844097/1040.337789331121/155/105//
+        '[vwYC6Auf343yoQz2Lej6T]:subGraph "Subgraph"':
+          data:
+            graphId: rWJ090GwHHDhz5_6jyIKo
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          visualData: 1347.1300454446298/624.1699872057209/330/137//
+        '[xrn0ZODkDxKduBCzvNt-E]:subGraph "Subgraph"':
+          data:
+            graphId: GH7zuGI1-WmPnxIAzFNpL
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Graph Output" 4AtDgSPB_r8ndGvqmo5cw/value
+          visualData: 1391.7194528152081/443.0255197627454/330/130//
         '[y0qKdo445PO9znc5M37JR]:chat "Chat"':
           data:
             cache: false
@@ -1994,6 +2114,43 @@ data:
             useContentInput: true
             usePathInput: true
           visualData: 1592/416/230/3//
+    WFWw3f3Zr2Zx7hBIZvTgk:
+      metadata:
+        description: ""
+        id: WFWw3f3Zr2Zx7hBIZvTgk
+        name: Adam
+      nodes:
+        '[45kFJGBQ4YfsOxhhLmceV]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          visualData: 938/168/230/3//
+        '[BbAnZWfKGQUmeyPvcFLR8]:userInput "User Input"':
+          data:
+            prompt: What question do you want to ask?
+            useInput: false
+          outgoingConnections:
+            - output->"Chat" 45kFJGBQ4YfsOxhhLmceV/prompt
+          visualData: 493/316/280/1//
     WLoP5IqrqyS-Cn81tCMMu:
       metadata:
         description: ""
@@ -2051,31 +2208,40 @@ data:
       metadata:
         description: ""
         id: YQI2D33qpHKAx0Wt8-7OH
-        name: Engineering/Crawler/Crawl
+        name: Knowledge/Crawler/Crawl
       nodes:
+        '[77gwTYu9Zdl2XJTQ-12I2]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1643/207/330/11//
         '[A6TLALjcR_p3zoqPVFCml]:graphInput "Graph Input"':
           data:
             dataType: string
             id: input
-            useDefaultValueInput: false
+            useDefaultValueInput: true
           outgoingConnections:
-            - data->"Http Call" zsJlk1ZSb0Xax-2kbVg6U/url
-          visualData: 443/585/330/8//
+            - data->"User Input" Y1ocPKexLP5XgNeu7gFJg/questions
+          visualData: -51/467/330/27//
         '[Ejtx9b74L_EntWqSRNPWr]:graphOutput "Graph Output"':
           data:
             dataType: string
             id: output
-          visualData: 1599/313/330/4//
+          visualData: 1642/519/330/9//
         '[Y1ocPKexLP5XgNeu7gFJg]:userInput "User Input"':
           data:
             prompt: What's the website URL you would like to crawl
-            useInput: false
-          visualData: 441/395/280/null//
+            useInput: true
+          outgoingConnections:
+            - output->"Http Call" zsJlk1ZSb0Xax-2kbVg6U/url
+          visualData: 480/430/280/26//
         '[kCqWMxGOnISXtb_2s4z6f]:extractRegex "Extract Regex"':
           data:
             errorOnFailed: false
             regex: <meta\s+property=["']og:title["']\s+content=["']([^"']*)["']
             useRegexInput: false
+          outgoingConnections:
+            - output1->"Graph Output" 77gwTYu9Zdl2XJTQ-12I2/value
           visualData: 1250/190/280/5//
         '[osZLHKFBFgaZJ9wZnhXmr]:extractRegex "Extract Regex"':
           data:
@@ -2214,20 +2380,27 @@ data:
       metadata:
         description: ""
         id: _x9a8cKd3VLbKqfBHbd2g
-        name: Engineering/Crawler/Extract
+        name: Knowledge/Crawler/Extract
       nodes:
         '[5Yl7zygkzd_wVRYTZHyTK]:graphOutput "Graph Output"':
           data:
             dataType: string
             id: text
-          visualData: 1929.337303724461/1147.0170386650805/330/108/var(--node-color-4)/var(--grey-darkish)
+          visualData: 2241.2668593774392/1153.4353422793392/330/127/var(--node-color-4)/var(--grey-darkish)
         '[NGrYTXwEHqsjsUksg41Aq]:extractObjectPath "Extract Object Path"':
           data:
             path: $.text
             usePathInput: false
           outgoingConnections:
             - match->"Graph Output" 5Yl7zygkzd_wVRYTZHyTK/value
-          visualData: 1537.120555648792/1162.7681781771346/280/103//
+          visualData: 1867.021361421695/1197.427017694132/280/129//
+        '[NJQ1QfIptDOpitqbRkJuv]:userInput "User Input"':
+          data:
+            prompt: What's your website address e.g. https://one.ie
+            useInput: false
+          outgoingConnections:
+            - output->"Graph Input" R-oOUGUN62d-B-IQptGHw/default
+          visualData: 204.8044300057594/1176.9661909982883/280/125//
         '[PdTx9_oDkKjxu457zbhQs]:httpCall "Http Call"':
           data:
             body: ""
@@ -2238,7 +2411,7 @@ data:
             useUrlInput: true
           outgoingConnections:
             - json->"Extract Object Path" NGrYTXwEHqsjsUksg41Aq/object
-          visualData: 1099.8825585962436/1433.8415260525583/280/117//
+          visualData: 1499.1010434031418/1155.2871491937258/280/126//
         '[R-oOUGUN62d-B-IQptGHw]:graphInput "Graph Input"':
           data:
             dataType: string
@@ -2246,7 +2419,7 @@ data:
             useDefaultValueInput: true
           outgoingConnections:
             - data->"Text" RTtuZLekJtr7Q2Ac649Ey/url
-          visualData: 602.4419719472078/1397.02124538246/330/116/var(--node-color-3)/var(--grey-darkish)
+          visualData: 602.4419719472078/1177.5152617748086/330/122/var(--node-color-3)/var(--grey-darkish)
         '[RTtuZLekJtr7Q2Ac649Ey]:text "Text"':
           data:
             text: https://extractorapi.com/api/v1/extractor/?apikey={{api_key}}&url={{url}}&fields=raw_text
@@ -2260,12 +2433,12 @@ data:
             useDefaultValueInput: false
           outgoingConnections:
             - data->"Text" RTtuZLekJtr7Q2Ac649Ey/api_key
-          visualData: 604.9204225734462/1153.2808929355162/330/85//
+          visualData: 613.9060476334085/964.5827666763071/330/121//
     _yJVFj2QHWN415GtiKc-_:
       metadata:
         description: ""
         id: _yJVFj2QHWN415GtiKc-_
-        name: Engineering/Crawler/Markdown
+        name: Knowledge/Crawler/Markdown
       nodes:
         '[-ePkjJ1kHnbNCdewkWnul]:code "Code"':
           data:
@@ -2317,6 +2490,12 @@ data:
             useWorkingDirectoryInput: true
             workingDirectory: /Users/toc/ONE
           visualData: 803.5918484658833/560.4530424545866/230/10//
+    dKwGs1VEQuHLONYLXHtZz:
+      metadata:
+        description: ""
+        id: dKwGs1VEQuHLONYLXHtZz
+        name: Engineering/Models/Claude
+      nodes: {}
     hRD34Ta_eCibzUN2zkDLY:
       metadata:
         description: ""
@@ -2388,6 +2567,103 @@ data:
           outgoingConnections:
             - response->"Assemble Prompt" dlHkAJ1QsvsAyNgDy-omI/message2
           visualData: 994/311/230/3//
+    hiT3wfKU7WrzHMBhp7POu:
+      metadata:
+        description: ""
+        id: hiT3wfKU7WrzHMBhp7POu
+        name: Engineering/Website/FAQ
+      nodes:
+        '[0aFf8I2-ekYC6mptleKTp]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Assemble Prompt" 7RKXW_YVo3pNcP1HbQsL_/message2
+          visualData: 648/293/230/16//
+        '[7RKXW_YVo3pNcP1HbQsL_]:assemblePrompt "Assemble Prompt"':
+          outgoingConnections:
+            - prompt->"Chat" zLb-gCdWu-1hkS0j6z5Xt/systemPrompt
+          visualData: 1224/231/280/28//
+        '[KqNqE-7iCg8FWpueNTWUq]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          visualData: 201/558/330/23//
+        '[XMe0eNlaFFZ92XavvOFqY]:text "Text"':
+          data:
+            text: Create a list of frequently asked questions about chocolate bars
+          outgoingConnections:
+            - output->"Chat" 0aFf8I2-ekYC6mptleKTp/systemPrompt
+          visualData: 154/291/330/22//
+        '[XmRSi-DMokmOIJRXrAXWC]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: >-
+              You are a coding assistant. You modify the file provided by the
+              user replacing items in the question and answer array only. you
+              will not change the file in any other way. 
+
+              You will replace it with the following questions and answers. 
+            type: system
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Assemble Prompt" 7RKXW_YVo3pNcP1HbQsL_/message1
+          visualData: 833/110/280/6//
+        '[u6CYYJZfT2lkVt0WCNnjG]:readFile "Read File"':
+          data:
+            asBinary: false
+            errorOnMissingFile: false
+            path: /Users/toc/Server/ONE/src/components/faq-section.tsx
+            usePathInput: true
+          outgoingConnections:
+            - content->"Chat" zLb-gCdWu-1hkS0j6z5Xt/prompt
+          visualData: 1190/533/280/27//
+        '[zLb-gCdWu-1hkS0j6z5Xt]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-4-1106-preview
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          visualData: 1704/275/230/25//
     i-aJseig7mg0qPCr5OjaD:
       metadata:
         description: Choses a route
@@ -2819,6 +3095,42 @@ data:
           outgoingConnections:
             - output->"Chat" 4Wd7DK2dPwt-afzsr5fwG/systemPrompt
           visualData: 488.2772047901053/229.59545042571492/330/40//
+    rWJ090GwHHDhz5_6jyIKo:
+      metadata:
+        description: ""
+        id: rWJ090GwHHDhz5_6jyIKo
+        name: Writer/Write and Publish
+      nodes:
+        '[2W9EAVT4wEXkL4TcaJ4dL]:subGraph "Subgraph"':
+          data:
+            graphId: tJ3HwE5WXJtB098PuqdfP
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" cM8q4A9YtGtwsc9MujSTz/input
+          visualData: 817/365/330/9//
+        '[Ww-GcoC81yK1qbtkXpNdn]:subGraph "Subgraph"':
+          data:
+            graphId: CMgY-yl963mOU4tvddPhb
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          visualData: 1756/370/330/7//
+        '[cM8q4A9YtGtwsc9MujSTz]:subGraph "Subgraph"':
+          data:
+            graphId: O8Wp6ee7hRYs3Jv907Eba
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" Ww-GcoC81yK1qbtkXpNdn/content
+          visualData: 1252/374/330/6//
+        '[gXLoxuhrNbZ0Y71iYP1Zm]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" 2W9EAVT4wEXkL4TcaJ4dL/input
+          visualData: 316/353/330/2//
     sLoPvh0tq7mFr1wyNqR5y:
       metadata:
         description: ""
@@ -2925,8 +3237,8 @@ data:
             id: input
             useDefaultValueInput: false
           outgoingConnections:
-            - data->"Chat" FGcwAJL30p5bMYIrHDy0_/prompt
-          visualData: 525/414/330/12//
+            - data->"User Input" ieAI1WXtvqorGvVtSHzdI/questions
+          visualData: 52/418/330/15//
         '[FGcwAJL30p5bMYIrHDy0_]:chat "Chat"':
           data:
             cache: false
@@ -2954,6 +3266,13 @@ data:
           outgoingConnections:
             - response->"Graph Output" -Fd-cakHcm76OFtFuGGuJ/value
           visualData: 993/357/230/2//
+        '[ieAI1WXtvqorGvVtSHzdI]:userInput "User Input"':
+          data:
+            prompt: This is an example question?
+            useInput: true
+          outgoingConnections:
+            - output->"Chat" FGcwAJL30p5bMYIrHDy0_/prompt
+          visualData: 533/404/280/16//
         '[we5A2s4YpO2iT0xS8XkhE]:prompt "Prompt"':
           data:
             enableFunctionCall: false
@@ -3243,7 +3562,7 @@ data:
             useTypeInput: false
           outgoingConnections:
             - output->"Assemble Prompt" JeXawxPc9cW280NQPLM6Y/message1
-          visualData: 381.66713627799527/446.24591354378447/280/37//
+          visualData: 328.73401130863124/403.0351992830791/280/40//
     zQTQk3V-Nn2YjcA3wSuCy:
       metadata:
         description: ""
@@ -3345,7 +3664,7 @@ data:
             useUserInput: false
           outgoingConnections:
             - response->"Write File" 6xJSpXqtt73XFPIBUfXMo/content
-          visualData: 812.5059673377592/169.94784861319553/230/59//
+          visualData: 812.5059673377592/98.53114006746969/230/32//
   metadata:
     description: Everything AI
     id: TjYKxcNBs-zJLHHmrc_-r
