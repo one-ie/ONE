@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "src/content/blog/post.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,9 +23,9 @@
             "id": "8d664f2ab542e033",
             "type": "leaf",
             "state": {
-              "type": "vscode-editor",
+              "type": "image",
               "state": {
-                "file": "src/content/config.ts"
+                "file": "src/content/docs/documentation/cloudflare/nodejs-compatability-3.png"
               }
             }
           }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/content/config.ts",
+                "file": "src/content/docs/documentation/cloudflare/nodejs-compatability-3.png",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/content/config.ts",
+                "file": "src/content/docs/documentation/cloudflare/nodejs-compatability-3.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/content/config.ts"
+                "file": "src/content/docs/documentation/cloudflare/nodejs-compatability-3.png"
               }
             }
           },
@@ -173,34 +173,37 @@
   },
   "active": "8d664f2ab542e033",
   "lastOpenFiles": [
-    "src/content/blog/markdown-style-guide.md",
+    "src/content/docs/documentation/cloudflare/index.mdx",
     "src/content/docs/documentation/cloudflare/cloudflare-start.png",
-    "src/content/docs/documentation/cloudflare/cloudflare-add-domain.png",
+    "src/content/docs/documentation/cloudflare/cloudflare-nodejs-compatability-2.png",
+    "src/content/docs/documentation/cloudflare/cloudflare-node-compatability.png",
+    "src/content/docs/documentation/cloudflare/cloudflare-deploy-manual.mdx",
+    "src/content/docs/documentation/cloudflare/cloudflare-create-application.png",
+    "src/content/docs/documentation/cloudflare/cloudflare-configure-automatic-builds.png",
     "src/content/docs/documentation/cloudflare/cloudflare-add-domain-activate.png",
+    "src/content/docs/documentation/code-blocks.mdx",
+    "src/content/config.ts",
+    "src/content/docs/in-progress.mdx",
+    "src/content/docs/getting-started.mdx",
+    "src/content/clients/Untitled.md",
+    "src/pages/rss.xml.js",
+    "src/styles/globals.css",
+    "credits.md",
+    "README.md",
+    "src/content/blog/post.md",
+    "src/content/blog/first-post.md",
+    "src/content/blog/markdown-style-guide.md",
+    "src/content/docs/documentation/cloudflare/cloudflare-add-domain.png",
     "src/content/clients/client.md",
     "src/content/clients",
     "src/content/blog/first-post-20240207211955444.webp",
     "src/content/blog/blog-placeholder-1.jpg",
     "src/components/blocks/timeline.astro",
     "src/components/blocks",
-    "public/robots.txt",
     "public/one-icon.png",
-    "credits.md",
-    "Write.rivet-graph",
-    "public/robot.txt.old",
-    "public/blog-placeholder-1.jpg",
     "src/media/blog-placeholder-about.jpg.md",
-    "src/media/blog-placeholder-about.jpg",
-    "public/blog-placeholder-2.jpg",
-    "src/styles/globals.css",
-    "src/env.d.ts",
-    "README.md",
     "license.md",
-    "src/content/blog/first-post.md",
-    "__unconfig_astro.config.mjs",
-    "public/og.jpg",
     "content/blog/made-with-obsidian.md",
-    "My code file.ts",
     "media/blog-placeholder-about.jpg.md",
     "content/blog/third-post.md",
     "content/blog/preview-markdown.md",

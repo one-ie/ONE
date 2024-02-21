@@ -3,23 +3,23 @@ import type { NavMenuConfig } from "@/types";
 export const navMenuConfig: NavMenuConfig = {
   infosNav: [
     {
-      title: "Software",
+      title: "Think",
       items: [
         {
-          title: "Features",
+          title: "Smarter",
           href: "/#features",
           description: "Take a closer look at the project's features.",
         },
         {
-          title: "Twitter (@tonyoconnell)",
+          title: "Faster",
           href: "https://twitter.com/tonyoconnell",
           description: "Follow me to get the latest updates and news.",
           external: true,
         },
         {
-          title: "Source Code",
-          href: "https://github.com/one-ie/oneai",
-          description: "You want to star the repository ? Let's get started!",
+          title: "Start Now", 
+          href: "https://one.ie/start",
+          description: "You can get started in less than a minute. Just enter your website address and our AI will research your company, market and customers.",
           external: true,
         },
       ],

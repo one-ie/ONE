@@ -10,7 +10,7 @@ category: 'design'
 
 ![AI in Marketing](https://source.unsplash.com/featured/?artificialintelligence,marketing)
 
-In an era where the digital landscape evolves at breakneck speed, **marketing agencies** are turning to **Artificial Intelligence (AI)** to stay ahead of the curve. AI is not just a buzzword; it's a transformative force reshaping the way marketers connect with their audience.
+In an era where the digital landscape evolves at breakneck speed, **marketing agencies** are turning to **Artificial Intelligence (AI)** to stay ahead of the curve. AI is not just a buzzword; it's a transformative force reshaping the way marketers connect with their audience. test
 
 ## The AI Revolution in Marketing
 
