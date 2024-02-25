@@ -1,0 +1,10 @@
+{
+  "areFoldersHidden": true,
+  "matchCaseInsensitive": true,
+  "attachmentFolderNames": [
+    "attachments",
+    "dist",
+    "node_modules",
+    ""
+  ]
+}

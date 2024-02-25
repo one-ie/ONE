@@ -20,6 +20,14 @@ import MainLayout from "@/layouts/base-layout.astro";
       mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer
       quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit
       amet.
-    </p>
+    </p><flowise-fullchatbot></flowise-fullchatbot>
   </section>
+  
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.initFull({
+        chatflowid: "1eb8f777-952d-4137-b465-db6b139df327",
+        apiHost: "https://flow.one.ie",
+    })
+</script>
 </MainLayout>

@@ -4,7 +4,7 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Documentation",
-      href: "/docs/getting-started/",
+      href: "/docs/get-ready/",
     },
     {
       title: "Guides",
@@ -13,124 +13,55 @@ export const docsConfig: DocsConfig = {
   ],
   sidebarNav: [
     {
-      title: "Getting Started",
+      title: "Quick Start",
       items: [
         {
-          title: "Introduction",
-          href: "/docs/getting-started/",
+          title: "Get Ready",
+          href: "/docs/get-ready/",
+        },
+        {
+          title: "Activate",
+          href: "/docs/activate/",
+        },
+        {
+          title: "Chat ",
+          href: "/docs/chat/",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Accelerate",
       items: [
         {
-          title: "Introduction",
-          href: "/docs/documentation",
+          title: "Your AI",
+          href: "/docs/documentation/cloud/profile",
         },
         {
-          title: "In progress",
-          href: "/docs/in-progress",
-          disabled: true,
+          title: "Your Work Spaces",
+          href: "/docs/documentation/cloud/workspaces",
         },
         {
-          title: "Components",
-          href: "/docs/documentation/components",
+          title: "Your Files",
+          href: "/docs/documentation/cloud/files",
         },
         {
-          title: "Code Blocks",
-          href: "/docs/documentation/code-blocks",
+          title: "Your Collections",
+          href: "/docs/documentation/cloud/collections",
         },
         {
-          title: "Style Guide",
-          href: "/docs/documentation/style-guide",
+          title: "Your Prompts",
+          href: "/docs/documentation/cloud/prompts",
         },
         {
-          title: "Search",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
-      title: "Blog",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
+          title: "Your Assistants",
+          href: "/docs/documentation/cloud/assistants",
         },
         {
-          title: "Build your own",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Writing Posts",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
-      title: "Dashboard",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Layouts",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Server Components",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Authentication",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Database with Prisma",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "API Routes",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
-      title: "Marketing Site",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "File Structure",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Tailwind CSS",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Typography",
-          href: "/docs/in-progress",
+          title: "Your Tools ",
+          href: "/docs/documentation/cloud/assistant",
           disabled: true,
         },
       ],
     },
   ],
-}
+};

@@ -3,7 +3,7 @@ import type { NavMenuConfig } from "@/types";
 export const navMenuConfig: NavMenuConfig = {
   infosNav: [
     {
-      title: "Think",
+      title: "Software",
       items: [
         {
           title: "Smarter",

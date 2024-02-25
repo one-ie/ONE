@@ -56,6 +56,14 @@ function parseVideoId(url) {
   const result = regex.exec(url);
   return result ? result[3] : null;
 }
+function checkPathTemplate(template) {
+  if (template.startsWith("/")) {
+    throw new Error("You can't use '/' at the beginning of the path.");
+  }
+  if (!template.endsWith(".md")) {
+    throw new Error("The path template should end with '.md' extension.");
+  }
+}
 function parseChapters(description) {
   const lines = description.split("\n");
   const regex = /(\d{0,2}:?\d{1,2}:\d{2})/g;
@@ -83,10 +91,21 @@ function filterFilename(text) {
 function filterStringData(text) {
   return text.replace(/"(.*?)"/g, "\xAB$1\xBB").replace(/["]/g, "");
 }
-function parseAttachmentFolder(folder) {
-  folder = folder.trim();
-  folder = folder.startsWith(".") ? folder.replace(".", "") : folder;
-  return folder === "" ? "/" : folder;
+function getAttachmentFolder(app) {
+  var _a;
+  const attachentPath = app.vault.getConfig("attachmentFolderPath");
+  if (attachentPath.startsWith("./")) {
+    if (attachentPath.length === 2)
+      return "/";
+    const activeFile = app.workspace.getActiveFile();
+    if (!activeFile)
+      throw new Error("No active file. Can't parse the path for the attachment folder.");
+    let parentFolder = (_a = activeFile == null ? void 0 : activeFile.parent) == null ? void 0 : _a.path;
+    if (parentFolder == null ? void 0 : parentFolder.startsWith("/"))
+      parentFolder = parentFolder.substring(1);
+    return parentFolder + attachentPath.substring(2);
+  }
+  return attachentPath;
 }
 
 // src/apis/youtube.ts
@@ -164,7 +183,7 @@ var baseUrlForVideos = "https://www.googleapis.com/youtube/v3/videos?";
 var baseUrlForChannels = "https://www.googleapis.com/youtube/v3/channels?";
 async function getVideoData(videoUrl, settings, downloadThumbnail) {
   var _a, _b;
-  let thumbnailLink = "";
+  let thumbnailFileLink = "";
   try {
     const videoResponse = await (0, import_obsidian3.requestUrl)(
       baseUrlForVideos + `part=snippet,contentDetails&id=${parseVideoId(videoUrl)}&key=${settings.googleCloudApiKey}`
@@ -178,11 +197,13 @@ async function getVideoData(videoUrl, settings, downloadThumbnail) {
     if (channelsResponse.items.length === 0) {
       throw new Error(NO_CHANNEL_ERROR);
     }
-    console.log(videoResponse);
-    console.log(channelsResponse);
+    const thumbnailUrl = getBestThumbnailUrl(Object.values(videoResponse.items[0].snippet.thumbnails));
     if (downloadThumbnail) {
-      const thumbnails = videoResponse.items[0].snippet.thumbnails;
-      thumbnailLink = (_a = await downloadVideoThumbnail(this.app, Object.values(videoResponse.items[0].snippet.thumbnails))) != null ? _a : "";
+      thumbnailFileLink = (_a = await downloadVideoThumbnail(
+        this.app,
+        settings.createPaths,
+        Object.values(videoResponse.items[0].snippet.thumbnails)
+      )) != null ? _a : "";
     }
     return {
       id: videoResponse.items[0].id,
@@ -192,7 +213,8 @@ async function getVideoData(videoUrl, settings, downloadThumbnail) {
       length: parseISODuration(videoResponse.items[0].contentDetails.duration),
       //@ts-ignore
       publishDate: moment(videoResponse.items[0].snippet.publishedAt).format("YYYY-MM-DD"),
-      thumbnail: thumbnailLink != null ? thumbnailLink : "",
+      thumbnail: thumbnailFileLink != null ? thumbnailFileLink : "",
+      thumbnailUrl,
       chapters: parseChapters(videoResponse.items[0].snippet.description).map(
         (chapter) => `${chapter.timestamp} ${filterStringData(chapter.title)}`
       ),
@@ -211,19 +233,29 @@ async function getVideoData(videoUrl, settings, downloadThumbnail) {
     throw Error((error == null ? void 0 : error.message) ? error.message : error);
   }
 }
-async function downloadVideoThumbnail(app, availableThumbnaisl) {
+function getBestThumbnailUrl(availableThumbnails) {
   let bestThumbnailIdx = 0;
-  for (let i = 1; i < availableThumbnaisl.length; i++) {
-    if (availableThumbnaisl[i].width > availableThumbnaisl[bestThumbnailIdx].width) {
+  for (let i = 1; i < availableThumbnails.length; i++) {
+    if (availableThumbnails[i].width > availableThumbnails[bestThumbnailIdx].width) {
       bestThumbnailIdx = i;
     }
   }
-  const imageUrl = availableThumbnaisl[bestThumbnailIdx].url;
+  return availableThumbnails[bestThumbnailIdx].url;
+}
+async function downloadVideoThumbnail(app, createFolders, availableThumbnails) {
+  const imageUrl = getBestThumbnailUrl(availableThumbnails);
   const response = await (0, import_obsidian3.requestUrl)(imageUrl);
   const filename = `${new Date().getTime()}.${imageUrl.split(".").pop()}`;
-  const abstractFile = this.app.vault.getAbstractFileByPath(parseAttachmentFolder(app.vault.getConfig("attachmentFolderPath")));
+  const attachmentFolderPath = getAttachmentFolder(app);
+  const abstractFile = this.app.vault.getAbstractFileByPath(attachmentFolderPath);
   if (!(abstractFile instanceof import_obsidian3.TFolder)) {
-    throw new Error(`Attachment folder '${app.vault.getConfig("attachmentFolderPath")}' does not exist. Check if the folder path is correct in your Settings \u2192 Files and links \u2192 Default location for new attachments.`);
+    if (createFolders) {
+      await app.vault.createFolder(attachmentFolderPath);
+    } else {
+      throw new Error(
+        `Attachment folder '${attachmentFolderPath}' does not exist. Check if the folder path is correct in your Settings \u2192 Files and links \u2192 Default location for new attachments. Or you can turn on option 'Create folders' in the plugin settings.`
+      );
+    }
   }
   await app.vault.createBinary(`${app.vault.getConfig("attachmentFolderPath")}/${filename}`, response.arrayBuffer);
   return filename;
@@ -243,8 +275,23 @@ function processTemplateKey(key, videoData, settings) {
       return key in videoData ? videoData[key].toString() : "";
   }
 }
-function processTemplate(videoData, settings) {
-  let template = settings.template;
+function processPathTemplate(videoData, settings) {
+  let template = settings.pathTemplate;
+  Object.keys(videoData).forEach((key) => {
+    template = replaceAll(template, `{{${key}}}`, filterFilename(processTemplateKey(key, videoData, settings)));
+  });
+  return template;
+}
+async function processTemplate(videoData, settings, app) {
+  let template;
+  if (settings.useTemplateFile) {
+    const file = findTFile(settings.templateFile, app);
+    if (!file)
+      throw new Error(`File '${settings.templateFile}' does not exist`);
+    template = await app.vault.read(file);
+  } else {
+    template = settings.template;
+  }
   Object.keys(videoData).forEach((key) => {
     template = replaceAll(template, `{{${key}}}`, processTemplateKey(key, videoData, settings));
   });
@@ -266,13 +313,26 @@ var InsertTemplateModal = class extends import_obsidian4.Modal {
         const downloadVideoThumbnail2 = this.plugin.settings.template.contains("{{thumbnail}}");
         const data = await getVideoData(this.videoUrl, this.plugin.settings, downloadVideoThumbnail2);
         if (!this.app.vault.getAbstractFileByPath(this.plugin.settings.folder)) {
+          if (this.plugin.settings.createPaths) {
+            await this.app.vault.createFolder(this.plugin.settings.folder);
+          }
           throw new Error(`Folder '${this.plugin.settings.folder}' does not exist`);
         }
-        const filepath = (0, import_obsidian4.normalizePath)(`${this.plugin.settings.folder}/${filterFilename(data.title)}.md`);
+        let filepath;
+        if (this.plugin.settings.usePathTemplate) {
+          checkPathTemplate(this.plugin.settings.pathTemplate);
+          filepath = (0, import_obsidian4.normalizePath)(processPathTemplate(data, this.plugin.settings));
+        } else {
+          filepath = (0, import_obsidian4.normalizePath)(`${this.plugin.settings.folder}/${filterFilename(data.title)}.md`);
+        }
         if (findTFile(filepath, this.app)) {
           new import_obsidian4.Notice(`File ${filepath} already exists`);
         } else {
-          await this.app.vault.create(filepath, processTemplate(data, this.plugin.settings));
+          if (this.plugin.settings.usePathTemplate && !this.app.vault.getAbstractFileByPath(filepath.contains("/") ? filepath.substring(0, filepath.lastIndexOf("/")) : "/")) {
+            await this.app.vault.createFolder(filepath.substring(0, filepath.lastIndexOf("/")));
+          }
+          const dataToWrite = await processTemplate(data, this.plugin.settings, this.app);
+          await this.app.vault.create(filepath, dataToWrite);
           const abstractFile = findTFile(filepath, this.app);
           if (abstractFile) {
             this.app.workspace.getLeaf().openFile(abstractFile);
@@ -324,7 +384,9 @@ var InsertTemplateModal = class extends import_obsidian4.Modal {
     });
     const buttonContainer = contentEl.createDiv({ cls: "insert-template-modal__button-container" });
     contentEl.appendChild(buttonContainer);
-    new import_obsidian4.Setting(buttonContainer).addButton((btn) => btn.setButtonText("Insert (or press Enter)").setCta().onClick(this.onSubmitClick));
+    new import_obsidian4.Setting(buttonContainer).addButton(
+      (btn) => btn.setButtonText("Insert (or press Enter)").setCta().onClick(this.onSubmitClick)
+    );
     const errorContainer = contentEl.createDiv({
       cls: "insert-template-modal__error-container",
       attr: { id: errorContainerId }
@@ -343,9 +405,14 @@ var import_obsidian5 = require("obsidian");
 var DEFAULT_SETTINGS = {
   googleCloudApiKey: "",
   folder: ROOT_FOLDER,
-  template: DEFAULT_TEMPLATE,
   chapterFormat: DEFAULT_CHAPTER_FORMAT,
-  hashtagFormat: DEFAULT_HASHTAG_FORMAT
+  hashtagFormat: DEFAULT_HASHTAG_FORMAT,
+  template: DEFAULT_TEMPLATE,
+  createPaths: true,
+  usePathTemplate: false,
+  pathTemplate: "",
+  useTemplateFile: false,
+  templateFile: ""
 };
 var YouTubeTemplatePluginSettingsTab = class extends import_obsidian5.PluginSettingTab {
   constructor(app, plugin) {
@@ -366,15 +433,33 @@ var YouTubeTemplatePluginSettingsTab = class extends import_obsidian5.PluginSett
     const rootFolder = this.app.vault.getAbstractFileByPath("/");
     const folders = getAllTFolders(rootFolder);
     const folderOptions = Object.fromEntries(folders.map((folder) => [folder.path, folder.path]));
-    new import_obsidian5.Setting(containerEl).setName("Folder to save the templates").setDesc(
-      "Choose the folder where you want to save the templates. The default value is the root folder of your vault."
-    ).addDropdown(
+    new import_obsidian5.Setting(containerEl).setName("Folder to save the notes").setDesc("Choose the folder where you want to save the notes. The default value is the root folder of your vault.").addDropdown(
       (dropdown) => dropdown.addOptions(folderOptions).setValue(this.plugin.settings.folder).onChange(async (value) => {
         this.plugin.settings.folder = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian5.Setting(containerEl).setName("Chapter format").setDesc("Make the template that will be used to insert chapters. You can use the following variables: {{chapter}}.").addTextArea(
+    new import_obsidian5.Setting(containerEl).setName("Use path template").setDesc("Turn on if you want to use a template for the path where you want to save the notes.").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.usePathTemplate).onChange(async (value) => {
+        this.plugin.settings.usePathTemplate = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian5.Setting(containerEl).setName("Path template").setDesc(
+      "Choose the path where you want to save the notes. You can use all keywords that are available in the template (like {{title}}, {{channelName}} etc) and make something like '/YouTube/{{channelName}}/{{title}}.md'."
+    ).addText(
+      (text) => text.setValue(this.plugin.settings.pathTemplate).onChange(async (value) => {
+        this.plugin.settings.pathTemplate = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian5.Setting(containerEl).setName("Create folders").setDesc("Turn on if you want to create the folders for the templates and attachments if they do not exist.").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.createPaths).onChange(async (value) => {
+        this.plugin.settings.createPaths = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian5.Setting(containerEl).setName("Chapter format").setDesc("Make the template that will be used to insert chapters. You can use the following variables: {{chapter}}.").addText(
       (text) => text.setPlaceholder(DEFAULT_CHAPTER_FORMAT).setValue(this.plugin.settings.chapterFormat).onChange(async (value) => {
         this.plugin.settings.chapterFormat = value;
         await this.plugin.saveSettings();
@@ -387,13 +472,27 @@ var YouTubeTemplatePluginSettingsTab = class extends import_obsidian5.PluginSett
       })
     );
     new import_obsidian5.Setting(containerEl).setName("Template").setDesc(
-      "Make the template that will be used to create the note. You can use the following variables: {{title}}, {{channelName}}, {{subscribers}}, {{length}}, {{publishDate}}, {{thumbnail}}, {{chapters}}, {{hashtags}}, {{description}}, {{noteCreated}}, {{youtubeUrl}}."
+      "Make the template that will be used to create the note. You can use the following variables: {{title}}, {{channelName}}, {{subscribers}}, {{length}}, {{publishDate}}, {{thumbnail}} (to download thumbnail, file name will be returned), {{thumbnailUrl}} {{chapters}}, {{hashtags}}, {{description}}, {{noteCreated}}, {{youtubeUrl}}."
     ).addTextArea(
       (text) => text.setValue(this.plugin.settings.template).onChange(async (value) => {
         this.plugin.settings.template = value;
         await this.plugin.saveSettings();
       })
     ).setClass("youtube-template-plugin__template-textarea");
+    new import_obsidian5.Setting(containerEl).setName("Use template file").setDesc("Turn on if you want to use a file with a template to create the note instead of textarea above.").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.useTemplateFile).onChange(async (value) => {
+        this.plugin.settings.useTemplateFile = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian5.Setting(containerEl).setName("Template file").setDesc(
+      "File with template that will be used to create the note. You can use the following You can use the following variables: {{title}}, {{channelName}}, {{subscribers}}, {{length}}, {{publishDate}}, {{thumbnail}} (to download thumbnail, file name will be returned), {{thumbnailUrl}} {{chapters}}, {{hashtags}}, {{description}}, {{noteCreated}}, {{youtubeUrl}}."
+    ).addText(
+      (text) => text.setValue(this.plugin.settings.templateFile).onChange(async (value) => {
+        this.plugin.settings.templateFile = value;
+        await this.plugin.saveSettings();
+      })
+    );
   }
 };
 
