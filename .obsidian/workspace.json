@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/documentation/cloud/workspaces.mdx",
-                "mode": "preview",
-                "source": true
+                "file": "src/content/guides/build-blog-using-astro-mdx.mdx",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/content/docs/documentation/cloud/workspaces.mdx",
+                "file": "src/content/guides/build-blog-using-astro-mdx.mdx",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/content/docs/documentation/cloud/workspaces.mdx",
+                "file": "src/content/guides/build-blog-using-astro-mdx.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/content/docs/documentation/cloud/workspaces.mdx"
+                "file": "src/content/guides/build-blog-using-astro-mdx.mdx"
               }
             }
           },
@@ -160,30 +160,38 @@
   },
   "active": "447a9a5b60d47f66",
   "lastOpenFiles": [
-    "src/content/docs/documentation/cloud/profile.mdx",
-    "public/me.jpeg",
-    "src/content/docs/documentation/cloud/blank.mdx",
+    "src/pages/landing.md",
+    "src/content/docs/getting-started.mdx",
     "src/content/docs/get-ready.mdx",
-    "src/content/docs/documentation/cloud/blank copy.mdx",
-    "src/content/docs/chat.mdx",
-    "src/content/docs/activate copy.mdx",
-    "src/content/docs/sign-up.mdx",
-    "src/content/docs/activate.mdx",
-    "src/content/docs/models/open-ai.mdx",
+    "src/content/docs/documentation/cloud/workspaces.mdx",
+    "src/content/docs/documentation/cloud/tools.mdx",
+    "src/content/docs/documentation/cloud/prompts.mdx",
+    "src/content/docs/documentation/cloud/profile.mdx",
+    "src/content/docs/documentation/cloud/models.mdx",
     "src/content/docs/documentation/cloud/files.mdx",
-    "src/content/docs/documentation/cloud/Untitled.md",
-    "src/content/prompts/Untitled.md",
+    "src/content/docs/documentation/cloud/blank.mdx",
+    "src/content/docs/documentation/cloud/assistants.mdx",
+    "dist/_astro/prompts.CgynC4sP.png",
+    "dist/_astro/workspaces.j5X9oju4.png",
+    "dist/_astro/profile.D2isuzhL.png",
+    "dist/_astro/profile2.BGSPjhOs.png",
+    "dist/_astro/files2.C47nSyQk.png",
+    "dist/_astro/chat1.QUMXjtuf.png",
+    "dist/_astro/files.Da8v6qDL.png",
+    "dist/_astro/cloudflare-connect-to-github.CI49ZyWT.png",
+    "dist/_astro/chatcopy.DRp7fZJ9.png",
+    "dist/_astro/chat3.C8iT9F3Z.png",
+    "src/content/clients/client.md",
     "credits.md",
+    "README.md",
+    "license.md",
+    "src/content/docs/cloud/pic.md",
+    "src/content/docs/documentation/cloud/pic.md",
+    "src/content/prompts/Untitled.md",
     "src/content/blog/pale-blue-dot.md",
     "src/content/blog/markdown-style-guide.md",
     "src/content/blog/first-post.md",
-    "README.md",
-    "license.md",
     "src/content/clients/Untitled.md",
-    "public/blog-placeholder-1.jpg",
-    "public/ONE-Design.svg",
-    "src/content/docs/documentation/local/Untitled.md",
-    "src/content/blog/first-post-20240207211955444.webp",
-    "src/content/blog/blog-placeholder-1.jpg"
+    "src/content/docs/documentation/local/Untitled.md"
   ]
 }
