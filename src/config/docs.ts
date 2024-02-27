@@ -4,7 +4,7 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Documentation",
-      href: "/docs/get-ready/",
+      href: "/docs/get-started/",
     },
     {
       title: "Guides",
@@ -16,16 +16,20 @@ export const docsConfig: DocsConfig = {
       title: "Quick Start",
       items: [
         {
+          title: "Get Started",
+          href: "/docs/get-started",
+        },
+        {
           title: "Get Ready",
-          href: "/docs/get-ready/",
+          href: "/docs/cloud/get-ready",
         },
         {
           title: "Activate",
-          href: "/docs/activate/",
+          href: "/docs/cloud/activate",
         },
         {
-          title: "Chat ",
-          href: "/docs/chat/",
+          title: "Chat",
+          href: "/docs/cloud/chat",
         },
       ],
     },
@@ -33,32 +37,45 @@ export const docsConfig: DocsConfig = {
       title: "Accelerate",
       items: [
         {
-          title: "Your AI",
-          href: "/docs/documentation/cloud/profile",
+          title: "Your Chats",
+          href: "/docs/cloud/chats",
         },
         {
-          title: "Your Work Spaces",
-          href: "/docs/documentation/cloud/workspaces",
-        },
-        {
-          title: "Your Files",
-          href: "/docs/documentation/cloud/files",
-        },
-        {
-          title: "Your Collections",
-          href: "/docs/documentation/cloud/collections",
+          title: "Your Profile",
+          href: "/docs/cloud/profile",
         },
         {
           title: "Your Prompts",
-          href: "/docs/documentation/cloud/prompts",
+          href: "/docs/cloud/prompts",
+        },
+        {
+          title: "Your Work Spaces",
+          href: "/docs/cloud/workspaces",
+        },
+        {
+          title: "Your Files",
+          href: "/docs/cloud/files",
+        },
+        {
+          title: "Your Collections",
+          href: "/docs/cloud/collections",
         },
         {
           title: "Your Assistants",
-          href: "/docs/documentation/cloud/assistants",
+          href: "/docs/cloud/assistants",
         },
         {
           title: "Your Tools ",
-          href: "/docs/documentation/cloud/assistant",
+          href: "/docs/cloud/tools",
+        },
+      ],
+    },
+    {
+      title: "Develop",
+      items: [
+        {
+          title: "Your AI",
+          href: "/docs/cloud/profile",
           disabled: true,
         },
       ],

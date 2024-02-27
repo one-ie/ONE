@@ -1,0 +1,43 @@
+---
+title: Your Assistants
+description: Create assistants for your organization to automate repetitive tasks and improve productivity.
+---
+import { Image } from 'astro:assets';
+import assistants from './assistants.png';
+
+### 1. Accessing the Assistant Management Interface
+
+- Open the sidebar and navigate to the section specifically designed for managing assistants. 
+
+<Image src={assistants} alt="Open Assistants"/>
+
+
+### 2. Creating a New Assistant
+
+- Click “+ New Assistant”.
+- Upon initiating the process, you’ll likely be asked to fill in several fields:
+    1. **Name:** Assign a name to your assistant. Choose a name that reflects the assistant's purpose or personality.
+    2. **Description:** Briefly describe the assistant's role or functionalities. This helps clarify the purpose of the assistant at a glance.
+    3. **Image:** Some applications allow or require you to select an image for your assistant. This could be done via an `ImagePicker` component where you can upload an image or select from existing ones.
+    4. **Chose the model** Configure chat settings like the model, prompt, temperature, and context length. These settings dictate how your assistant will generate responses.
+    5. **Select Advanced Settings** Configure chat settings like the temperature, context length, if chats include profile context and workspace instructions. These settings dictate how your assistant will generate responses.
+    6. **Files and Collections** Add files and collections to your assistant. These files and collections will be available to your assistant when it is used.
+    7. **Tools** Select tools to add to your assistant. Tools are third-party services that can be integrated into your assistant.
+
+Complete the assistant creation by clicking a “Create,” Your new assistant should now be listed within your application's assistant section.
+
+### 3. Using Your Assistant
+
+- Type @ and the assistant name in a chat window to initiate the assistant.
+or
+- Select it from the quick settings menu. 
+
+### 4. Monitoring and Maintenance
+
+- Regularly review the performance and accuracy of your assistant. Make adjustments to the configuration as needed based on feedback or changes in requirements.
+- Keep the assistant's resources, such as linked files or tools, updated to maintain its functionality and relevance.
+
+### 5. Deleting an Assistant
+
+- If an assistant is no longer needed, look for a “Delete” option within the assistant configuration or settings menu. Confirm the deletion as prompted.
+- Please note that deleting an assistant is irreversible and should be done with consideration of any dependencies or ongoing uses.

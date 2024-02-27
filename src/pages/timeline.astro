@@ -1,0 +1,186 @@
+---
+import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
+import MainLayout from "@/layouts/main-layout.astro";
+import { cn } from "@/lib/utils";
+import Icon from "astro-icon";
+import Workspace from "@/components/workspace.astro";
+import React from 'react';
+import AnimatedTimeline from '../components/AnimatedTimeline.jsx';
+
+const items = [
+  {
+      "title": "Your Profile",
+      "content": "Your Profile is where you infuse ONE with the essence of your business goals, operational preferences, and growth strategies. This personalization means every piece of advice, every insight, and every suggestion you receive is tailored specifically to propel your business forward, aligning perfectly with your vision for revolutionizing your company."
+    },
+    {
+      "title": "Your Prompts",
+      "content": "With Your Prompts, you have the power to direct the AI to focus on your most pressing business needs. Whether you're looking for innovative product ideas, market expansion strategies, or ways to streamline operations, you command the AI to deliver actionable insights that drive your business towards increased profitability and growth."
+    },
+    {
+      "title": "Your Work Spaces",
+      "content": "Your Work Spaces are your digital command posts for every aspect of your business, from sales and marketing to product development and customer service. This organizational feature allows you to manage multiple projects and initiatives simultaneously, ensuring each one receives the attention it deserves, driving efficiency and effectiveness across your operations."
+    },
+    {
+      "title": "Your Files",
+      "content": "Think of Your Files as your business's memory, an intelligent system that stores, organizes, and retrieves all your crucial documents and data with unparalleled accuracy. This instant access to information speeds up decision-making, ensures precision in your strategies, and keeps your business agile and informed."
+    },
+    {
+      "title": "Your Collections",
+      "content": "Your Collections allow you to group related business assets, documents, and data, making it easier to manage projects and strategic initiatives. This feature is like having a personalized business library at your fingertips, ensuring you always have the right information ready for any business decision, streamlining your path to innovation and profit."
+    },
+    {
+      "title": "Your Assistants",
+      "content": "Your Assistants are your digital workforce, handling routine tasks, analyzing data, and managing communications, allowing you to focus on high-level strategic thinking and business growth. This delegation of tasks to AI increases your operational speed, accuracy, and efficiency, directly contributing to your bottom line."
+    },
+    {
+      "title": "Your Tools",
+      "content": "Your Tools equip you with a suite of AI-powered capabilities designed to enhance how you work. From analyzing market trends to optimizing customer interactions, these tools empower you to make smarter, faster decisions, execute strategies more effectively, and ultimately drive your business towards greater profitability and success."
+    },
+    {
+      "title": "Your Chats",
+      "content": "Description of Your Chats..."
+    },
+    {
+      "title": "Your Profile",
+      "content": "Description of Your Profile..."
+    }
+];
+
+---
+
+<MainLayout title="ONE">
+  <section class="space-y-6 pb-12 pt-16 lg:py-28">
+    <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+  <li>
+    <div className="timeline-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+    </div>
+    <div className="timeline-start md:text-end mb-10">
+      <div className="text-lg font-black">Your Chats</div>
+      Interact dynamically with AI models through personalized dialogues, securely store and organize chats for easy access, and continue your conversations seamlessly across devices.
+    </div>
+    <hr/>
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+    </div>
+    <div className="timeline-end mb-10">
+      <div className="text-lg font-black">Your Profile</div>
+      Customize your AI experience by uploading a profile picture, adding personal information, and setting preferences to refine interactions to your style.
+    </div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+    </div>
+    <div className="timeline-start md:text-end mb-10">
+      <div className="text-lg font-black">Your Prompts</div>
+      Manage and utilize prompts to craft specific questions or commands, enabling a streamlined workflow and enhanced productivity with AI.
+    </div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+    </div>
+    <div className="timeline-end mb-10">
+      <div className="text-lg font-black">Your Work Spaces</div>
+      Compartmentalize and manage tasks or projects efficiently through customized workspaces, enhancing focus and organization for every project.
+    </div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+    </div>
+    <div className="timeline-start md:text-end mb-10">
+      <div className="text-lg font-black">Your Files</div>
+      Upload, organize, share, and manage files with comprehensive file management capabilities, keeping your data at your fingertips.
+    </div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+    </div>
+    <div className="timeline-end mb-10">
+      <div className="text-lg font-black">Your Collections</div>
+      Categorize your files into collections for easy access, enhancing organization and productivity across different workspaces and projects.
+    </div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+    </div>
+    <div className="timeline-start md:text-end mb-10">
+      <div className="text-lg font-black">Your Assistants</div>
+      Automate repetitive tasks and improve productivity by creating custom AI assistants tailored to your specific needs and workflows.
+    </div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+    </div>
+    <div className="timeline-end mb-10">
+      <div className="text-lg font-black">Your Tools</div>
+      Enhance your AI capabilities with a suite of powerful tools for browsing, file management, creativity, and more, expanding what's possible with AI.
+    </div>
+    <hr />
+  </li>
+</ul>
+
+  </section>
+</MainLayout>
+
+<style>
+    .timeline {
+  @apply relative before:absolute before:bg-gray-200 before:top-0 before:bottom-0 before:w-1 before:left-1/2 before:transform before:-translate-x-1/2;
+}
+
+.timeline-snap-icon {
+  @apply flex flex-col items-center;
+}
+
+.max-md:timeline-compact {
+  @apply md:flex-row md:items-center;
+}
+
+.timeline-vertical {
+  @apply flex flex-col;
+}
+
+.timeline-middle {
+  @apply relative flex items-center justify-center;
+}
+
+.timeline-start,
+.timeline-end {
+  @apply relative flex flex-col items-center md:items-end text-center md:text-left mb-10 md:mb-0;
+}
+
+.timeline-start .font-black,
+.timeline-end .font-black {
+  @apply text-lg font-bold;
+}
+
+hr {
+  @apply border-t border-gray-200 my-4 w-full;
+}
+
+svg {
+  @apply h-5 w-5 text-gray-400;
+}
+
+</style>

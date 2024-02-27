@@ -13,16 +13,24 @@ export const docsConfig: DocsConfig = {
   ],
   sidebarNav: [
     {
-      title: "Getting Started",
+      title: "Quick Start",
       items: [
         {
-          title: "Introduction",
-          href: "/docs/getting-started/",
+          title: "Get Ready",
+          href: "/docs/cloud/get-ready",
+        },
+        {
+          title: "Activate",
+          href: "/docs/cloud/activate",
+        },
+        {
+          title: "Chat",
+          href: "/docs/cloud/chat",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Optimise",
       items: [
         {
           title: "Introduction",
@@ -133,4 +141,4 @@ export const docsConfig: DocsConfig = {
       ],
     },
   ],
-}
+};

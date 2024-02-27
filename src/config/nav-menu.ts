@@ -36,9 +36,9 @@ export const navMenuConfig: NavMenuConfig = {
         },
         {
           title: "Docs",
-          href: "/docs/getting-started",
+          href: "/docs/get-started",
           description:
-            "A Markdown/MDX documentation site built using Content Collections.",
+            "User Manual",
         },
         {
           title: "Courses",

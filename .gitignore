@@ -21,3 +21,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+## obsidian
+.obsidian/workspace.json
+.obsidian/workspace.json

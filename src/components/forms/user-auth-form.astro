@@ -1,5 +1,18 @@
 ---
 
 ---
-
-<div class="h-56 border rounded-lg flex justify-center items-center text-muted-foreground">Auth form soon</div>
+<form class="animate-in text-foreground flex w-full flex-1 flex-col justify-center gap-2" action="https://my.one.ie/login" method="POST">
+    <div class="mb-2">
+    </div>
+    <div class="text-4xl font-bold tracking-wide">ONE</div>
+  </a>
+  <label class="font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-md mt-4" for="email">Email</label>
+  <input class="border-input ring-offset-background placeholder:text-muted-foreground focus:none flex h-10 w-full text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-3 rounded-md border bg-inherit px-4 py-2" placeholder="you@example.com" required="" name="email"/>
+  <label class="font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-md" for="password">Password</label>
+  <input type="password" class="border-input ring-offset-background placeholder:text-muted-foreground focus:none flex h-10 w-full text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-6 rounded-md border bg-inherit px-4 py-2" placeholder="••••••••" name="password"/>
+  <button class="ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors hover:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 mb-2 rounded-md bg-blue-700 px-4 py-2 text-white">Login</button>
+  <div class="text-muted-foreground mt-1 flex justify-center text-sm">
+    <span class="mr-1">Forgot your password?</span>
+    <!-- Additional elements like reset password button might be here -->
+  </div>
+</form>

@@ -1,5 +1,6 @@
 {
   "alwaysUpdateLinks": true,
   "propertiesInDocument": "visible",
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "strictLineBreaks": true
 }
