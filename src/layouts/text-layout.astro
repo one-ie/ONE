@@ -1,0 +1,24 @@
+---
+import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import MainLayout from "./main-layout.astro";
+
+type Props = {
+  title: string;
+  description?: string;
+  mainClass?: string;
+};
+
+const { title, description, mainClass } = Astro.props;
+---
+
+<MainLayout title={title} description={description}>
+  <div class="relative container max-w-screen-md py-10">
+    
+    <article class="prose dark:prose-invert max-w-none">
+      <slot />
+    </article>
+  </div>
+</MainLayout>
