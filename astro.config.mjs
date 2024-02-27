@@ -21,8 +21,7 @@ export default defineConfig({
     react(),
     tailwind({
       applyBaseStyles: false,
-    }),
-    compressor(),
+    })
   ],
   adapter: cloudflare(),
   output: "hybrid",
