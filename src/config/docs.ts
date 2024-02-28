@@ -74,9 +74,8 @@ export const docsConfig: DocsConfig = {
       title: "Develop",
       items: [
         {
-          title: "Your AI",
-          href: "/docs/cloud/profile",
-          disabled: true,
+          title: "Build Custom AI",
+          href: "/lab",
         },
       ],
     },

@@ -7,13 +7,13 @@ export const navMenuConfig: NavMenuConfig = {
       items: [
         {
           title: "Features",
-          href: "/",
+          href: "/#features",
           description: "Create your own AI agents.",
         },
         {
           title: "Our Vision",
           href: "/company/vision",
-          description: "Read about our company's vision.",
+          description: "Read about our company's vision for free and open AI.",
           external: true,
         },
         {
