@@ -6,20 +6,20 @@ export const navMenuConfig: NavMenuConfig = {
       title: "Software",
       items: [
         {
-          title: "Smarter",
-          href: "/#features",
-          description: "Take a closer look at the project's features.",
+          title: "Features",
+          href: "/",
+          description: "Create your own AI agents.",
         },
         {
-          title: "Faster",
-          href: "https://twitter.com/tonyoconnell",
-          description: "Follow me to get the latest updates and news.",
+          title: "Our Vision",
+          href: "/company/vision",
+          description: "Read about our company's vision.",
           external: true,
         },
         {
           title: "Start Now", 
-          href: "https://one.ie/start",
-          description: "You can get started in less than a minute. Just enter your website address and our AI will research your company, market and customers.",
+          href: "/docs/get-started",
+          description: "Get started in a few minutes.",
           external: true,
         },
       ],
@@ -32,18 +32,18 @@ export const navMenuConfig: NavMenuConfig = {
         {
           title: "Blog",
           href: "/blog",
-          description: "A Markdown/MDX blog built using Content Collections.",
+          description: "Thoughts and ideas about AI, marketing and education.",
         },
         {
           title: "Docs",
           href: "/docs/get-started",
           description:
-            "User Manual",
+            "User Manual: How to get started and create your first AI agent quickly.",
         },
         {
           title: "Courses",
           href: "/login",
-          description: "Guide learners on a journey with a static LMS",
+          description: "Learn how to build advanced AI agents using visual programming tools.",
           disabled: true,
         },
       ],

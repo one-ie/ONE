@@ -35,64 +35,30 @@ import FaqSection from "@/components/faq-section";
       >
         Own powerful AI that will transform your enterprise and your life. Your keys. Your data. Your code. Free and open. Forever. MIT Licensed.
       </p>
-
+<br /><br />
       <div class="flex justify-center space-x-2 md:space-x-4">
         <a
-          href="/docs/cloud/get-ready/"
+          href="/docs/get-started/"
           class={cn(buttonVariants({ size: "lg" }))}
         >
           Get Started
         </a>
         <a
-          href={siteConfig.links.github}
-          target="_blank"
-          rel="noreferrer"
+          href="/company/vision"
           class={cn(buttonVariants({ variant: "outline", size: "lg" }), "px-8")}
         >
-          <Icon name="github" class="mr-2 size-5" />
-           Github
+           Our Vision
         </a>
       </div>
     </div>
-  </section>
       <Features />
 
-  <section id="open-source" class="container py-8 md:py-12 lg:py-28">
-    <div
-      class="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center"
-    >
-      <h2 class="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-        Proudly Open Source
-      </h2>
-      <p
-        class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-      >
-        ONE is open source and powered by open source software. <br />{
-          " "
-        }
-         The code is available on{" "}
-        <a
-          href={siteConfig.links.github}
-          target="_blank"
-          rel="noreferrer"
-          class="underline underline-offset-4"
-        >
-          GitHub
-        </a>
-         .
-      </p>
-    </div>
   </section>
    <section>
     <div class="space-y-6 text-center mb-14">
-      <h1 class="font-heading text-4xl text-center">
+      <h2 class="font-heading text-4xl text-center">
         Frequently Asked Questions
-      </h1>
-      <p class="text-muted-foreground text-md">
-        Explore our comprehensive FAQ to find quick answers to common inquiries.
-        If you need further assistance, don't hesitate to contact our support
-        team for personalized help.
-      </p>
+      </h2>
     </div>
 <div class="relative container max-w-screen-md py-10">
     <FaqSection client:load />

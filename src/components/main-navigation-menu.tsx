@@ -34,7 +34,7 @@ export function MainNavigationMenu() {
 
                   <div className="mb-2 mt-3 text-lg font-medium">ONE</div>
                   <p className="text-sm leading-tight text-muted-foreground">
-                    Generate and sell products, services and ideas at the edge. 
+                    Create AI agents for your enterprise or yourself. 
                   </p>
                 </a>
               </li>
