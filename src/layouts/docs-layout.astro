@@ -4,6 +4,8 @@ import Header from "@/components/layout/header.astro";
 import { MainNavigationMenu } from "@/components/main-navigation-menu";
 import { siteConfig } from "@/config/site";
 import { Icon } from "astro-icon/components";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import BaseLayout from "./base-layout.astro";
 import { SheetMobileNav } from "@/components/layout/sheet-mobile-nav";
 import { navMenuConfig } from "@/config/nav-menu";
@@ -42,11 +44,18 @@ const { title, description } = Astro.props;
       client:load
     />
 
-    <nav slot="right-header">
-       <a
-        href="https://my.one.ie/login"
+     <nav slot="right-header">
+      <a
+        href="/docs/get-started"
+        class={cn(buttonVariants({ variant: "outline", size: "sm" }), "px-4")}
       >
-        Dashboard
+        Get Started
+      </a>
+      <a
+        href="https://my.one.ie/login"
+        class={cn(buttonVariants({ variant: "secondary", size: "sm" }), "px-4")}
+      >
+        Sign In
       </a>
     </nav>
   </Header>

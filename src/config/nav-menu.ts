@@ -42,7 +42,7 @@ export const navMenuConfig: NavMenuConfig = {
         },
         {
           title: "Courses",
-          href: "/login",
+          href: "/courses",
           description: "Learn how to build advanced AI agents using visual programming tools.",
           disabled: true,
         },

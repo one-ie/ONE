@@ -43,10 +43,16 @@ const { title, description, mainClass } = Astro.props;
 
     <nav slot="right-header">
       <a
-        href="https://my.one.ie"
+        href="/docs/get-started"
         class={cn(buttonVariants({ variant: "outline", size: "sm" }), "px-4")}
       >
-        Start Now
+        Get Started
+      </a>
+      <a
+        href="https://my.one.ie/login"
+        class={cn(buttonVariants({ variant: "secondary", size: "sm" }), "px-4")}
+      >
+        Sign In
       </a>
     </nav>
   </Header>
