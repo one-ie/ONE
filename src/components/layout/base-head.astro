@@ -55,31 +55,29 @@ const {
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<!-- Dark mode with prevent flickering flash between navigations -->
-<script is:inline>
+<script>
 const setDarkMode = () => {
-  const theme = (() => {
-    if (
-      typeof localStorage !== "undefined" &&
-      localStorage.getItem("theme")
-    ) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  })();
+  let theme = "dark"; // Default to dark mode
+  
+  // Check localStorage for a theme setting
+  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+    theme = localStorage.getItem("theme");
+  }
 
+  // Apply the theme based on the above logic
   if (theme === "light") {
     document.documentElement.classList.remove("dark");
   } else {
     document.documentElement.classList.add("dark");
   }
+
+  // Save the theme setting in localStorage
   window.localStorage.setItem("theme", theme);
 };
 
 setDarkMode();
+
+// Reapply theme setting upon dynamic content changes
 document.addEventListener("astro:after-swap", setDarkMode);
 </script>
 
