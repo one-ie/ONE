@@ -14,7 +14,7 @@ const faqData = [
 	{
 		id: "item-2",
 		question: "Is ONE really free?",
-		answer: "Yes, ONE is free to use with your own AI keys. Companies who pay for access to our lab get access to our source code with a MIT License, providing maximum freedom to use, modify, and sell our software as you see fit.",
+		answer: "Yes, ONE is free to use with your own AI keys. If you pay to join our lab you get access to our source code with a MIT License, providing maximum freedom to use, modify, and sell our software as you see fit.",
 	},
 	{
 		id: "item-3",
@@ -24,7 +24,7 @@ const faqData = [
 	{
 		id: "item-4",
 		question: "Do I need technical skills to use ONE?",
-		answer: "No. ONE is designed to be user-friendly. We offer educational resources and courses for both non-technical users and developers.",
+		answer: "No. ONE is user-friendly. Your AI will make your life easier. We offer educational resources and courses for both non-technical users and developers.",
 	},
 	{
 		id: "item-6",
@@ -33,15 +33,16 @@ const faqData = [
 	},
 	{
 		id: "item-7",
-		question: "Can I customize ONE to fit my brand?",
-		answer: "Definitely! ONE is designed to be fully customizable, allowing you to change logos, colors, and other branding elements to match your company's identity.",
+		question: "Can I whitelabel ONE to fit my brand?",
+    answer:
+      "Definitely! Members of ONE Lab have full access to modifiy our source code and we can also host ONE for you with your logo, colours and brand.",
 	},
 
 	{
 		id: "item-11",
 		question: "How do I get started with ONE?",
     answer:
-      "Getting started is easy. <a href='/docs/get-started'> >> Start Here</a>.",	
+      "Getting started is easy. Just click the Start Mow button and your AI will be ready and activated in a few minutes. ",	
 	},
 	{
 		id: "item-12",
@@ -51,17 +52,12 @@ const faqData = [
 	{
 		id: "item-13",
 		question: "What kind of AI agents can I create with ONE?",
-		answer: "You can create a wide variety of AI agents, from customer service bots to sales and marketing assistants, tailored to automate and enhance various aspects of your business.",
+		answer: "You can create a wide variety of AI agents, for marketing, sales, customer service, design, engineering, education and intelligence.",
 	},
 	{
 		id: "item-14",
 		question: "Can ONE integrate with my existing systems?",
 		answer: "Yes, ONE is designed to seamlessly integrate with a broad range of systems and platforms, enhancing your existing infrastructure with powerful AI capabilities.",
-	},
-	{
-		id: "item-16",
-		question: "Are there any hidden costs with ONE?",
-		answer: "There are no hidden costs. ONE is free to use under the MIT License, though certain third-party services or integrations you choose to use with ONE may have their own costs.",
 	},
 ];
 

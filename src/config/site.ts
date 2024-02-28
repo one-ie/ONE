@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
 // Update Your Information 
   name: "ONE",
   description:
-    "Accellerate with AI. Generate and sell products, services and ideas at the edge.",
+    "Accellerate with AI. Sell products, services and ideas at unprecedented speed.",
   url: "https://one.ie/",
   ogImage: "https://one.ie/og.jpg",
   links: {
