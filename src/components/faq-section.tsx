@@ -9,12 +9,12 @@ const faqData = [
 	{
 		id: "item-1",
 		question: "What exactly does ONE offer?",
-		answer: "ONE provides a suite of free and open AI-powered software, designs, and knowledge to help individuals and enterprises automate tasks, educate, improve operational efficiency, and sell products, services, and ideas at unprecedented speed.",
+		answer: "ONE provides access to a suite of free and open AI-powered software, designs, and knowledge to help individuals and enterprises sell products, services, and ideas at unprecedented speed.",
 	},
 	{
 		id: "item-2",
 		question: "Is ONE really free?",
-		answer: "Yes, ONE is free to use with your own AI keys. If you pay to join our lab you get access to our source code with a MIT License, providing maximum freedom to use, modify, and sell our software as you see fit.",
+		answer: "Yes, ONE cloud is free to use with your own AI keys. You pay for AI completions at cost. We are working on a free cloud service that allows you to use your own database. If you pay to join our lab you get access to our source code with a MIT License, providing maximum freedom to use, modify, and profit from our software as you see fit.",
 	},
 	{
 		id: "item-3",
@@ -29,7 +29,7 @@ const faqData = [
 	{
 		id: "item-6",
 		question: "Is my data safe with ONE?",
-		answer: "Yes, data privacy and security are our top priorities. You own your data, and we ensure it is stored securely and accessible to you in real-time.",
+		answer: "Yes, data privacy and security are our top priorities. All customer data is encrypted at rest with AES-256 and in transit via TLS.Sensitive information like access tokens and keys are encrypted at the application level before they are stored in the database. Enterprise customers can have SSO, SOC2 Type 2 and HIPAA compliance.",
 	},
 	{
 		id: "item-7",
@@ -42,7 +42,7 @@ const faqData = [
 		id: "item-11",
 		question: "How do I get started with ONE?",
     answer:
-      "Getting started is easy. Just click the Start Mow button and your AI will be ready and activated in a few minutes. ",	
+      "Getting started is easy. Just click the Get Started button and your AI will be ready and activated in a few minutes. ",	
 	},
 	{
 		id: "item-12",
@@ -57,7 +57,7 @@ const faqData = [
 	{
 		id: "item-14",
 		question: "Can ONE integrate with my existing systems?",
-		answer: "Yes, ONE is designed to seamlessly integrate with a broad range of systems and platforms, enhancing your existing infrastructure with powerful AI capabilities.",
+		answer: "Yes, ONE is designed to integrate with a broad range of systems and platforms, enhancing your existing infrastructure with powerful AI capabilities.",
 	},
 ];
 
