@@ -8,16 +8,16 @@ category: vision
 ---
 # ONE Lab
 
-One Lab is a place for governments, enterprises, agencies, schools, medium and small businesses to build swarms of AI agents.
+One Lab is a place for governments, enterprises, agencies, schools, medium and small businesses to build swarms of AI agents that do jobs faster and more accurately than humans.
 
-Here's what you will receive if you join us:
+Here's what you will receive if you join ONE Lab ...
 
 ## **Exclusive Access and Resources**
 
 - **Private GitHub Repository:** Get access to a suite of stable, tightly integrated, MIT licensed software for AI interfaces, visual AI programming tools, APIs, databases, websites, learning management systems, user billing and much more.
 - **Custom AI Creation:** Collaborate with our team and other lab members to develop AI tailored to your needs, whether it's for automating tasks, enhancing customer service, or unlocking new insights from your data.
 - **Education and Mentorship:** Dive deep into the world of AI with access to our educational resources and mentorship from seasoned experts. Whether you're a beginner or looking to refine your skills, we're here to guide you.
-- **Deployment Support:** We don't just help you build; we help you deploy. Your AI agents and database can be seamlessly integrated into your existing systems, ensuring a smooth transition and compliant operation.
+- **Deployment Support:** We don't just help you build; we help you deploy. Your AI agents, models, API and database can be seamlessly integrated into your existing systems, ensuring a smooth transition and compliant operation.
 
 ## **Flexible Pricing Based on Your Needs**
 
