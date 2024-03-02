@@ -34,7 +34,7 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Accelerate",
+      title: "Personalise",
       items: [
         {
           title: "Your Chats",

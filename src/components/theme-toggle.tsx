@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 const SunIcon = () => (
   <>
     <motion.svg
-      width="22"
-      height="22"
+      width="60"
+      height="60"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -43,8 +43,8 @@ const SunIcon = () => (
 const MoonIcon = () => (
   <>
     <motion.svg
-      width="22"
-      height="22"
+      width="40"
+      height="40"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
