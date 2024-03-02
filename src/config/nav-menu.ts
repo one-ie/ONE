@@ -16,7 +16,7 @@ export const navMenuConfig: NavMenuConfig = {
           description: "Read about our company's vision for free and open AI.",
         },
         {
-          title: "Start Now", 
+          title: "Start Now",
           href: "/docs/get-started",
           description: "Get started in a few minutes.",
           external: false,
@@ -40,9 +40,16 @@ export const navMenuConfig: NavMenuConfig = {
             "User Manual: How to get started and create your first AI agent quickly.",
         },
         {
+          title: "Guides",
+          href: "/guides",
+          description:
+            "Deep dives, step by step",
+        },
+        {
           title: "Courses",
           href: "/courses",
-          description: "Learn how to build advanced AI agents using visual programming tools.",
+          description:
+            "Learn how to build advanced AI agents using visual programming tools.",
           disabled: true,
         },
       ],
