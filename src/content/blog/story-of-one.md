@@ -1,7 +1,7 @@
 ---
 title: The Story of ONE
 description: Here is my story
-pubDate: 28 February 2024
+pubDate: 22 December 1994
 coverImage: /blog-placeholder-3.jpg
 category: Personal
 ---
