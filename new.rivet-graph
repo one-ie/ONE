@@ -1,0 +1,39 @@
+version: 4
+data:
+  metadata:
+    description: ""
+    id: 645IfDBYhy6DQsfCvCAIg
+    name: new
+  nodes:
+    '[G7oLnMAETaZdPpaJFDZbI]:userInput "User Input"':
+      data:
+        prompt: This is an example question?
+        useInput: false
+      outgoingConnections:
+        - output->"Chat" I_emk70FEWJjFWG8aj5PE/prompt
+      visualData: 340/360/280/2//
+    '[I_emk70FEWJjFWG8aj5PE]:chat "Chat"':
+      data:
+        cache: false
+        enableFunctionUse: false
+        frequencyPenalty: 0
+        maxTokens: 1024
+        model: gpt-3.5-turbo
+        parallelFunctionCalling: true
+        presencePenalty: 0
+        stop: ""
+        temperature: 0.5
+        top_p: 1
+        useAsGraphPartialOutput: true
+        useFrequencyPenaltyInput: false
+        useMaxTokensInput: false
+        useModelInput: false
+        usePresencePenaltyInput: false
+        useStop: false
+        useStopInput: false
+        useTemperatureInput: false
+        useTopP: false
+        useTopPInput: false
+        useUseTopPInput: false
+        useUserInput: false
+      visualData: 825/289/230/5//

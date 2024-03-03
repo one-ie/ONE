@@ -6,12 +6,12 @@ export const navMenuConfig: NavMenuConfig = {
       title: "Software",
       items: [
         {
-          title: "Features",
+          title: "Agents",
           href: "/#features",
           description: "Create your own AI agents.",
         },
         {
-          title: "Our Vision",
+          title: "MIT License",
           href: "/company/vision",
           description: "Read about our company's vision for free and open AI.",
         },
