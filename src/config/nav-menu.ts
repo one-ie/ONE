@@ -8,7 +8,7 @@ export const navMenuConfig: NavMenuConfig = {
         {
           title: "Agents",
           href: "/#features",
-          description: "Create your own AI agents.",
+          description: "AI agents that do important jobs in your enterrprise or life.",
         },
         {
           title: "MIT License",
