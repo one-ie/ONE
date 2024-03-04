@@ -1,14 +1,10 @@
 ---
 title: ONE Vision
-description: This is the story of the written word and how we are rewriting our future. 
+description: Picture this it's the dark ages (and I mean, literally dark), and if you wanted to share an idea, you had to find a monk with good handwriting. This was a time when knowledge was as rare as a fat-free cheesecake, locked up tighter than your high school diary. Then along came Johannes Gutenberg, the Steve Jobs of the 15th century, with his printing press. Boom! Books started flying off the presses like hotcakes, but there was a catch – getting them around was as slow as dial-up internet.
 pubDate: 1 March 2024
 coverImage: /blog-placeholder-3.jpg
 category: vision
 ---
-
- This story begins back in the day when monks were the OG Content Creators. 
- 
- Picture this: it's the dark ages (and I mean, literally dark), and if you wanted to share an idea, you had to find a monk with good handwriting. Knowledge was as rare as a fat-free cheesecake, locked up tighter than your high school diary. Then along came Johannes Gutenberg, the Steve Jobs of the 15th century, with his printing press. Boom! Books started flying off the presses like hotcakes, but there was a catch – getting them around was as slow as dial-up internet.
 
 **Fast Forward: The Internet Enters the Chat**
 
