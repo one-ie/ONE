@@ -8,12 +8,14 @@ export const navMenuConfig: NavMenuConfig = {
         {
           title: "Agents",
           href: "/#features",
-          description: "AI agents that do important jobs in your enterrprise or life.",
+          description:
+            "AI agents that do important jobs in your enterrprise or life.",
         },
         {
           title: "MIT License",
           href: "/guides/how-to-profit-with-mit-and-open-source",
-          description: "Free, Open, Unrestricted. Read about The MIT License Advantage",
+          description:
+            "Free, Open, Unrestricted. Read about The MIT License Advantage",
         },
         {
           title: "Start Now",
@@ -42,8 +44,18 @@ export const navMenuConfig: NavMenuConfig = {
         {
           title: "Guides",
           href: "/guides",
+          description: "Deep dives, step by step",
+        },
+        {
+          title: "Meetings",
+          href: "/meet",
           description:
-            "Deep dives, step by step",
+            "Join a meeting with audio, video and chat",
+        },
+        {
+          title: "Live Streams",
+          href: "/live",
+          description: "View and participate in live streams",
         },
         {
           title: "Courses",
