@@ -28,7 +28,7 @@
     ]
   },
   "hideFilters": {
-    "active": false,
+    "active": true,
     "tags": [
       {
         "name": "",

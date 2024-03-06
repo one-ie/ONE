@@ -1,6 +1,6 @@
 This project has been build on the shoulders of giants. 
 
-I would like to thank the people who made ... 
+ONE is build with the best and latest software from ...
 
 ShadCN
 DaisyUI
