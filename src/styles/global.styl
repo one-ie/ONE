@@ -1,0 +1,68 @@
+.dark body
+  background-image: url(/pattern-primary.png)!important;
+  background-repeat: repeat;
+
+.dark .bg-background 
+  background-image: url(/pattern-secondary.png)!important;
+  background-repeat: repeat;
+
+body
+  background-image: url(/light-pattern-primary.png)!important;
+  background-repeat: repeat;
+
+.bg-background 
+  background-image: url(/light-pattern-secondary.png)!important;
+  background-repeat: repeat;
+
+// Switch Logos
+
+.logo-mobile
+    width: 150px; /* Width of new image */
+    height: 50px; /* Height of new image */
+    margin-left: -40px
+    margin-top:-10px
+
+.dark
+  --logo url("/images/logos/ONE.svg")
+.dark .logo
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: var(--logo) no-repeat;
+    width: 50px; /* Width of new image */
+    height: 50px; /* Height of new image */
+    padding-left: 125px; /* Equal to width of new image */
+
+ .dark .logo-mobile 
+    margin-left: -40px
+    margin-top:-10px
+
+.red
+  background-color: red
+.red-text
+  color: red
+
+.center
+  display: block
+  margin-left: auto;
+  margin-right: auto;
+//Header
+header
+  padding: 50px 0px
+
+//Links
+
+.link-underline
+  border-bottom-width 0
+  background-image linear-gradient(transparent, transparent), linear-gradient(#fff, #fff)
+  background-size 0 3px
+  background-position 0 100%
+  background-repeat no-repeat
+  transition background-size 0.5s ease-in-out
+
+.link-underline-black
+  background-image linear-gradient(transparent, transparent), linear-gradient(#1a5fb4, #1a5fb4)
+
+.link-underline:hover
+  background-size 100% 3px
+  background-position 0 100%
