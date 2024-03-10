@@ -65,28 +65,7 @@
     @apply border-border;
   }
 
-{
-    @apply border-border;
-    --sb-track-color: #ffffff;
-    --sb-thumb-color: #f8f8f8;
-    --sb-size: 100px;
-
-    scrollbar-color: #ffffff;
-  }
-
-  ::-webkit-scrollbar {
-    width: var(--sb-size)
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 10px;
-  } 
+ 
 
   html {
     /* scroll-padding-top: 4rem; */
