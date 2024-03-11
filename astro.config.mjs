@@ -19,6 +19,7 @@ export default defineConfig({
     icon(),
     sitemap(),
     react(),
+    compressor(),
     tailwind({
       applyBaseStyles: false,
     })
