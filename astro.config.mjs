@@ -1,15 +1,17 @@
-import mdx from "@astrojs/mdx";
+import { defineConfig } from "astro/config";
+import svelte from "@astrojs/svelte";
 import react from "@astrojs/react";
+import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import { defineConfig } from "astro/config";
 import icon from "astro-icon";
-import cloudflare from "@astrojs/cloudflare";
 import compressor from "astro-compressor";
+
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://one.ie",
+  site: "https://one.ie", 
   integrations: [
     mdx({
       syntaxHighlight: "shiki",
@@ -20,6 +22,7 @@ export default defineConfig({
     sitemap(),
     react(),
     compressor(),
+    svelte(),
     tailwind({
       applyBaseStyles: false,
     })
