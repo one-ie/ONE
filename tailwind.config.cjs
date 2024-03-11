@@ -18,10 +18,10 @@ module.exports = {
         heading: ["CalSans Semibold", ...fontFamily.sans],
       },
       height: {
-        "18": "4.5rem",
+        18: "4.5rem",
       },
       spacing: {
-        "18": "4.5rem",
+        18: "4.5rem",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -79,5 +79,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("daisyui")],
 };
