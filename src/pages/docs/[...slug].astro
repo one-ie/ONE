@@ -9,6 +9,7 @@ import DocsLayout from "@/layouts/docs-layout.astro";
 import { getTableOfContents } from "@/lib/toc";
 import { getCollection, type CollectionEntry } from "astro:content";
 
+export const prerender = false;
 export async function getStaticPaths() {
   const docs = await getCollection("docs");
   return docs.map((doc) => ({
