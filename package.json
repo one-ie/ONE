@@ -36,6 +36,7 @@
     "astro-embed": "^0.6.1",
     "astro-icon": "^1.1.0",
     "balance-text": "^3.3.1",
+    "canvas-confetti": "^1.9.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "d3-interpolate": "^3.0.1",

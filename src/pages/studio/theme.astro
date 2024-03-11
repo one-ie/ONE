@@ -1,0 +1,23 @@
+---
+const title = 'ONE Themes'
+const description = 'Make The World Yours.'
+const keywords = 'AI'
+import MainLayout from "@/layouts/main-layout.astro";
+
+import ThemeSwitchButtons from '@/blocks/theme-switch-buttons.astro'
+---
+
+<MainLayout title={title}>
+  <section class="section banner relative">
+    <div class="container">
+      <div class="row items-center">
+        <div class="center">
+          <h1>Change Theme</h1>
+
+              <ThemeSwitchButtons />
+
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
