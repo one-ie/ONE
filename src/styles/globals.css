@@ -53,19 +53,10 @@
 }
 
 @layer base {
-  @font-face {
-    font-family: 'CalSans Semibold';
-    src: url('/fonts/calsans-semibold.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
+  
   * {
     @apply border-border;
   }
-
- 
 
   html {
     /* scroll-padding-top: 4rem; */

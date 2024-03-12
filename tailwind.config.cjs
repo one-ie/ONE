@@ -13,10 +13,30 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
-        heading: ["CalSans Semibold", ...fontFamily.sans],
+        fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              'Segoe UI',
+              'Roboto',
+              'Oxygen',
+              'Ubuntu',
+              'Cantarell',
+              'Fira Sans',
+              'Droid Sans',
+              'Helvetica Neue',
+              'sans-serif',
+            ],
       },
+      fontSize: {
+  xs: '0.9rem', // 18px
+  sm: '1rem', // 21px
+  base: '1.2rem', // 24px
+  lg: '1.6875rem', // 27px
+  xl: '1.875rem', // 30px
+    // Add more sizes as needed
+},
+
       height: {
         18: "4.5rem",
       },
