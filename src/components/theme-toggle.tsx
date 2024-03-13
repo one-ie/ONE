@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 const SunIcon = () => (
   <>
     <motion.svg
-      width="60"
-      height="60"
+      width="30"
+      height="30"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"

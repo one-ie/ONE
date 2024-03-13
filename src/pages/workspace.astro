@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import MainLayout from "@/layouts/main-layout.astro";
@@ -6,20 +7,22 @@ import { cn } from "@/lib/utils";
 import Icon from "astro-icon";
 import Workspace from "@/components/workspace";
 import Design from "@/figma/design";
-import Hero from "@/blocks/HeroCenter.astro";
 import Cal from "@/blocks/Cal.astro";
 import Channels from "@/blocks/Channels.astro";
 import Stats from "@/blocks/Stats.astro";
 import CTA from "@/blocks/CTA.astro";
 import EcommercePlatforms from "@/blocks/EcommercePlatforms.astro";
 import { Tweet, Vimeo, YouTube } from 'astro-embed';
+import Hero from "@/components/blocks/slider";
 
 ---
 
 <MainLayout title="ONE">
- <Hero />
+ <Hero client:load/>
+ <!-- 
   <section>
     <container>
+      
   <div class="flex justify-center items-center pattern-secondary">
     <div class="w-full max-w-[800px] shadow-lg p-4">
       <h2 class="text-center">Demo</h2>
@@ -35,4 +38,5 @@ import { Tweet, Vimeo, YouTube } from 'astro-embed';
   <EcommercePlatforms/>
   <CTA/>
 <Workspace client:load/>
+-->
 </MainLayout>
