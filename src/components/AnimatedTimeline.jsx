@@ -1,4 +1,3 @@
-// src/components/AnimatedTimeline.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import 'tailwindcss/tailwind.css'; // Ensure you've imported TailwindCSS for styling
