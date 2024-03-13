@@ -1,0 +1,160 @@
+---
+title: Speed
+description: Quotes and statistics about AI-powered ecommerce chatbots
+pubDate: 14 March 2024
+coverImage: /blog-placeholder-3.jpg
+category: vision
+---
+---
+
+I decided to start with a perfect score on Google Lighthouse before I launched my website and then build it from there. I just got 100% Lighthouse score for performance, 100% for accessibility and 100% for SEO so I guess I'm ready.
+  
+<Blockquote name="Google Search Team">
+
+"As Google, we believe in the undeniable truth that page speed serves as the cornerstone of a seamless user experience. It's not just a metric; it's the ultimate bridge connecting users to valuable content. With its paramount influence on search rankings, page speed becomes the harmonious symphony that orchestrates a website's success in the digital realm."
+
+</Blockquote>
+
+  
+  
+
+The site loads in as little as 346ms! You're reading this right. Not 3 seconds. It's 0.3 of a second!
+
+  
+
+<img src="/images/posts/lighthouse-desktop.webp" alt="100% Lighthouse Score Desktop" width="768px" height="1040px" />
+
+  
+
+On a mobile with a slow 4g connection the site still loads in less than 2 seconds!
+
+  
+
+<img src="/images/posts/lighthouse-mobile.webp" alt="100% Lighthouse Score Mobile" width="768px" height="1040px" />
+
+  
+
+**Why is this important?**
+
+2 reasons. Firstly Google ranks sites higher when they load faster. Secondly, sites that load faster have higher conversion rates.
+
+  
+
+<Blockquote name="Tech Insights">
+
+Every second counts in the digital landscape, where speed reigns as the king of conversions. Research by reputable institutions, such as Google and Amazon, have revealed that for every second of delay in page loading, conversion rates can plummet drastically. For instance, Google found that a mere one-second delay in mobile page load times can lead to a 20% drop in conversion rates. Similarly, Amazon unearthed that a mere 100-millisecond delay in page load time can result in a substantial 1% reduction in revenue.
+
+</Blockquote>
+
+  
+
+**How I achieved a perfect Lighthouse score***
+
+  
+
+The metrics scores and the perf score are colored according to these ranges:
+
+  
+
+0 to 49 (red): Poor
+
+50 to 89 (orange): Needs Improvement
+
+90 to 100 (green): Good
+
+  
+
+<Blockquote name="Google">
+
+To provide a good user experience, sites should strive to have a good score (90-100). A "perfect" score of 100 is extremely challenging to achieve and not expected. For example, taking a score from 99 to 100 needs about the same amount of metric improvement that would take a 90 to 94.
+
+</Blockquote>
+
+  
+
+So how did I achieve a perfect score of 100%?
+
+  
+
+I achieved this without expensive software and servers. In fact everything, including the hosting is entirely free.
+
+  
+
+How?
+
+  
+
+It's headless.
+
+  
+
+<Blockquote>
+
+Headless, the trailblazing approach to web development, liberates creativity by decoupling the frontend from the backend. It sets innovation free, unlocking endless possibilities for crafting interactive, lightning-fast experiences that captivate users, and rewrite the rules of the digital realm.
+
+</Blockquote>
+
+  
+  
+
+I used Astro https://astro.build the fastest web technology on the market. Astro is used by Google, Microsoft and The Guardian and it's a beautiful piece of technology.
+
+  
+
+<img src="/images/posts/astro-speed.webp" alt="Astro Speed" width="780px" height="260px" />
+
+  
+
+Astro uses Islands (aka Component Islands) are a pattern of web architecture pioneered by Astro.
+
+  
+
+The term “Astro Island” refers to an interactive UI component on an otherwise static page of HTML. Multiple islands can exist on a page, and an island always renders in isolation. Think of them as islands in a sea of static, non-interactive HTML.
+
+  
+
+The technique is known as partial or selective hydration. Astro strips your site of JavaScript and loads it in islands, if needed. That's how it can load a site so fast.
+
+  
+
+<img src="/images/posts/astro-islands.webp" alt="Astro Islands" width="780px" height="1010px"/>
+
+  
+
+Astro is not only fast but it's a pleasure to work with.
+
+  
+
+In Astro, you can use any supported UI framework (React, Svelte, Vue, etc.) to render islands in the browser. You can mix and match different frameworks on the same page, or just pick your favorite. I'm using some React and Svelte, which is my favourite.
+
+  
+
+Then I deployed it to Netlify (which is free). You can deploy Astro to any modern web host that allows you to use edge functions, for example Vercel.
+
+  
+
+That's it. If you don't believe me here here are the links to the results of my tests.
+
+  
+
+- https://pagespeed.web.dev/analysis/https-one-ie-channels-google/i4ng6rdwxf?form_factor=mobile
+
+  
+
+- https://gtmetrix.com/reports/one.ie/3PWkXsAc/
+
+  
+
+Now it's time to add my Analytics code with Google Tag Manager. We have deep integration with Tag Manager and Chat so we can not only track events that happen on the website but also within the chat. It's a little bit ironic that Analytics apps generally have some of the biggest negative impacts to site performance. However, Astro it's easy to load them with Partytown.
+
+  
+
+Partytown is a lazy-loaded library to help relocate resource intensive scripts into a web worker, and off of the main thread.
+
+  
+
+If you’re using third-party scripts for things like analytics or ads, Partytown is a great way to make sure that they don’t slow down your site.
+
+  
+
+I will let you know how I get on in the next post.
