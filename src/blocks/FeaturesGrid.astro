@@ -1,19 +1,8 @@
----
-import { buttonVariants } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
-import MainLayout from "@/layouts/main-layout.astro";
-import { cn } from "@/lib/utils";
-import { Icon } from "astro-icon/components";
-import Features from "@/sections/features.astro";
-import FaqSection from "@/components/faq-section";
-import { ThemeToggle } from "@/components/theme-toggle";
-import Hero from "@/blocks/Hero.astro";
-
----
-
-<MainLayout title="ONE">
-  <Hero />
-
+<section id="features"> <br><br>
+  <div class="container flex max-w-[64rem] flex-col items-center gap-2 text-center"
+  >
+    <h2 class="text-4xl">Features</h2><br>
+  </div>
   <div
     class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
   >
@@ -29,14 +18,13 @@ import Hero from "@/blocks/Hero.astro";
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="tabler-icon tabler-icon-user"
+          class="tabler-icon tabler-icon-sparkles"
           ><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path><path
             d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
         </svg>
         <h3 class="font-bold">Your Identity</h3>
         <p class="text-sm text-muted-foreground">
-          This is your custom AI connected to your identity. Designed for world
-          leaders, their children and everyone in-between.
+          Create AI connected and trained with your identity. 
         </p>
       </div>
     </div>
@@ -61,8 +49,7 @@ import Hero from "@/blocks/Hero.astro";
 
         <h3 class="font-bold">Your Models</h3>
         <p class="text-sm text-muted-foreground">
-          Use any AI model at cost price with your own API keys. Open AI,
-          Google, Antrophic, Open Router.
+          Use any AI model at cost price with your own API keys. 
         </p>
       </div>
     </div>
@@ -235,15 +222,19 @@ import Hero from "@/blocks/Hero.astro";
           Give your AI access to use any software or service.
         </p>
       </div>
-      
     </div>
-    
   </div>
-  <section class="bg-background py-12">
- <div class="container flex max-w-[64rem] flex-col items-center gap-2 text-center">
-    ONE is free. Free as in freedom. Free of restrictions with a MIT License,  
-    suitable for governments, enterprises and individuals. You are free to use, modify, brand, distribute, sell, resell, ONE at a profit, without restrictions. <a href="/guides/how-to-profit-with-mit-and-open-source"> Read our guide - From Open Source to Revenue Source: The MIT License Advantage</a>   
- </div>
-  </section>
-
-</MainLayout>
+</section>
+<section class="py-12">
+  <div
+    class="container flex max-w-[64rem] flex-col items-center gap-2 text-center"
+  >
+    ONE is free. Free as in freedom. Free of restrictions with a MIT License,
+    suitable for governments, enterprises and individuals. You are free to use,
+    modify, brand, distribute, sell, resell, ONE at a profit, without
+    restrictions. <a href="/guides/how-to-profit-with-mit-and-open-source">
+      Read our guide - From Open Source to Revenue Source: The MIT License
+      Advantage</a
+    >
+  </div>
+</section>

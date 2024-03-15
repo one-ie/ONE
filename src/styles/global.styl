@@ -1,10 +1,103 @@
+//Theme
+// Colors
+primary = #1D3963 // Dark blue
+secondary = #394E32 // Dark olive green
+tertirary = dimgray
+focus = #111
+neutral = transparent
+dark = #111
+medium = #333
+light = white
+
+.primary-color
+  color: primary
+
+.secondary-color
+  color: secondary
+
+.tertirary-color
+  color: tertirary
+
+.primary
+  background-color: primary
+  color: light
+  border-color: primary
+  &:hover
+    background-color darken(primary, 50%)
+
+.secondary
+  background-color: secondary
+  color: light
+  border-color: secondary
+  &:hover
+    background-color darken(secondary, 50%)
+
+.tertirary
+  background-color: tertirary
+  color: light
+  border-color: tertirary
+  &:hover
+    background-color darken(secondary, 50%)
+
+.focus
+  background-color: focus
+  color: light
+  border-color: focus
+  &:hover
+    background-color: primary
+
+.neutral
+  background-color: neutral
+  color: dark
+  border-color: dark
+  &:hover
+    background-color: secondary
+    color: light
+
+.dark .neutral
+  background-color: neutral
+  color: light!important
+  border-color: dark
+  &:hover
+    background-color: secondary
+    color: light
+
+.dark .focus
+  background-color: light
+  color: dark
+  border-color: focus
+  &:hover
+    background-color: primary
+    color: light
+
+
+.btn
+  border-radius: 2rem
+  padding-bottom: 10px!important
+
+// Dark
 .dark body
+  background-color: dark
   background-image: url(/pattern-primary.png)!important;
   background-repeat: repeat;
 
+
 .dark .bg-background, footer 
+  background: dark
   background-image: url(/pattern-secondary.png)!important;
   background-repeat: repeat;
+
+.dark .btn-primary
+  background : red
+  color: accent-text
+
+.dark .btn-muted
+  background : muted-color
+  box-sizing: border-box
+  border-color: white
+  color: primary
+
+// Light 
 
 body
   background-image: url(/light-pattern-primary.png)!important;
@@ -62,10 +155,13 @@ header
   padding: 50px 0px
 
 //Links
+.link
+  color: #1D3963
+  border-bottom-width: 0
 
 .link-underline
   border-bottom-width 0
-  background-image linear-gradient(transparent, transparent), linear-gradient(#fff, #fff)
+  background-image linear-gradient(transparent, transparent), linear-gradient(#1D3963, #1D3963)
   background-size 0 3px
   background-position 0 100%
   background-repeat no-repeat
@@ -77,3 +173,4 @@ header
 .link-underline:hover
   background-size 100% 3px
   background-position 0 100%
+
