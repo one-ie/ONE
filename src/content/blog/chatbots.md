@@ -3,7 +3,7 @@ title: Leveraging Chatbots for Ecommerce Growth
 description: Quotes and statistics about AI-powered ecommerce chatbots
 pubDate: 14 March 2024
 coverImage: /blog-placeholder-3.jpg
-category: vision
+category: Ecommerce
 ---
 Staying ahead of the curve means not only embracing new technologies but integrating them strategically to drive growth and enhance customer satisfaction. With 70% of high-performing marketers boasting a fully defined AI strategy (eConsultancy), the importance of a clear AI vision has never been more apparent. Furthermore, 82% of marketing leaders cite improving customer experience as their primary motive for adopting AI, aiming to uplift performance metrics (Statista).
 

@@ -1,9 +1,9 @@
 ---
-title: Speed
+title: How to Achieve 100% Lighthouse Score
 description: Quotes and statistics about AI-powered ecommerce chatbots
 pubDate: 14 March 2024
 coverImage: /blog-placeholder-3.jpg
-category: vision
+category: performance
 ---
 ---
 
