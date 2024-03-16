@@ -13,15 +13,15 @@ export const docsConfig: DocsConfig = {
   ],
   sidebarNav: [
     {
-      title: "Quick Start",
+      title: "",
       items: [
         {
           title: "Get Started",
           href: "/docs/get-started",
         },
         {
-          title: "Get Ready",
-          href: "/docs/cloud/get-ready",
+          title: "Access AI",
+          href: "/docs/cloud/ai-models",
         },
         {
           title: "Activate",
@@ -70,14 +70,6 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
-    {
-      title: "Develop",
-      items: [
-        {
-          title: "Build Custom AI",
-          href: "/lab",
-        },
-      ],
-    },
+
   ],
 };
