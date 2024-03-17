@@ -47,17 +47,6 @@ export const navMenuConfig: NavMenuConfig = {
           description: "Deep dives, step by step",
         },
         {
-          title: "Meetings",
-          href: "/meet",
-          description:
-            "Join a meeting with audio, video and chat",
-        },
-        {
-          title: "Live Streams",
-          href: "/live",
-          description: "View and participate in live streams",
-        },
-        {
           title: "Courses",
           href: "/courses",
           description:
