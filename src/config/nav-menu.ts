@@ -19,7 +19,7 @@ export const navMenuConfig: NavMenuConfig = {
         },
         {
           title: "Start Now",
-          href: "/docs/get-started",
+          href: "https://my.one.ie/login",
           description: "Get started in a few minutes.",
           external: false,
         },
