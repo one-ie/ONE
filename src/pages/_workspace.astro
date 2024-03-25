@@ -1,0 +1,406 @@
+---
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
+import MainLayout from "@/layouts/main-layout.astro";
+import { cn } from "@/lib/utils";
+import Icon from "astro-icon";
+import Hero from "@/blocks/HeroTest.astro";
+import Cal from "@/blocks/Cal.astro";
+import Channels from "@/blocks/Models.astro";
+import Stats from "@/blocks/Stats.astro";
+import Features from "@/blocks/FeaturesGrid.astro";
+import Carosel from "@/blocks/Carosel.astro";
+import videojs from 'video.js';
+import 'video.js/dist/video-js.css';
+import CTA from "@/blocks/CTA.astro";
+import EcommercePlatforms from "@/blocks/EcommercePlatforms.astro";
+import { Tweet, Vimeo, YouTube } from 'astro-embed';
+
+---
+
+<MainLayout title="ONE">
+  <div data-vjs-player>
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="360"
+    poster="/blog-placeholder-1.jpg"
+    data-setup='{}'>
+    <source src="/example.mov" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">
+        supports HTML5 video
+      </a>
+    </p>
+  </video>
+</div>
+
+<div id="subscribe-form" style="display: none;">
+  <h3>Subscribe to our newsletter</h3>
+  <form>
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+
+<script>
+  import videojs from 'video.js';
+
+  videojs('my-video').ready(function() {
+    var myPlayer = this;
+
+    myPlayer.on('ended', function() {
+      var subscribeForm = document.getElementById('subscribe-form');
+      subscribeForm.style.display = 'block';
+    });
+  });
+</script>
+<div class="carousel w-full">
+  <div class="carousel-item grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- OpenAI -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-openai.svg" width="50px" height="50px" alt="Open AI">
+        <p>OpenAI</p>
+      </div>
+    </div>
+    <!-- Azure OpenAI -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-azure.svg" width="50px" height="50px" alt="Azure">
+        <p>Azure OpenAI</p>
+      </div>
+    </div>
+    <!-- Google Gemini -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-google.svg" width="50px" height="50px" alt="Google Gemini">
+        <p>Google Gemini</p>
+      </div>
+    </div>
+    <!-- Antropic Claude -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-antrophic.svg" width="50px" height="50px" alt="Antrophic">
+        <p>Antropic Claude</p>
+      </div>
+    </div>
+    <!-- Mistral -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-mistral.svg" width="50px" height="50px" alt="Mistral">
+        <p>Mistral</p>
+      </div>
+    </div>
+    <!-- Hugging Face -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-hugging-face.svg" width="50px" height="50px" alt="Hugging Face">
+        <p>Hugging Face</p>
+      </div>
+    </div>
+    <!-- Additional AI models info -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Connect to over 100 AI models</h2>
+        <p>with Open Router.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Hero />
+
+<div class="carousel w-full">
+  <div class="carousel-item grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Identity</h2>
+        <p>Create AI connected and trained with your identity.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Models</h2>
+        <p>Use any AI model at cost price with your own API keys.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Chats</h2>
+        <p>Organise your AI conversations neatly in folders.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Prompts</h2>
+        <p>Organise your AI prompts and access them seamlesssly.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Work Spaces</h2>
+        <p>Create AI workspaces designed for different tasks.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Files</h2>
+        <p>Upload your documents and make them available to your AI.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Collections</h2>
+        <p>Group documents into collections.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Assistants</h2>
+        <p>Create a digital workforce.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Tools</h2>
+        <p>Give your AI access to use any software or service.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Identity</h2>
+        <p>Create AI connected and trained with your identity.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex justify-center w-full py-2 gap-2">
+  <a href="#item1" class="btn btn-xs">1</a>
+  <a href="#item2" class="btn btn-xs">2</a> 
+  <a href="#item3" class="btn btn-xs">3</a>
+  <a href="#item4" class="btn btn-xs">4</a>
+</div>
+
+<div class="carousel w-full">
+  <div id="slide1" class="carousel-item relative w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Identity</h2>
+        <p>Create AI connected and trained with your identity.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Models</h2>
+        <p>Use any AI model at cost price with your own API keys.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Chats</h2>
+        <p>Organise your AI conversations neatly in folders.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Prompts</h2>
+        <p>Organise your AI prompts and access them seamlesssly.</p>
+      </div>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide4" class="btn btn-circle bg-background-secondary">❮</a> 
+      <a href="#slide2" class="btn btn-circle bg-background-secondary">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" class="carousel-item relative w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Work Spaces</h2>
+        <p>Create AI workspaces designed for different tasks.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Files</h2>
+        <p>Upload your documents and make them available to your AI.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Collections</h2>
+        <p>Group documents into collections.</p>
+      </div>
+    </div>
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Assistants</h2>
+        <p>Create a digital workforce.</p>
+      </div>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" class="btn btn-circle bg-background-secondary">❮</a> 
+      <a href="#slide3" class="btn btn-circle bg-background-secondary">❯</a>
+    </div>
+  </div> 
+  <div id="slide3" class="carousel-item relative w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Tools</h2>
+        <p>Give your AI access to use any software or service.</p>
+      </div>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide2" class="btn btn-circle bg-background-secondary">❮</a> 
+      <a href="#slide1" class="btn btn-circle bg-background-secondary">❯</a>
+    </div>
+  </div>
+</div>
+
+<div class="carousel w-full">
+  <div id="slide1" class="carousel-item relative w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Identity</h2>
+        <p>Create AI connected and trained with your identity.</p>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Models</h2>
+        <p>Use any AI model at cost price with your own API keys.</p>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Chats</h2>
+        <p>Organise your AI conversations neatly in folders.</p>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Prompts</h2>
+        <p>Organise your AI prompts and access them seamlesssly.</p>
+      </div>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide4" class="btn btn-circle">❮</a> 
+      <a href="#slide2" class="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" class="carousel-item relative w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Work Spaces</h2>
+        <p>Create AI workspaces designed for different tasks.</p>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Files</h2>
+        <p>Upload your documents and make them available to your AI.</p>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Collections</h2>
+        <p>Group documents into collections.</p>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Assistants</h2>
+        <p>Create a digital workforce.</p>
+      </div>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" class="btn btn-circle">❮</a> 
+      <a href="#slide3" class="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide3" class="carousel-item relative w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Your Tools</h2>
+        <p>Give your AI access to use any software or service.</p>
+      </div>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide2" class="btn btn-circle">❮</a> 
+      <a href="#slide1" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+</div>
+<!-- The script tag should live in the head of your page if at all possible -->
+<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
+
+<!-- Put this wherever you would like your player to appear -->
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/SQeKTr5DGZizTsxkYbqBMB.jpg"
+  data-uuid="SQeKTr5DGZizTsxkYbqBMB"
+  data-v="4"
+  data-type="inline"
+/>
+ 
+ <!-- 
+  <section>
+    <container>
+      
+  <div class="flex justify-center items-center pattern-secondary">
+    <div class="w-full max-w-[800px] shadow-lg p-4">
+      <h2 class="text-center">Demo</h2>
+      <br>
+  <YouTube id="https://www.youtube.com/watch?v=kj1OB42Dhqw"/>
+    </div>
+</div>
+</container>
+</section>
+
+  <Channels/>
+  <Stats/>
+  <EcommercePlatforms/>
+  <CTA/>
+<Workspace client:load/>
+-->
+</MainLayout>
+
+<style>
+
+  .carousel {
+  overflow: hidden;
+}
+
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item > div {
+  scroll-snap-align: start;
+}
+
+.carousel-item:first-child {
+  animation: carousel 36s linear infinite;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+.dark .bg-background {
+  background-color: #1f2937;
+}
+</style>
