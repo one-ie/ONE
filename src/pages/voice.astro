@@ -1,0 +1,35 @@
+---
+import MainLayout from "@/layouts/text-layout.astro";
+---
+
+<MainLayout title="ONE">
+ <h1>Voice AI</h1>
+ <p>Click the phone icon below to speak with your AI. </p>
+ <p>This AI will be able to make phone calls. </p>
+
+</MainLayout>
+ <script>
+  var vapiInstance = null;
+  const assistant = "cdf09da7-fe2f-4948-8a61-b429f2df32f8"; // Substitute with your assistant ID
+  const apiKey = "3fccd4f2-5715-4e97-b6fb-5b870055c74a"; // Substitute with your Public key from Vapi Dashboard.
+  const buttonConfig = {}; // Modify this as required
+
+  (function (d, t) {
+    var g = document.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    g.src =
+      "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g, s);
+
+    g.onload = function () {
+      vapiInstance = window.vapiSDK.run({
+        apiKey: apiKey, // mandatory
+        assistant: assistant, // mandatory
+        config: buttonConfig, // optional
+      });
+    };
+  })(document, "script");
+
+</script>
