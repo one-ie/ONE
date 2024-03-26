@@ -2,7 +2,7 @@
 
 ## Accelerate with AI
 
-Sell your products, services and ideas at the edge ... it's surprisingly fast. 
+Sell your products, services and ideas freely, at the edge, with your own brand of AI  ... it's surprisingly fast. 
 
 1. Clone this repo
 
@@ -24,7 +24,7 @@ pnpm run dev
 
 ## Credits
 
-We stand on the shoulders of giants. See credits.md for more details.
+We stand on the shoulders of giants. See Credits.md for more details.
 
 ## License
 

@@ -1,12 +1,18 @@
 ---
-import MainLayout from "@/layouts/text-layout.astro";
+import MainLayout from "@/layouts/no-footer.astro";
+
 ---
 
 <MainLayout title="ONE">
- <h1>Voice AI</h1>
- <p>Click the phone icon below to speak with your AI. </p>
- <p>This AI will be able to make phone calls. </p>
+<section id="hero">
+        <h1>Unlock a New Level of Support with Advanced Voice AI</h1>
+        <p>Experience "Care" - the voice AI designed for children and young people with special needs. Tap into the future of empathetic, real-time interaction.</p>
+        <button onclick="location.href='#contact';">Click the Call Button Below Now</button>
+</section>
 
+
+
+ 
 </MainLayout>
  <script>
   var vapiInstance = null;
@@ -33,3 +39,4 @@ import MainLayout from "@/layouts/text-layout.astro";
   })(document, "script");
 
 </script>
+

@@ -1,27 +1,30 @@
-This project has been build on the shoulders of giants. 
+Build your enterprise on the shoulders of giants. 
 
-ONE is build with the best and latest software from ...
+ONE is build on the best and latest free and open software by ...
 
+Supabase
+Postgres
 ShadCN
 DaisyUI
 Tailwind
 Svelte
 React
-VUE
-Astro
 Markdown
 MDX
+YAML
 ZOD
+Typescript
+Active Pieces
+Open Router
+Vercel
+Astro
 Chatbot UI
+Botpress
 AI Approachable
 Ironclad Rivet
 Langchain
 Flowise
-Botpress
 Budibase
 Typescript
-Javascript
-Supabase
-Postgres
 TypeDB
 
