@@ -1,6 +1,6 @@
 ---
 title: How to Achieve 100% Lighthouse Score
-description: Quotes and statistics about AI-powered ecommerce chatbots
+description: I spent a long time to shaving miliseconds off my website. Here's how I did it.
 pubDate: 14 March 2024
 coverImage: /blog-placeholder-3.jpg
 category: performance
