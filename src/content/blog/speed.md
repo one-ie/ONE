@@ -5,9 +5,7 @@ pubDate: 14 March 2024
 coverImage: /blog-placeholder-3.jpg
 category: performance
 ---
----
-
-I decided to start with a perfect score on Google Lighthouse before I launched my website and then build it from there. I just got 100% Lighthouse score for performance, 100% for accessibility and 100% for SEO so I guess I'm ready.
+There's nothing more guaranteed to increase your website traffic, converesion rates and sales than fast loading web pages. A perfect Google Lighthouse is the pinacle of web performance. ONE now scores 100% for performance, 100% for accessibility and 100% for SEO on Google.
   
 <Blockquote name="Google Search Team">
 
