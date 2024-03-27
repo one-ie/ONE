@@ -1,6 +1,6 @@
 ---
-title: How to Achieve 100% Lighthouse Score
-description: I spent a long time to shaving miliseconds off my website. Here's how I did it.
+title: How to Achieve 100% Google Lighthouse Score
+description: Here's how to load web pages in less than 1 second and achieve 100% Google Lighthouse score.
 pubDate: 14 March 2024
 coverImage: /blog-placeholder-3.jpg
 category: performance
