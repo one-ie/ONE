@@ -1,0 +1,7 @@
+<svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="125" cy="125" r="125" fill="#222222"/>
+<rect opacity="0.3" x="156.25" y="75" width="18.75" height="81.25" rx="1.5" fill="#FCFCFC"/>
+<rect opacity="0.3" x="125" y="106.25" width="18.75" height="50" rx="1.5" fill="#FCFCFC"/>
+<path d="M81.25 168.75H175C178.452 168.75 181.25 171.548 181.25 175C181.25 178.452 178.452 181.25 175 181.25H75C71.5482 181.25 68.75 178.452 68.75 175V75C68.75 71.5482 71.5482 68.75 75 68.75C78.4518 68.75 81.25 71.5482 81.25 75V168.75Z" fill="#FCFCFC"/>
+<rect opacity="0.3" x="93.7499" y="118.75" width="18.75" height="37.5" rx="1.5" fill="#FCFCFC"/>
+</svg>
