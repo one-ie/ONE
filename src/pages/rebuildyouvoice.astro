@@ -1,0 +1,44 @@
+---
+import MainLayout from "@/layouts/no-footer.astro";
+---
+
+<MainLayout title="ONE">
+  <section id="hero">
+    <h1>Unlock a New Level of Support with Advanced Voice AI</h1>
+    <p>
+      Experience "Rebuild You" - the voice AI to answer questions, close sales
+      or book an appointment with a human.
+    </p>
+    <p>
+      Click the Call button below for a demo. We can connect this to a phone
+      number and also put a form to fill in your phone number to receive a call
+      on the website. Please note this is just a demo and you will continuously
+      fine tune your agent.
+    </p>
+  </section>
+</MainLayout>
+<script>
+  var vapiInstance = null;
+  const assistant =
+    "476090a8-d87b-4dec-beae-1ee49a5a92d8"; // Substitute with your assistant ID
+  const apiKey = "3fccd4f2-5715-4e97-b6fb-5b870055c74a"; // Substitute with your Public key from Vapi Dashboard.
+  const buttonConfig = {}; // Modify this as required
+
+  (function (d, t) {
+    var g = document.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    g.src =
+      "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g, s);
+
+    g.onload = function () {
+      vapiInstance = window.vapiSDK.run({
+        apiKey: apiKey, // mandatory
+        assistant: assistant, // mandatory
+        config: buttonConfig, // optional
+      });
+    };
+  })(document, "script");
+</script>
