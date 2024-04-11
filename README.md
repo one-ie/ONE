@@ -1,6 +1,6 @@
 # ONE
 
-## Accelerate with AI
+## Your AI Workforce Awaits
 
 Sell your products, services and ideas freely, at the edge, with your own brand of AI  ... it's surprisingly fast. 
 
