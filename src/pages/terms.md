@@ -5,7 +5,7 @@ pubDate: 28 February 2024
 coverImage: /blog-placeholder-3.jpg
 category: legal
 ---
-# ONE Terms and Conditions
+# ONE Terms and Conditions 
 
 Welcome to ONE, located at Le Canadu House, Pollnarooma West, Salthill, Galway, H15NT, Ireland. Accessing https://one.ie means you accept these terms.
 
