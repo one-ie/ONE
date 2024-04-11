@@ -19,7 +19,7 @@ pnpm install
 3. Start your server
 
 ```sh
-pnpm run dev
+npm run dev
 ```
 
 ## Credits
