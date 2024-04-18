@@ -1,0 +1,133 @@
+---
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
+import MainLayout from "@/layouts/main-layout.astro";
+import { cn } from "@/lib/utils";
+import Icon from "astro-icon";
+import Hero from "@/blocks/HeroTest.astro";
+import Cal from "@/blocks/Cal.astro";
+import Channels from "@/blocks/Models.astro";
+import Stats from "@/blocks/Stats.astro";
+import Features from "@/blocks/FeaturesGrid.astro";
+import Carosel from "@/blocks/Carosel.astro";
+import videojs from 'video.js';
+import 'video.js/dist/video-js.css';
+import CTA from "@/blocks/CTA.astro";
+import EcommercePlatforms from "@/blocks/EcommercePlatforms.astro";
+import { Tweet, Vimeo, YouTube } from 'astro-embed';
+
+---
+
+<MainLayout title="ONE">
+  <Hero />
+<div class="carousel w-full">
+  <div class="carousel-item grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- OpenAI -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-openai.svg" width="50px" height="50px" alt="Open AI">
+        <p>OpenAI</p>
+      </div>
+    </div>
+    <!-- Azure OpenAI -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-azure.svg" width="50px" height="50px" alt="Azure">
+        <p>Azure OpenAI</p>
+      </div>
+    </div>
+    <!-- Google Gemini -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-google.svg" width="50px" height="50px" alt="Google Gemini">
+        <p>Google Gemini</p>
+      </div>
+    </div>
+    <!-- Antropic Claude -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-antrophic.svg" width="50px" height="50px" alt="Antrophic">
+        <p>Antropic Claude</p>
+      </div>
+    </div>
+    <!-- Mistral -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-mistral.svg" width="50px" height="50px" alt="Mistral">
+        <p>Mistral</p>
+      </div>
+    </div>
+    <!-- Hugging Face -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body flex items-center justify-center">
+        <img src="/images/logos/logo-hugging-face.svg" width="50px" height="50px" alt="Hugging Face">
+        <p>Hugging Face</p>
+      </div>
+    </div>
+    <!-- Additional AI models info -->
+    <div class="card bg-background shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Connect to over 100 AI models</h2>
+        <p>with Open Router.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ 
+ <!-- 
+  <section>
+    <container>
+      
+  <div class="flex justify-center items-center pattern-secondary">
+    <div class="w-full max-w-[800px] shadow-lg p-4">
+      <h2 class="text-center">Demo</h2>
+      <br>
+  <YouTube id="https://www.youtube.com/watch?v=kj1OB42Dhqw"/>
+    </div>
+</div>
+</container>
+</section>
+
+  <Channels/>
+  <Stats/>
+  <EcommercePlatforms/>
+  <CTA/>
+<Workspace client:load/>
+-->
+</MainLayout>
+
+<style>
+
+  .carousel {
+  overflow: hidden;
+}
+
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item > div {
+  scroll-snap-align: start;
+}
+
+.carousel-item:first-child {
+  animation: carousel 36s linear infinite;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+.dark .bg-background {
+  background-color: #1f2937;
+}
+</style>

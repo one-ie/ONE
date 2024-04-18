@@ -6,7 +6,8 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["src/*"
+     ],
        "@library/*": [
         "library/*"
       ],
@@ -43,6 +44,8 @@
       "@scripts/*": [
         "scripts/*"
       ],
+      "@aceternityui/*": [
+      "src/components/react/aceternityui/*"],
       "@settings/*": [
         "settings/*"
       ]

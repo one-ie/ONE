@@ -5,7 +5,7 @@ const {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: ["class"],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   theme: {
     container: {
@@ -16,28 +16,30 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          'Fira Sans',
-          'Droid Sans',
-          'Helvetica Neue',
-          'sans-serif',
-        ],
+        fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              'Segoe UI',
+              'Roboto',
+              'Oxygen',
+              'Ubuntu',
+              'Cantarell',
+              'Fira Sans',
+              'Droid Sans',
+              'Helvetica Neue',
+              'sans-serif',
+            ],
       },
       fontSize: {
-        xs: '0.9rem', // 18px
-        sm: '1rem', // 21px
-        base: '1.1rem', // 24px
-        lg: '1.4rem', // 27px
-        xl: '1.6rem', // 30px
-      },
+  xs: '0.9rem', // 18px
+  sm: '1rem', // 21px
+  base: '1.1rem', // 24px
+  lg: '1.4rem', // 27px
+  xl: '1.6rem', // 30px
+    // Add more sizes as needed
+},
+
       height: {
         18: "4.5rem",
       },
@@ -50,7 +52,7 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
+        primary: { 
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
@@ -100,19 +102,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography"),
-    require("daisyui"),
-    function addVariablesForColors({ addBase, theme }) {
-      let allColors = flattenColorPalette(theme("colors"));
-      let newVars = Object.fromEntries(
-        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-      );
-
-      addBase({
-        ":root": newVars,
-      });
-    },
-  ],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("daisyui"), reqire(addVariablesForColors)],
 };

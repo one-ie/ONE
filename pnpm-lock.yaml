@@ -73,13 +73,10 @@ dependencies:
     version: 18.2.23
   astro:
     specifier: ^4.5.12
-    version: 4.5.12(stylus@0.63.0)
+    version: 4.5.12(stylus@0.63.0)(typescript@5.4.5)
   astro-compressor:
     specifier: ^0.4.1
     version: 0.4.1
-  astro-embed:
-    specifier: ^0.6.1
-    version: 0.6.1(astro@4.5.12)
   astro-icon:
     specifier: ^1.1.0
     version: 1.1.0
@@ -134,6 +131,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.3)
+  typescript:
+    specifier: ^5.4.5
+    version: 5.4.5
   video.js:
     specifier: ^8.10.0
     version: 8.10.0
@@ -211,50 +211,6 @@ packages:
     resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
     dev: false
 
-  /@astro-community/astro-embed-integration@0.6.1(astro@4.5.12):
-    resolution: {integrity: sha512-+dujQeYa6fAdF2Obiep0HZrmkGNd2JcKmZAv9C9gZHqnPr3pGnxm0YZPC30jyCZsmpIMMyMsfgTOuP4Cwpj4QQ==}
-    peerDependencies:
-      astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta
-    dependencies:
-      '@astro-community/astro-embed-twitter': 0.5.3(astro@4.5.12)
-      '@astro-community/astro-embed-vimeo': 0.3.3(astro@4.5.12)
-      '@astro-community/astro-embed-youtube': 0.4.5(astro@4.5.12)
-      '@types/unist': 2.0.10
-      astro: 4.5.12(stylus@0.63.0)
-      astro-auto-import: 0.3.2(astro@4.5.12)
-      unist-util-select: 4.0.3
-    dev: false
-
-  /@astro-community/astro-embed-twitter@0.5.3(astro@4.5.12):
-    resolution: {integrity: sha512-oxu+KOmNXu3k2RjVVoEJxi5ZaLeEIKS0+clMnNUVFD8PI8Yzsil8faO4/mmRyLHKKZNG38XFyBbAgZsoyOa6wg==}
-    peerDependencies:
-      astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta
-    dependencies:
-      '@astro-community/astro-embed-utils': 0.1.0
-      astro: 4.5.12(stylus@0.63.0)
-    dev: false
-
-  /@astro-community/astro-embed-utils@0.1.0:
-    resolution: {integrity: sha512-whbRs9JpUApKwdzfkakBPVQT73LFxgj/RrfUu0IXTDf5SqxniZaXG4WcdG5MKj0nQyc82O21f1RnY3ddOo/yng==}
-    dev: false
-
-  /@astro-community/astro-embed-vimeo@0.3.3(astro@4.5.12):
-    resolution: {integrity: sha512-dcVTaP/GEqsOF0GCSeTvTU/Ds7cqfO1Qu2sY74N0pipofFLtbc1+5IfCL8kVwubZu7RMeiJQL3FhV6ftNb2VeQ==}
-    peerDependencies:
-      astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta
-    dependencies:
-      astro: 4.5.12(stylus@0.63.0)
-    dev: false
-
-  /@astro-community/astro-embed-youtube@0.4.5(astro@4.5.12):
-    resolution: {integrity: sha512-YD2g9a8aiUvypYb4wSobqCKhItDomdrdy62eHFaEGlqMrxP3eT+GUYUsjFxw7Yj/KwTzMjeqbgZlav11MwQgOg==}
-    peerDependencies:
-      astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta
-    dependencies:
-      astro: 4.5.12(stylus@0.63.0)
-      lite-youtube-embed: 0.3.2
-    dev: false
-
   /@astrojs/cloudflare@9.2.1(astro@4.5.12):
     resolution: {integrity: sha512-IPsfuqy3r0OR0CvCdQw72J0iC4dhOW4WXByi2s3vAE3py8RQQtiyJXY8a4rAT/LRUz7WVlpzkm7FxORtmIeKVw==}
     peerDependencies:
@@ -263,7 +219,7 @@ packages:
       '@astrojs/underscore-redirects': 0.3.3
       '@cloudflare/workers-types': 4.20240329.0
       '@iarna/toml': 2.2.5
-      astro: 4.5.12(stylus@0.63.0)
+      astro: 4.5.12(stylus@0.63.0)(typescript@5.4.5)
       dotenv: 16.4.5
       esbuild: 0.19.12
       find-up: 6.3.0
@@ -317,7 +273,7 @@ packages:
       '@astrojs/markdown-remark': 4.3.2
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.5.12(stylus@0.63.0)
+      astro: 4.5.12(stylus@0.63.0)(typescript@5.4.5)
       es-module-lexer: 1.5.0
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -381,7 +337,7 @@ packages:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.5.12(stylus@0.63.0)
+      astro: 4.5.12(stylus@0.63.0)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -2506,12 +2462,6 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node@18.19.28:
-    resolution: {integrity: sha512-J5cOGD9n4x3YGgVuaND6khm5x07MMdAKkRyXnjVR6KFhLMNh2yONGiP7Z+4+tBOt5mK+GvDTiacTOVGGpqiecw==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: false
-
   /@types/node@20.12.2:
     resolution: {integrity: sha512-zQ0NYO87hyN6Xrclcqp7f8ZbXNbRfoGWNcMvHTPQp9UUrwI0mI7XBz+cu7/W6/VClYo2g63B0cjull/srU7LgQ==}
     dependencies:
@@ -2759,31 +2709,8 @@ packages:
     hasBin: true
     dev: false
 
-  /astro-auto-import@0.3.2(astro@4.5.12):
-    resolution: {integrity: sha512-xnr56geVyqJTu5qicJzvxqSnkhktq7SulWIzme1Vs5mrrcMkH/N1s7TEYkgJCN2b5qSeltqqZ7UUSD3xXrXamA==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      astro: ^2.0.0 || ^3.0.0-beta
-    dependencies:
-      '@types/node': 18.19.28
-      acorn: 8.11.3
-      astro: 4.5.12(stylus@0.63.0)
-    dev: false
-
   /astro-compressor@0.4.1:
     resolution: {integrity: sha512-IAgYAlxYRMolaptsFB9quH7RxX4eUeC4UfULCPhT+ILcg7m1kbaxuyUKqGg9Hh+KZ+FNPPDAz7DqUfl+HDWhQg==}
-    dev: false
-
-  /astro-embed@0.6.1(astro@4.5.12):
-    resolution: {integrity: sha512-lHO8ZJJ3AjXpdBD3irGQdD+jnFBE6nPNzT6Edfr6/8dj6Z8lWoB1lmAgd6Yp4YSu0RSU5bZIJ9U2kJqE622BDA==}
-    peerDependencies:
-      astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta
-    dependencies:
-      '@astro-community/astro-embed-integration': 0.6.1(astro@4.5.12)
-      '@astro-community/astro-embed-twitter': 0.5.3(astro@4.5.12)
-      '@astro-community/astro-embed-vimeo': 0.3.3(astro@4.5.12)
-      '@astro-community/astro-embed-youtube': 0.4.5(astro@4.5.12)
-      astro: 4.5.12(stylus@0.63.0)
     dev: false
 
   /astro-icon@1.1.0:
@@ -2796,7 +2723,7 @@ packages:
       - supports-color
     dev: false
 
-  /astro@4.5.12(stylus@0.63.0):
+  /astro@4.5.12(stylus@0.63.0)(typescript@5.4.5):
     resolution: {integrity: sha512-xIJcFI2hbyV8+h5pWjL7SKD1jIP0K01fYVAH+gdAt0mJaXy+u8Mj+goD0cPlK6sEaykR+7zxQLYGKJ44U4qarg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -2854,7 +2781,7 @@ packages:
       shiki: 1.2.1
       string-width: 7.1.0
       strip-ansi: 7.1.0
-      tsconfck: 3.0.3
+      tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
       vite: 5.2.7(stylus@0.63.0)
@@ -3298,10 +3225,6 @@ packages:
       domhandler: 5.0.3
       domutils: 3.1.0
       nth-check: 2.1.1
-    dev: false
-
-  /css-selector-parser@1.4.1:
-    resolution: {integrity: sha512-HYPSb7y/Z7BNDCOrakL4raGO2zltZkbeXyAd6Tg9obzix6QhzxCotdBl6VT0Dv4vZfJGVz3WL/xaEI9Ly3ul0g==}
     dev: false
 
   /css-selector-tokenizer@0.8.0:
@@ -4564,10 +4487,6 @@ packages:
 
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
-
-  /lite-youtube-embed@0.3.2:
-    resolution: {integrity: sha512-b1dgKyF4PHhinonmr3PB172Nj0qQgA/7DE9EmeIXHR1ksnFEC2olWjNJyJGdsN2cleKHRjjsmrziKlwXtPlmLQ==}
-    dev: false
 
   /load-yaml-file@0.2.0:
     resolution: {integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==}
@@ -6697,7 +6616,7 @@ packages:
   /ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
-  /tsconfck@3.0.3:
+  /tsconfck@3.0.3(typescript@5.4.5):
     resolution: {integrity: sha512-4t0noZX9t6GcPTfBAbIbbIU4pfpCwh0ueq3S4O/5qXI1VwK1outmxhe9dOiEWqMz3MW2LKgDTpqWV+37IWuVbA==}
     engines: {node: ^18 || >=20}
     hasBin: true
@@ -6706,6 +6625,8 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+    dependencies:
+      typescript: 5.4.5
     dev: false
 
   /tslib@2.6.2:
@@ -6723,6 +6644,12 @@ packages:
   /type-fest@2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
+    dev: false
+
+  /typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
     dev: false
 
   /ua-parser-js@1.0.37:
@@ -6817,15 +6744,6 @@ packages:
     dependencies:
       '@types/unist': 3.0.2
       unist-util-visit: 5.0.0
-    dev: false
-
-  /unist-util-select@4.0.3:
-    resolution: {integrity: sha512-1074+K9VyR3NyUz3lgNtHKm7ln+jSZXtLJM4E22uVuoFn88a/Go2pX8dusrt/W+KWH1ncn8jcd8uCQuvXb/fXA==}
-    dependencies:
-      '@types/unist': 2.0.10
-      css-selector-parser: 1.4.1
-      nth-check: 2.1.1
-      zwitch: 2.0.4
     dev: false
 
   /unist-util-stringify-position@3.0.3:
