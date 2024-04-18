@@ -26,7 +26,7 @@ export const Highlight = ({
       )}
     >
       {children}
-    </span>
+    </span>  
   );
 };
 
