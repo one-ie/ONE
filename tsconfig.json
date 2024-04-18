@@ -45,7 +45,8 @@
         "scripts/*"
       ],
       "@aceternityui/*": [
-      "src/components/react/aceternityui/*"],
+      "src/components/react/aceternityui/*"
+    ],
       "@settings/*": [
         "settings/*"
       ]
