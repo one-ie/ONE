@@ -1,28 +1,10 @@
 ---
-import { Image } from 'astro:assets';
-import { buttonVariants } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
 import MainLayout from "@/layouts/main-layout.astro";
-import { cn } from "@/lib/utils";
-import Icon from "astro-icon";
-import Hero from "@/blocks/HeroTest.astro";
-import Cal from "@/blocks/Cal.astro";
-import Channels from "@/blocks/Models.astro";
 import Stats from "@/blocks/Stats.astro";
-import Features from "@/blocks/FeaturesGrid.astro";
-import Carosel from "@/blocks/Carosel.astro";
-import videojs from 'video.js';
-import 'video.js/dist/video-js.css';
-import CTA from "@/blocks/CTA.astro";
-import Work from "@/components/react/GeminiEffect";
-
+import HeroScroll from "@/components/react/ContainerScroll";
 ---
 
-<MainLayout title="ONE">
-  <Work client:load />
-  <Stats/>
-  <Channels/>
-  <CTA/>
+<MainLayout title="hi">
+  <HeroScroll client:load />
+  <Stats />
 </MainLayout>
-
-<
