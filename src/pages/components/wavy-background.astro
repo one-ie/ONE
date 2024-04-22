@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import { siteConfig } from "@/config/site";
+import MainLayout from "@/layouts/main-layout.astro";
+import WavyBackgroundDemo from "@/components/react/WavyBackground";
+---
+
+<MainLayout title="ONE">
+  <section class="h-full">
+    <WavyBackgroundDemo client:load />
+  </section>
+</MainLayout>
