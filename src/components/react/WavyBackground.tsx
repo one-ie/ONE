@@ -3,9 +3,9 @@ import { WavyBackground } from "@/components/react/aceternityui/WavyBackground";
 
 export function WavyBackgroundDemo() {
 	return (
-		<WavyBackground id="hero" className="primary-background hero max-w-4xl mx-auto pb-40">
+		<WavyBackground id="hero" className="background hero max-w-4xl mx-auto pb-40">
 			<section >
-				<div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-4xl base-content">
+				<div className="background container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-4xl base-content">
 					<h1 className="text-4xl font-bold leading-none sm:text-5xl ">Your <span className="">AI Workforce</span>
 						<span className=""> Awaits</span>
 					</h1>

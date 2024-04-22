@@ -2,9 +2,17 @@
 import MainLayout from "@/layouts/main-layout.astro";
 import Stats from "@/blocks/Stats.astro";
 import HeroScroll from "@/components/react/ContainerScroll";
+import Wavy from "@/components/react/WavyBackground";
+import PinPerspective from "@/components/react/3dPin";
+import CardHover from "@/components/react/CardHover";
+import Gemini from "@/components/react/GeminiEffect";
 ---
 
 <MainLayout title="hi">
+  <Wavy client:load />
   <HeroScroll client:load />
+  <PinPerspective client:load />
   <Stats />
+  <CardHover client:load />
+  <Gemini client:load />
 </MainLayout>
