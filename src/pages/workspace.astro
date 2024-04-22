@@ -14,67 +14,15 @@ import Carosel from "@/blocks/Carosel.astro";
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 import CTA from "@/blocks/CTA.astro";
-import CardStack from "@/components/CardStack.astro";
-import { Tweet, Vimeo, YouTube } from 'astro-embed';
+import Work from "@/components/react/GeminiEffect";
 
 ---
 
 <MainLayout title="ONE">
-  <CardStack />
-
-
-
- 
- <!-- 
-  <section>
-    <container>
-      
-  <div class="flex justify-center items-center pattern-secondary">
-    <div class="w-full max-w-[800px] shadow-lg p-4">
-      <h2 class="text-center">Demo</h2>
-      <br>
-  <YouTube id="https://www.youtube.com/watch?v=kj1OB42Dhqw"/>
-    </div>
-</div>
-</container>
-</section>
-
-  <Channels/>
+  <Work client:load />
   <Stats/>
-  <EcommercePlatforms/>
+  <Channels/>
   <CTA/>
-<Workspace client:load/>
--->
 </MainLayout>
 
-<style>
-
-  .carousel {
-  overflow: hidden;
-}
-
-.carousel-item {
-  transition: transform 1s ease-in-out;
-}
-
-.carousel-item > div {
-  scroll-snap-align: start;
-}
-
-.carousel-item:first-child {
-  animation: carousel 36s linear infinite;
-}
-
-@keyframes carousel {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% + 100vw));
-  }
-}
-
-.dark .bg-background {
-  background-color: #1f2937;
-}
-</style>
+<
