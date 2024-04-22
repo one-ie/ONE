@@ -6,15 +6,14 @@ import Hero from "@/components/BackgroundBoxes.astro";
 import Channels from "@/blocks/Models.astro";
 import Stats from "@/blocks/Stats.astro";
 import Features from "@/blocks/FeaturesGrid.astro";
-import CTA from "@/blocks/CTA.astro";
+import Wavy from "@/components/react/WavyBackground";
+import Gemini from "@/components/react/GeminiEffect";
 ---
 
 <MainLayout title="ONE">
-  <Hero />
+  <Wavy client:load />
   <Stats />
-
   <Features />
   <img class="timeline" src="timeline.svg" width="100%" />
- 
   <Channels />
 </MainLayout>
