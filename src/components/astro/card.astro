@@ -1,0 +1,46 @@
+---
+export interface Props {
+  name: string;
+  url: string;
+  image: string;
+}
+
+const { name, url, image } = Astro.props;
+---
+
+<li class="card">
+  <a href={url}>
+    <img src={image} alt={name} />
+    <h3 class="social-label">
+      {name}
+    </h3>
+  </a>
+</li>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0.25rem;
+    border-radius: 0.6rem;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  .card a {
+    text-decoration: none;
+  }
+  .card img {
+    display: none;
+  }
+  .card:is(:hover, :focus-within) {
+    background-image: var(--accent-gradient);
+  }
+  .card:is(:hover, :focus-within) h3 {
+    color: var(--accent);
+  }
+</style>
