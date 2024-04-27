@@ -2,7 +2,7 @@
 import Layout from "@/layouts/main-layout.astro";
 import Card from "@/components/astro/card.astro";
 import ComponentsList from "../../data/components.json";
-import Component from "@/blocks/HeroPhone.astro";
+import Component from "@/blocks/testimonials-cards.astro";
 
 type Component = {
   name: string;
@@ -13,9 +13,6 @@ type Component = {
 
 <Layout title="ONE">
   <main>
-    <span class="countdown">
-      <span style="--value:52;"></span>
-    </span>
     <Component />
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
       {

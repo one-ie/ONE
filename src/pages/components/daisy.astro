@@ -1,0 +1,269 @@
+---
+import Layout from "@/layouts/main-layout.astro";
+import Card from "@/components/astro/card.astro";
+import Component from "@/blocks/About.astro";
+---
+
+<Layout title="ONE">
+  <main>
+    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+      <div
+        class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span style="--value:15;"></span>
+        </span>
+        days
+      </div>
+      <div
+        class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span style="--value:10;"></span>
+        </span>
+        hours
+      </div>
+      <div
+        class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span style="--value:24;"></span>
+        </span>
+        min
+      </div>
+      <div
+        class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span style="--value:43;"></span>
+        </span>
+        sec
+      </div>
+    </div>
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="form-control">
+      <label class="label cursor-pointer gap-4">
+        <span class="label-text">Default</span>
+        <input
+          type="radio"
+          name="theme-radios"
+          class="radio theme-controller"
+          value="default"
+        />
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="label cursor-pointer gap-4">
+        <span class="label-text">Retro</span>
+        <input
+          type="radio"
+          name="theme-radios"
+          class="radio theme-controller"
+          value="retro"
+        />
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="label cursor-pointer gap-4">
+        <span class="label-text">Cyberpunk</span>
+        <input
+          type="radio"
+          name="theme-radios"
+          class="radio theme-controller"
+          value="cyberpunk"
+        />
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="label cursor-pointer gap-4">
+        <span class="label-text">Valentine</span>
+        <input
+          type="radio"
+          name="theme-radios"
+          class="radio theme-controller"
+          value="valentine"
+        />
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="label cursor-pointer gap-4">
+        <span class="label-text">Aqua</span>
+        <input
+          type="radio"
+          name="theme-radios"
+          class="radio theme-controller"
+          value="aqua"
+        />
+      </label>
+    </div>
+    <div class="mockup-browser border bg-base-300">
+      <div class="mockup-browser-toolbar">
+        <div class="input">https://daisyui.com</div>
+      </div>
+      <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
+    </div>
+    <label class="swap">
+      <input type="checkbox" />
+      <div class="swap-on">ON</div>
+      <div class="swap-off">OFF</div>
+    </label>
+
+    <span class="loading loading-spinner loading-xs"></span>
+    <span class="loading loading-spinner loading-sm"></span>
+    <span class="loading loading-spinner loading-md"></span>
+    <span class="loading loading-spinner loading-lg"></span>
+    <span class="countdown font-mono text-2xl">
+      <span style="--value:10;"></span>h
+      <span style="--value:24;"></span>m
+      <span style="--value:39;"></span>s
+    </span>
+    <button class="btn">Button</button>
+    <button class="btn btn-neutral">Neutral</button>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-accent">Accent</button>
+    <button class="btn btn-ghost">Ghost</button>
+    <button class="btn btn-link">Link</button>
+
+    <ul
+      class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+    >
+      <li>
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">1984</time>
+          <div class="text-lg font-black">First Macintosh computer</div>
+          The Apple Macintosh—later rebranded as the Macintosh 128K—is the original
+          Apple Macintosh personal computer. It played a pivotal role in establishing
+          desktop publishing as a general office function. The motherboard, a 9 in
+          (23 cm) CRT monitor, and a floppy drive were housed in a beige case with
+          integrated carrying handle; it came with a keyboard and single-button mouse.
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono italic">1998</time>
+          <div class="text-lg font-black">iMac</div>
+          iMac is a family of all-in-one Mac desktop computers designed and built
+          by Apple Inc. It has been the primary part of Apple's consumer desktop
+          offerings since its debut in August 1998, and has evolved through seven
+          distinct forms
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">2001</time>
+          <div class="text-lg font-black">iPod</div>
+          The iPod is a discontinued series of portable media players and multi-purpose
+          mobile devices designed and marketed by Apple Inc. The first version was
+          released on October 23, 2001, about 8+1⁄2 months after the Macintosh version
+          of iTunes was released. Apple sold an estimated 450 million iPod products
+          as of 2022. Apple discontinued the iPod product line on May 10, 2022. At
+          over 20 years, the iPod brand is the oldest to be discontinued by Apple
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono italic">2007</time>
+          <div class="text-lg font-black">iPhone</div>
+          iPhone is a line of smartphones produced by Apple Inc. that use Apple's
+          own iOS mobile operating system. The first-generation iPhone was announced
+          by then-Apple CEO Steve Jobs on January 9, 2007. Since then, Apple has
+          annually released new iPhone models and iOS updates. As of November 1,
+          2018, more than 2.2 billion iPhones had been sold. As of 2022, the iPhone
+          accounts for 15.6% of global smartphone market share
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">2015</time>
+          <div class="text-lg font-black">Apple Watch</div>
+          The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates
+          fitness tracking, health-oriented capabilities, and wireless telecommunication,
+          and integrates with iOS and other Apple products and services
+        </div>
+      </li>
+    </ul>
+  </main>
+</Layout>
