@@ -8,11 +8,11 @@
     "build": "astro build",
     "astro": "astro",
     "preview": "wrangler pages dev ./dist"
-
   },
   "dependencies": {
     "@astrojs/cloudflare": "10.2.4",
     "@astrojs/mdx": "^2.3.1",
+    "@astrojs/netlify": "^5.2.0",
     "@astrojs/react": "^3.3.1",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.4",
