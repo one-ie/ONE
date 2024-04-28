@@ -25,7 +25,7 @@ export default defineConfig({
     })
   ],
   adapter: cloudflare(),
-  output: "hybrid",
+  output: "server",
     vite: {
     ssr: {
       external: ['node:buffer'],
