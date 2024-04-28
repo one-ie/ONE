@@ -5,7 +5,6 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 import cloudflare from "@astrojs/cloudflare";
-import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,11 +18,11 @@ export default defineConfig({
     icon(),
     sitemap(),
     react(),
-    compressor(),
     tailwind({
       applyBaseStyles: false,
     })
   ],
-  adapter: cloudflare(),
-  output: "hybrid",
+adapter: cloudflare({
+     imageService: 'cloudflare'
+  }),  output: "server",
 });

@@ -1,5 +1,5 @@
 {
-  "name": "ONE",
+  "name": "one",
   "type": "module",
   "version": "1.0.0",
   "scripts": {
@@ -11,18 +11,15 @@
 
   },
   "dependencies": {
-    "@100mslive/react-sdk": "^0.10.9",
     "@astrojs/cloudflare": "10.2.2",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/react": "^3.3.1",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.4",
     "@astrojs/tailwind": "^5.1.0",
-    "@calcom/embed-react": "^1.4.0",
     "@iconify-json/lucide": "^1.1.185",
     "@iconify-json/mdi": "^1.1.66",
     "@iconify-json/ri": "^1.1.20",
-    "@nivo/line": "^0.85.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -39,7 +36,6 @@
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.7.0",
-    "astro-compressor": "^0.4.1",
     "astro-icon": "^1.1.0",
     "autoprefixer": "^10.4.19",
     "balance-text": "^3.3.1",
