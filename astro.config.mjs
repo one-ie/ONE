@@ -20,6 +20,8 @@ export default defineConfig({
   }), icon(), sitemap(), react(), tailwind({
     applyBaseStyles: false
   })],
-  adapter: netlify(),
-  output: "hybrid"
+output: 'server',
+  adapter: netlify({
+    edgeMiddleware: true
+  }),
 });
