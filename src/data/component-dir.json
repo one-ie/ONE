@@ -1,0 +1,114 @@
+{
+  "components": [
+    {
+      "name": "BackgroundBoxes",
+      "url": "/components/BackgroundBoxes",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "CardStack",
+      "url": "/components/CardStack",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "card",
+      "url": "/components/card",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "blog-header",
+      "url": "/components/blog-header",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "callout",
+      "url": "/components/callout",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "blog-card",
+      "url": "/components/blog-card",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "course-card",
+      "url": "/components/course-card",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "guide-card",
+      "url": "/components/guide-card",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "centered",
+      "url": "/components/centered",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "mdx-card",
+      "url": "/components/mdx-card",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "mdx-image",
+      "url": "/components/mdx-image",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "card",
+      "url": "/components/card",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "table",
+      "url": "/components/table",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "user-auth-form",
+      "url": "/components/user-auth-form",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "base-head",
+      "url": "/components/base-head",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "footer",
+      "url": "/components/footer",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "header",
+      "url": "/components/header",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "main-nav",
+      "url": "/components/main-nav",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "sidebar-nav",
+      "url": "/components/sidebar-nav",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "page-header",
+      "url": "/components/page-header",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "pager",
+      "url": "/components/pager",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "tailwind-indicator",
+      "url": "/components/tailwind-indicator",
+      "image": "/placeholder.jpg"
+    }
+  ]
+}

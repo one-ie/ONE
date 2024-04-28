@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main-layout.astro";
 import Card from "@/components/astro/card.astro";
-import ComponentsList from "../../data/components.json";
+import ComponentsList from "../../data/component-dir.json";
 
 type Component = {
   name: string;
@@ -14,8 +14,8 @@ type Component = {
   <main>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
       {
-        ComponentsList.component &&
-          ComponentsList.component.map((component: Component) => {
+        ComponentsList.components &&
+          ComponentsList.components.map((component: Component) => {
             return (
               <Card
                 name={component.name}
