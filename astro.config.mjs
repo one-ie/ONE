@@ -22,6 +22,16 @@ export default defineConfig({
       applyBaseStyles: false,
     })
   ],
-adapter: cloudflare({
-  }),  output: "server",
+adapter: cloudflare({}),
+output: "server",
+routes: {
+  extend: {
+    include: [
+      { pattern: '/api/*' },
+    ],
+    exclude: [
+      { pattern: '/fonts/*' },
+    ],
+  },
+},
 });
