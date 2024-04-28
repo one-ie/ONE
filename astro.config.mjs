@@ -30,7 +30,7 @@ routes: {
       { pattern: '/api/*' },
     ],
     exclude: [
-      { pattern: '/fonts/*' },
+      { pattern: '/*' },
     ],
   },
 },
