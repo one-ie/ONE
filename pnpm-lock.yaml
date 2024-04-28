@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/cloudflare':
-    specifier: 10.1.0
-    version: 10.1.0(astro@4.7.0)
+    specifier: 10.2.4
+    version: 10.2.4(astro@4.7.0)
   '@astrojs/mdx':
     specifier: ^2.3.1
     version: 2.3.1(astro@4.7.0)
@@ -199,8 +199,8 @@ packages:
     resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
     dev: false
 
-  /@astrojs/cloudflare@10.1.0(astro@4.7.0):
-    resolution: {integrity: sha512-26+mkkMNQ7lHQ9wEwPxNS/zUEZj/emYkHTmlmvgzkEq9J/vFI5QVtTur2R/ZIZ8SimpLqZJtsn584716Jqq1Nw==}
+  /@astrojs/cloudflare@10.2.4(astro@4.7.0):
+    resolution: {integrity: sha512-/9uw09VEEjbfv1yeER4qEWkuQWqJvIAlcZZSSkqcB8/ZCOz/TPzXimvmhndIWCTUsBFvQNP4fqemMtoEAW92Ug==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
@@ -209,6 +209,8 @@ packages:
       '@cloudflare/workers-types': 4.20240423.0
       astro: 4.7.0(stylus@0.63.0)(typescript@5.4.5)
       esbuild: 0.19.12
+      estree-walker: 3.0.3
+      magic-string: 0.30.10
       miniflare: 3.20240419.0
       tiny-glob: 0.2.9
       wrangler: 3.52.0(@cloudflare/workers-types@4.20240423.0)
