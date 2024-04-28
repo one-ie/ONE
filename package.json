@@ -10,7 +10,7 @@
     "preview": "wrangler pages dev ./dist"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "9.1.0",
+    "@astrojs/cloudflare": "10.0.2",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/react": "^3.3.1",
     "@astrojs/rss": "^4.0.5",
