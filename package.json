@@ -7,11 +7,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "preview": "wrangler pages dev ./dist"
+
   },
   "dependencies": {
     "@100mslive/react-sdk": "^0.10.9",
-    "@astrojs/cloudflare": "^9.2.0",
+    "@astrojs/cloudflare": "10.2.0",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/react": "^3.3.1",
     "@astrojs/rss": "^4.0.5",
@@ -67,6 +69,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "mdast-util-toc": "^7.0.0",
     "remark": "^15.0.1",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "wrangler": "^3.52.0"
   }
 }
