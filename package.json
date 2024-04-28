@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@100mslive/react-sdk": "^0.10.9",
-    "@astrojs/cloudflare": "10.2.0",
+    "@astrojs/cloudflare": "10.2.4",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/react": "^3.3.1",
     "@astrojs/rss": "^4.0.5",
