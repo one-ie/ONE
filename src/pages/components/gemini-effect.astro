@@ -1,0 +1,30 @@
+---
+import {
+  GoogleGeminiEffect,
+  MotionValue,
+} from "@/components/react/aceternityui/GeminiEffect";
+import Layout from "@/layouts/main-layout.astro";
+---
+
+<Layout title="ONE">
+  <section class="space-y-6 pb-12 pt-16 lg:py-28">
+    <GoogleGeminiEffect
+      pathLengths={[
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+        new MotionValue(),
+      ]}
+      title="Gemini Effect"
+      description="Description of the Gemini Effect"
+      client:load
+    />
+  </section>
+</Layout>

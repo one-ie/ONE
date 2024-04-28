@@ -6,22 +6,20 @@ import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 import cloudflare from "@astrojs/cloudflare";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://one.ie",
-  integrations: [
-    mdx({
-      syntaxHighlight: "shiki",
-      shikiConfig: { theme: "github-dark-dimmed" },
-      gfm: true,
-    }),
-    icon(),
-    sitemap(),
-    react(),
-    tailwind({
-      applyBaseStyles: false,
-    })
-  ],
-adapter: cloudflare({
-  }),  output: "server",
+  integrations: [mdx({
+    syntaxHighlight: "shiki",
+    shikiConfig: {
+      theme: "github-dark-dimmed"
+    },
+    gfm: true
+  }), icon(), sitemap(), react(), tailwind({
+    applyBaseStyles: false
+  })],
+  adapter: vercel(),
+  output: "server"
 });

@@ -1,0 +1,32 @@
+---
+import Layout from "@/layouts/main-layout.astro";
+import Card from "@/components/astro/card.astro";
+import ComponentsList from "../../data/components.json";
+import Component from "@/blocks/HeroTest.astro";
+
+type Component = {
+  name: string;
+  url: string;
+  image: string;
+};
+---
+
+<Layout title="ONE">
+  <main>
+    <Component />
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      {
+        ComponentsList.component &&
+          ComponentsList.component.map((component: Component) => {
+            return (
+              <Card
+                name={component.name}
+                url={component.url}
+                image={component.image}
+              />
+            );
+          })
+      }
+    </div>
+  </main>
+</Layout>

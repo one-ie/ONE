@@ -1,0 +1,11 @@
+---
+export const prerender = true;
+import { Image } from "astro:assets";
+import { siteConfig } from "@/config/site";
+import MainLayout from "@/layouts/main-layout.astro";
+import CardStackDemo from "@/components/CardStack.astro";
+---
+
+<MainLayout title="ONE">
+  <CardStackDemo />
+</MainLayout>
