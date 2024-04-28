@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/cloudflare':
-    specifier: 10.2.2
-    version: 10.2.2(astro@4.7.0)
+    specifier: 10.2.4
+    version: 10.2.4(astro@4.7.0)
   '@astrojs/mdx':
     specifier: ^2.3.1
     version: 2.3.1(astro@4.7.0)
@@ -196,8 +196,8 @@ packages:
     resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
     dev: false
 
-  /@astrojs/cloudflare@10.2.2(astro@4.7.0):
-    resolution: {integrity: sha512-e4FZUnlKrV10YWEYoLd59PcrECb0lcUw9Co6Cp+6UoqM+C8I/A8zGWk7sbhNJOy/KswUBTLFxN8UXbgdbQaW8g==}
+  /@astrojs/cloudflare@10.2.4(astro@4.7.0):
+    resolution: {integrity: sha512-/9uw09VEEjbfv1yeER4qEWkuQWqJvIAlcZZSSkqcB8/ZCOz/TPzXimvmhndIWCTUsBFvQNP4fqemMtoEAW92Ug==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
