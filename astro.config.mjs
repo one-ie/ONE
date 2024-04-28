@@ -23,11 +23,13 @@ export default defineConfig({
     })
   ],
 adapter: cloudflare({}),
-output: "server",
+output: "hybrid",
 routes: {
   extend: {
     include: [
       { pattern: '/api/*' },
+      { pattern: '/signin' },
+      { pattern: '/signup' },
     ],
     exclude: [
       { pattern: '/*' },
