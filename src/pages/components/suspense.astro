@@ -12,7 +12,7 @@ type Component = {
 
 <Layout title="ONE">
   <main>
-    <Suspense>
+    <Suspense ssr="false">
       <Component />
       <p slot="fallback">Loading...</p>
     </Suspense>
