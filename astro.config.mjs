@@ -6,34 +6,34 @@ import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import cloudflare from "@astrojs/cloudflare";
 
+import simpleStackStream from "simple-stack-stream";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://one.ie",
-  integrations: [
-    mdx({
-      syntaxHighlight: "shiki",
-      shikiConfig: { theme: "github-dark-dimmed" },
-      gfm: true,
-    }),
-    icon(),
-    sitemap(),
-    react(),
-    tailwind({
-      applyBaseStyles: false,
-    })
-  ],
-adapter: cloudflare({}),
-output: "hybrid",
-routes: {
-  extend: {
-    include: [
-      { pattern: '/api/*' },
-      { pattern: '/signin' },
-      { pattern: '/signup' },
-    ],
-    exclude: [
-      { pattern: '/*' },
-    ],
-  },
-},
+  integrations: [mdx({
+    syntaxHighlight: "shiki",
+    shikiConfig: {
+      theme: "github-dark-dimmed"
+    },
+    gfm: true
+  }), icon(), sitemap(), react(), tailwind({
+    applyBaseStyles: false
+  }), simpleStackStream()],
+  adapter: cloudflare({}),
+  output: "hybrid",
+  routes: {
+    extend: {
+      include: [{
+        pattern: '/api/*'
+      }, {
+        pattern: '/signin'
+      }, {
+        pattern: '/signup'
+      }],
+      exclude: [{
+        pattern: '/*'
+      }]
+    }
+  }
 });
