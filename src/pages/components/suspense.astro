@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main-layout.astro";
 import Component from "@/blocks/HeroWavy.astro";
-import { Suspense } from "simple-stack-stream/components";
+import { Suspense as SuspenseComponent } from "simple-stack-stream/components";
 
 type Component = {
   name: string;
@@ -12,9 +12,11 @@ type Component = {
 
 <Layout title="ONE">
   <main>
-    <Suspense ssr="false">
-      <Component />
-      <p slot="fallback">Loading...</p>
-    </Suspense>
+    <h1>hi</h1>
+    <SuspenseComponent ssr="false">
+        <Component />
+      <div class="primary" slot="fallback">Loading...</div>
+    </SuspenseComponent>
   </main>
-</Layout>
+  <script></script></Layout
+>
